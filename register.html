@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Yendo - Mensajeria Descentralizada</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Gestion mensajeria" />
+  <meta name="author" content="@dfralan" />
+  <!-- Previews -->
+  <meta name="msapplication-TileImage" content="https://yendo.vercel.app/src/public/img/yendo-500x500.png">
+  <meta property="og:site_name" content="yendo.vercel.app">
+  <meta property="og:title" content="Yendo">
+  <meta property="og:description" content="Mensajeria Descentralizada">
+  <meta property="og:image" itemprop="image" content="https://yendo.vercel.app/src/public/img/yendo-500x500.png">
+  <meta property="og:type" content="website" />
+  <meta property="og:image:width" content="500px">
+  <meta property="og:image:height" content="500px">
+  <meta property="og:url" content="https://yendo.vercel.app">
+  <!-- JS Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+  <!-- Frame Dependencies -->
+  <link rel="stylesheet" href="src/public/css/jquery-ui-modified.css">
+  <link rel="stylesheet" href="src/public/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="src/public/css/style.css" />
+  <link rel="icon" type="image/x-icon" href="src/public/img/yendo.ico" />
+
+</head>
+
+<body class="bg-body-secondary">
+
+  <!-- DOM Load Animation -->
+  <div class='logoLoadAnimationContainer bg-body-secondary'>
+      <div class="logoLoadAnimation text-light">
+          <img src="src/public/img/rafiki.svg" alt="" width="150px">
+          <img src="src/public/img/logo.svg" alt="">
+      </div>
+  </div>
+
+  <!-- Theme SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check2" viewBox="0 0 16 16">
+          <path
+              d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+          <path
+              d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+          <path
+              d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+          <path
+              d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+      </symbol>
+  </svg>
+
+  <!-- Loom language switcher -->
+  <loom style="display: none !important;" class="nav-link btn  dropdown align-items-center d-flex position-fixed bottom-0 end-0 mb-4 me-5 pe-5"
+      flag="rounded">
+      <a class="nav-link dropdown-toggle btn p-2 align-items-center" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false" loom-indicator>
+      </a>
+      <ul class="dropdown-menu" loom-list>
+          <li role="button" class="dropdown-item" loom-language="ar"></li>
+          <li role="button" class="dropdown-item" loom-language="br"></li>
+      </ul>
+  </loom>
+
+  <!-- Theme Selector -->
+  <div id="themeSelector" style="transition: ease-in-out 0.3s;"
+      class="dropdown position-fixed bottom-0  d-flex align-items-center end-0 mb-4 me-4 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center rounded-3" id="bd-theme"
+          type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+          <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+              <use href="#circle-half"></use>
+          </svg>
+          <span class="visually-hidden" id="bd-theme-text"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+          <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                  aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                      <use href="#sun-fill"></use>
+                  </svg>
+                  <span loom="Light"></span>
+                  <svg class="bi ms-auto d-none" width="1em" height="1em">
+                      <use href="#check2"></use>
+                  </svg>
+              </button>
+          </li>
+          <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                  aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                      <use href="#moon-stars-fill"></use>
+                  </svg>
+                  <span loom="Dark"></span>
+                  <svg class="bi ms-auto d-none" width="1em" height="1em">
+                      <use href="#check2"></use>
+                  </svg>
+              </button>
+          </li>
+          <li>
+              <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                  aria-pressed="true">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                      <use href="#circle-half"></use>
+                  </svg>
+                  <span loom="Auto"></span>
+                  <svg class="bi ms-auto d-none" width="1em" height="1em">
+                      <use href="#check2"></use>
+                  </svg>
+              </button>
+          </li>
+      </ul>
+  </div>
+
+  <!-- Main Section -->
+  <section class="container col-xl-10 col-xxl-8 px-4 py-5 d-flex flex-column align-items-center">
+      
+      <div class="row align-items-center g-lg-5 py-5 z-3">
+
+        <div class="col-lg-7 text-center text-lg-start">
+          <img src="src/public/img/rafiki.svg" alt="" width="200">
+          <div>
+            <img class="pt-3" src="src/public/img/logo.svg" alt="">
+            <p class="fs-4 mb-0">Mensajeria descentralizada</p>
+            <a href="buscar.html" role="button" class="fs-5 text-decoration-none">Realizá un pedido</a>
+          </div>
+        </div>
+
+        <div class="col-md-10 mx-auto col-lg-5">
+
+          <form class="p-3 shadow rounded-3 bg-body" id="loginForm" novalidate>
+
+            <div class="mb-3" id="formType">
+              <span role="button" class="badge rounded-pill selected-pill" id="particularBtn">Particular</span>
+              <span role="button" class="badge rounded-pill text-body-tertiary" id="negocioBtn">Negocio</span>
+            </div>
+
+            <div class="input-group has-validation mb-3">
+              <span class="input-group-text rounded-0 rounded-start">@</span>
+              <div class="form-floating">
+                <input type="text" class="form-control" id="formUsername" placeholder="juan1" pattern="[A-Za-z0-9-_]+" required>
+                <label for="formUsername">Nombre de usuario</label>
+                <div class="invalid-tooltip">
+                  Ingresá un usuario válido.
+                </div>
+              </div>
+            </div>
+            
+            <div class="input-group has-validation mb-3">
+              <span class="input-group-text rounded-0 rounded-start" id="basic-addon3" type="button" data-bs-toggle="popover" data-bs-placement="bottom"  data-bs-title="¿No encuentras tu país?" data-bs-content="Actualmente prestamos nuestros servicios solo en Argentina, envianos un mensaje especificándonos tu país para informarte cuando extendamos nuestro servicio">
+                <span>
+                  <img src="https://hatscripts.github.io/circle-flags/flags/ar.svg" width="20">
+                </span>
+                +54
+              </span>
+              <div class="form-floating">
+                <input type="text" class="form-control" id="formNumber" placeholder="xxxxxxxxxx" required pattern="^[\d+-]{9,14}$">
+                <label for="formNumber">Número de whatsapp</label>
+                <div class="invalid-tooltip">
+                  Ingresá un número válido.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="formCity" placeholder="Juan" pattern="^.*\(.+\).*"required>
+              <label for="formCity">Localidad</label>
+              <div class="invalid-tooltip">
+                Ingresá tu localidad o ciudad.
+              </div>
+            </div>
+            
+            <button class="w-100 btn btn-lg btn-primary fw-bold" type="submit">Registrarme</button>
+            <label class="mt-2">
+              Al hacer clic en "Registrarme", aceptas los términos de uso.
+            </label>
+            
+          </form>
+
+          <div class="py-3 px-5 w-100 text-center">
+            <p>
+              <span>Creá una página para vos, o tu negocio.</span>
+              <span id="navBarTellerLaunch" role="button" class="fw-bold">¿Necesitas ayuda?</span>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+  </section>
+
+  <!-- Teller Button -->
+  <teller style="transition: ease-in-out 0.3s;" class="bottom-0 start-0 mb-4 ms-4" lang="en"
+      supportHours="12:00/13:59(-03:00)" tellerMode="brick" side="left" borderRadius="15" theme="light"
+      tintColor="#4367F2" appearAfter="0"
+      formUrl="https://docs.google.com/forms/d/e/1FAIpQLSd-JU7y43Pf0Y1DzHIrnIYyZIoQY_CxIHqu6etU-AHg4vvZSg/viewform?usp=pp_url&entry.972628122=sad&entry.131831582=pepe@pepe&entry.1647376085=Hola&entry.1069296986=hoy">
+  </teller>
+
+  <!-- App Dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="src/public/js/app.js"></script>
+  <script src="src/public/js/dataAR.js"></script>
+  <script src="src/public/js/predictiveCity.js"></script>
+  <script src="src/public/js/color-modes.js"></script>
+  <!-- Specific -->
+  <script src="src/public/js/loginForm.js"></script>
+  <script src="src/public/js/matcher.js"></script>
+  <!-- QR Generator -->
+  <script src="src/public/js/qrcode.js"></script>
+  <script src="src/public/js/userqr.js"></script>
+  <!-- Feedback Dependencies -->
+  <script src="src/public/js/teller.js"></script>
+  <script src="src/public/js/ouibounce.js"></script>
+  <!-- Internationalization -->
+  <script src="src/public/js/loom.js"></script>
+  <script src="src/public/js/loomTranslations.js"></script>
+
+</body>
+
+</html>
