@@ -36,6 +36,10 @@ const loomTranslations = {
         "es": "Buscar repartidores",
         "br": "Buscar entregadores"
     },
+    "Ingresá tu ciudad": {
+        "es": "Ingresá tu ciudad",
+        "br": "Digite sua cidade"
+    },
     "Mensajería descentralizada": {
         "es": "Mensajería descentralizada",
         "br": "Mensageria descentralizada"
