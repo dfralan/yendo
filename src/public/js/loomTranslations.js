@@ -44,6 +44,10 @@ const loomTranslations = {
         "es": "Registrarme",
         "br": "Cadastre-se"
     },
+    "Registrate": {
+        "es": "Registrarme",
+        "br": "Cadastre-se"
+    },
     "Realizá un pedido": {
         "es": "Realiza un pedido",
         "br": "Faça um pedido"
