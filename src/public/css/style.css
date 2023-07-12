@@ -47,6 +47,16 @@ body {
     margin-left: -75px; /* margin is -0.5 * dimension */
 }
 
+.logoSuper {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-22px);
+  margin-top: -22px; /* margin is -0.5 * dimension */
+}
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;

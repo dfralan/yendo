@@ -11,13 +11,15 @@
     let deliveryStateField = document.getElementById("deliveryState")
     let deliveryRatingField = document.getElementById("rat")
     let deliveryCityField = document.getElementById("deliveryCity")
-
+    let deliveryUsernameQR = document.getElementById("deliveryUsernameQR")
+    let deliveryCityQR = document.getElementById("deliveryCityQR")
 
     // Content to fill fields to fill
     let stateOfThisDelivery = usersAR[userID].activeInterval ? "Activo" : "Inactivo";
 
     // Filling fields to fill
     deliveryUsername.textContent = usersAR[userID].username
+    deliveryUsernameQR.textContent = usersAR[userID].username
     deliveryStateField.setAttribute("loom", stateOfThisDelivery)
     deliveryRatingField.innerHTML = `
     <rater rating="`+ usersAR[userID].rank +`">
@@ -36,33 +38,20 @@
     var ubicacionDelivery = getParentProvinceAndCityName(usersAR[userID].cityID);
 
     deliveryCityField.textContent = ubicacionDelivery.ciudad + " (" + ubicacionDelivery.provincia + ")"
+    deliveryCityQR.textContent = ubicacionDelivery.ciudad + " (" + ubicacionDelivery.provincia + ")"
 
 
     if (yendoElement) {
 
         // QR Gen
-        let qrdinamic = document.getElementsByTagName("qrs")
-        if (qrdinamic) {
-        let qrda = Array.from(qrdinamic);
-        qrda.forEach((element) => {
-            let width = element.getAttribute("width") || "220px";
-            let height = element.getAttribute("height") || (width || "220px");
-            let colorDark = element.getAttribute("colorDark") || "#000000";
-            let colorLight = element.getAttribute("colorLight") || "#ffffff";
-    
-            if (content) {
-                var qrcode = new QRCode(element, {
-                    text: "https://yendo.vercel.app/u/" + parseInt(userID)/11 + ".html",
-                    width: parseInt(width),
-                    height: parseInt(height),
-                    colorDark : colorDark,
-                    colorLight : colorLight,
-                    correctLevel : QRCode.CorrectLevel.H
-                });
-            }
-            
-          });
-        }
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: "https://yendo.vercel.app/u/" + parseInt(userID)/11 + ".html",
+            width: 200,
+            height: 200,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
 
         var switchDirec = document.getElementById('invertirDireccionesBtn');
         var pedirButton = document.getElementById('pedir');
