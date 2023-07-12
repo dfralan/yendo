@@ -8,27 +8,45 @@
   'use strict'
 
   function main() {
+
+
+    // Collapse navbar button animation
+    const plusIcon = document.getElementById('navbar-toggler-icon');
+
+    if (plusIcon) {
+      document.getElementById('navbarNavAltMarkup').addEventListener('show.bs.collapse', function () {
+        plusIcon.classList.add('rotate');
+      });
+      document.getElementById('navbarNavAltMarkup').addEventListener('hide.bs.collapse', function () {
+        plusIcon.classList.remove('rotate');
+      });
+    }
+
     // Loading DOM animation
     const logoLoadAnimationContainer = document.querySelector('.logoLoadAnimationContainer');
     const logoLoadAnimation = document.querySelector('.logoLoadAnimation');
-    function fadeOut(el) {
-      var opacity = 1; // Initial opacity
-      var interval = setInterval(function () {
-        if (opacity > 0) {
-          opacity -= 0.1;
-          el.style.opacity = opacity;
-        } else {
-          clearInterval(interval); // Stop the interval when opacity reaches 0
-          el.style.display = 'none'; // Hide the element
-        }
-      }, 50);
-    }
-    setTimeout(function () {
-      fadeOut(logoLoadAnimation);
+
+    if (logoLoadAnimation) {
+      function fadeOut(el) {
+        var opacity = 1; // Initial opacity
+        var interval = setInterval(function () {
+          if (opacity > 0) {
+            opacity -= 0.1;
+            el.style.opacity = opacity;
+          } else {
+            clearInterval(interval); // Stop the interval when opacity reaches 0
+            el.style.display = 'none'; // Hide the element
+          }
+        }, 50);
+      }
       setTimeout(function () {
-        fadeOut(logoLoadAnimationContainer);
-      }, 500);
-    }, 1000);
+        fadeOut(logoLoadAnimation);
+        setTimeout(function () {
+          fadeOut(logoLoadAnimationContainer);
+        }, 500);
+      }, 1000);
+    }
+    
 
     // Popover launch
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')

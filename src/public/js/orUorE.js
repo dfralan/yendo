@@ -1,29 +1,3 @@
-function operatorState(h) {
-  //Zero Zone
-  var localDate = new Date();
-  var zeroDate = localDate.toUTCString();
-  zeroTime = ((zeroDate.split(" "))[4]).split(":");
-  zeroInSec = (zeroTime[0] * 3600) + (zeroTime[1] * 60);
-  a = h.slice(0, 5); a1 = a.split(":"); a2 = (a1[0] * 3600) + (a1[1] * 60); //openhour
-  b = h.slice(6, 11); b1 = b.split(":"); b2 = (b1[0] * 3600) + (b1[1] * 60); //endhour
-  pol = h.slice(12, 13)//operator (+ or -)
-  c = h.slice(13, 18); c1 = c.split(":"); c2 = (c1[0] * 3600) + (c1[1] * 60);//gmt zone
-  oh = 0;
-  eh = 0;
-  getOhEh()
-  function getOhEh() {
-      if (pol == "+") { oh = a2 - c2; eh = b2 - c2 }
-      else { oh = a2 + c2; eh = b2 + c2 }
-  }
-
-  if ((oh < eh && zeroInSec >= oh && zeroInSec < eh) || (oh > eh && zeroInSec < eh && zeroInSec < oh) || (oh == eh)) {
-      return true;
-  }
-  else {
-      return false;
-  }
-}
-
 const ar = {
   60427792846014: {
     cityID: "1989",
@@ -72,24 +46,27 @@ buttonFindCityForm.addEventListener('click', function (event) {
         let deliveryUsername = obj.username
         let checkDeliveryState = (operatorState(obj.activeInterval))
         var deliveryState
+        var deliveryStateStyle
         if (checkDeliveryState) {
           deliveryState = "Activo"
+          deliveryStateStyle = " "
         } else {
           deliveryState = "Inactivo"
+          deliveryStateStyle = " style = 'filter: grayscale(100%); opacity: 0.9' "
         }
 
         deliveryResults.innerHTML += `
-        <a class="text-decoration-none" href="u/`+ obj.phoneNumber +`.html">
-        <label role="button" class="list-group-item rounded-3 py-3">
+        <a` + deliveryStateStyle + `class="text-decoration-none" href="u/`+ obj.phoneNumber +`.html">
+        <label role="button" class=" py-3">
           <div class="d-flex align-items-start">
             <div class="me-3">
-              <img style="object-fit: cover;" class="rounded-2" src="`+ obj.profileImg +`" alt="" width="120px" height="120px">
+              <img style="object-fit: cover;" class="rounded-circle" src="`+ obj.profileImg +`" alt="" width="90px" height="90px">
             </div>
             <div class="align-items-bottom">
-              <h5 class="m-0 fw-bold p-0">
+              <h5 class="m-0 p-0 text-dark">
                 `+ deliveryUsername +`
               </h5>
-              <p class="m-0 fw-semibold text-success">
+              <p class="m-0 fw-semibold text-primary">
                 ` + deliveryState + `
               </p>
               <div>
@@ -104,7 +81,7 @@ buttonFindCityForm.addEventListener('click', function (event) {
                   </ul>
                 </rater>
               </div>
-              <small class="fw-bold bi bi-geo-alt">`+ obtenerContenidoParentesis(formCity.value)[0] + " (" + obtenerContenidoParentesis(formCity.value)[1] + ")" +`</small>
+              <small class="bi bi-geo-alt text-dark">`+ obtenerContenidoParentesis(formCity.value)[0] + " (" + obtenerContenidoParentesis(formCity.value)[1] + ")" +`</small>
             </div>
           </div>
         </label>

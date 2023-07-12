@@ -118,7 +118,7 @@
             })
             .then(function (text) {
               loginForm.classList.remove('was-validated');
-              window.location.href = "userReview.html";
+              window.location.href = "nuevo-repartidor.html";
             })
             .catch(function (error) {
             });

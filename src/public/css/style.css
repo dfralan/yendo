@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 body {
-    font-family: 'Quicksand', sans-serif !important;
+    font-family: 'Space Grotesk', sans-serif !important;
 }
 
 .ui-helper-hidden-accessible{
@@ -10,12 +10,24 @@ body {
 
 }
 
+.navbar-toggler{
+  transition: .2s;
+  border: 0 !important;
+}
+
+
+.rotate {
+  transform: rotate(45deg) scale(1.4);
+  transition: .2s;
+}
+
 .logo-text{
     font-weight: 300;
 }
 
 .logoLoadAnimationContainer{
     position: absolute;
+    top: 0;
     background-color: var(--bs-body-bg);
     width: 100%;
     height: 100%;
@@ -30,10 +42,9 @@ body {
     position: absolute;
     width: 100px;
     height: 50px;
-    top: 30%;
+    top: 40%;
     left: 50%;
-    margin-left: -99px; /* margin is -0.5 * dimension */
-    margin-top: -25px;
+    margin-left: -75px; /* margin is -0.5 * dimension */
 }
 
 .bd-placeholder-img {

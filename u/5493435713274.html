@@ -33,155 +33,68 @@
 <body>
 
 	<!-- DOM Load Animation -->
-	<div class='logoLoadAnimationContainer bg-body-secondary'>
+	<div class='logoLoadAnimationContainer'>
 		<div class="logoLoadAnimation text-light">
-			<img src="../src/public/img/rafiki.svg" alt="" width="150px">
-			<img src="../src/public/img/logo.svg" alt="">
+			<img src="../src/public/img/logo.svg" alt="" width="150px">
 		</div>
 	</div>
-
-	<!-- Theme SVG -->
-	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-		<symbol id="check2" viewBox="0 0 16 16">
-			<path
-				d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-		</symbol>
-		<symbol id="circle-half" viewBox="0 0 16 16">
-			<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
-		</symbol>
-		<symbol id="moon-stars-fill" viewBox="0 0 16 16">
-			<path
-				d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
-			<path
-				d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
-		</symbol>
-		<symbol id="sun-fill" viewBox="0 0 16 16">
-			<path
-				d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-		</symbol>
-	</svg>
-
-	<!-- Loom language switcher -->
-	<loom style="display: none !important;" class="nav-link btn  dropdown align-items-center d-flex position-fixed bottom-0 end-0 mb-4 me-5 pe-5"
-		flag="rounded">
-		<a class="nav-link dropdown-toggle btn p-2 align-items-center" role="button" data-bs-toggle="dropdown"
-			aria-expanded="false" loom-indicator>
-		</a>
-		<ul class="dropdown-menu" loom-list>
-			<li role="button" class="dropdown-item" loom-language="ar"></li>
-			<li role="button" class="dropdown-item" loom-language="br"></li>
-		</ul>
-	</loom>
-
-	<!-- Theme Selector -->
-	<div id="themeSelector" style="transition: ease-in-out 0.3s;"
-		class="dropdown position-fixed bottom-0  d-flex align-items-center end-0 mb-4 me-4 bd-mode-toggle">
-		<button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center rounded-3" id="bd-theme"
-			type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
-			<svg class="bi my-1 theme-icon-active" width="1em" height="1em">
-				<use href="#circle-half"></use>
-			</svg>
-			<span class="visually-hidden" id="bd-theme-text"></span>
-		</button>
-		<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-			<li>
-				<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
-					aria-pressed="false">
-					<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
-						<use href="#sun-fill"></use>
-					</svg>
-					<span loom="Light"></span>
-					<svg class="bi ms-auto d-none" width="1em" height="1em">
-						<use href="#check2"></use>
-					</svg>
-				</button>
-			</li>
-			<li>
-				<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
-					aria-pressed="false">
-					<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
-						<use href="#moon-stars-fill"></use>
-					</svg>
-					<span loom="Dark"></span>
-					<svg class="bi ms-auto d-none" width="1em" height="1em">
-						<use href="#check2"></use>
-					</svg>
-				</button>
-			</li>
-			<li>
-				<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
-					aria-pressed="true">
-					<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
-						<use href="#circle-half"></use>
-					</svg>
-					<span loom="Auto"></span>
-					<svg class="bi ms-auto d-none" width="1em" height="1em">
-						<use href="#check2"></use>
-					</svg>
-				</button>
-			</li>
-		</ul>
-	</div>
-
+	
 	<!-- Profile Info -->
 	<yendo userID="60427792846014" username="@kevindevetac" userKind="0" phoneNumber="5493435713274" cityID="1989" activeInterval="08:00/18:00(-03:00)" countryCode="ar">
 	</yendo>
 
 	<!-- Header -->
-	<header class="p-3 bg-body-secondary">
-		<div class="container">
-			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-				<a href="/" class="d-flex align-items-center pt-1 pe-2 mb-lg-0 text-white text-decoration-none">
-					<img src="../src/public/img/logo.svg" alt="logo yendo" width="110">
-				</a>
+	<header class="fixed-top bg-body-secondary navbar d-flex align-items-center navbar-expand-md px-4">
+    <div class="container-fluid p-0">
 
-				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-					<div class="dropdown">
-						<button class="btn py-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-						  Su repartidor es
-						  <span id="selectedDeliveryUsername" class="text-primary"></span>
-						  <span id="userKind" class="bi"></span>
-						</button>
-						<div class="d-flex justify-content-center">
-							<ul class="dropdown-menu text-center p-3 mx-auto">
-							  <div class="p-2 rounded-3 bg-white justify-content-center mx-auto">
-								<qrs width="120px" content="5493435713274"></qrs>
-							  </div>
-							  <div>
-								<p class="fs-6 fw-semibold mb-0 pb-0" id="repartidorEstado"></p>
-								<p class="mb-1 list-inline-item badge rounded-pill text-light bg-black">Reputación alta: 4.5 estrellas
-								</p>
-						  
-								<ul class="list-inline mb-0 gap-0" rating="4.5">
-								  <li class="list-inline-item bi bi-star-fill text-primary"></li>
-								  <li class="list-inline-item bi bi-star-fill text-primary"></li>
-								  <li class="list-inline-item bi bi-star-fill text-primary"></li>
-								  <li class="list-inline-item bi bi-star-fill text-primary"></li>
-								  <li class="list-inline-item bi bi-star-half text-primary"></li>
-								</ul>
-								<small class="fw-bold bi bi-geo-alt">Paraná (Entre Rios)</small>
-							  </div>
-							</ul>
-						  </div>						  
-					  </div>
-				</ul>
+      <!-- Logo -->
+      <a class="navbar-brand d-flex fs-4" href="../index.html">
+        <img style="transform: translateY(5px);" src="../src/public/img/logo.svg" alt="logo yendo" width="100">
+      </a>
 
-				<div class="text-end">
-					<a href="../register.html" type="button" class="btn btn-primary me-2">Quiero ser repartidor</a>
-				</div>
-			</div>
-		</div>
-	</header>
+      <!-- Collapse header button -->
+      <a id="navbar-toggler-icon" class="m-0 p-1 navbar-toggler bi bi-plus fs-3 btn-warning btn rounded-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"></a>
+
+      
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav align-items-center">
+
+          <!-- Loom language switcher -->
+          <loom class="nav-link btn dropdown align-items-center p-0" flag="rounded">
+            <a class="nav-link dropdown-toggle btn p-0 align-items-center" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" loom-indicator>
+            </a>
+            <ul class="dropdown-menu" loom-list>
+                <li role="button" class="dropdown-item" loom-language="ar"></li>
+                <li role="button" class="dropdown-item" loom-language="br"></li>
+            </ul>
+          </loom>
+
+          <a id="navBarTellerLaunch" class="nav-link" loom="Need Help?" role="button" ></a>
+          <a href="register.html" role="button" type="button" class="btn btn-warning rounded-5 border-dark">Registrate como repartidor</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
 
 	<!-- Envio Form Section -->
-	<section class="flex-column">
+	<section class="flex-column pt-5">
 		<div id="envioForm" class="px-4 py-5 container col-lg-6 col-xl-5 col-md-7 mx-auto">
 
 			<h3 class="fw-bold">¿A dónde vamos?</h3>
-			<h6 class="mb-4">
-				Enviá y recibí en menos de 1 hora.
-			</h6>
-
+			<div class="btn-group mb-3">
+				<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+					Su repartidor es @kevindevetac
+				</button>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#">Action</a></li>
+					<li><a class="dropdown-item" href="#">Another action</a></li>
+					<li><a class="dropdown-item" href="#">Something else here</a></li>
+					<li><hr class="dropdown-divider"></li>
+					<li><a class="dropdown-item" href="#">Separated link</a></li>
+				</ul>
+			</div>
 			<div class="mx-5 mb-5">
 
 				<div class="form-floating mb-3">
@@ -220,7 +133,7 @@
 					</div>
 				</div>
 
-				<div class="d-flex gap-2 mb-3">
+				<div class="d-flex gap-2 mb-3 flex-wrap">
 
 					<input type="checkbox" class="btn-check" id="btn-check-fragil" autocomplete="off">
 					<label class="btn btn-outline-danger rounded-4 btn-sm" for="btn-check-fragil">
@@ -243,13 +156,13 @@
 					<input type="checkbox" class="btn-check" id="btn-check-efectivo" autocomplete="off">
 					<label class="btn btn-outline-success rounded-4 btn-sm" for="btn-check-efectivo">
 						<span class="bi bi-cash"></span>
-						Pago en Efectivo
+						Efectivo
 					</label>
 
 				</div>
 
 				<div class="d-grid gap-2">
-					<button id="pedir" class="btn btn-primary btn-lg fw-semibold" type="button" disabled>Pedir</button>
+					<button id="pedir" class="btn btn-warning btn-lg fw-semibold rounded-5 border-dark" type="button" disabled>Pedir Ahora</button>
 				</div>
 
 			</div>
@@ -269,10 +182,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="../src/public/js/app.js"></script>
 	<script src="../src/public/js/dataAR.js"></script>
-	<script src="../src/public/js/predictiveCity.js"></script>
-	<script src="../src/public/js/color-modes.js"></script>
 	<!-- Specific -->
 	<script src="../src/public/js/yendoComposer.js"></script>
+	<script src="../src/public/js/operatorState.js"></script>
 	<!-- QR Generator -->
 	<script src="../src/public/js/qrcode.js"></script>
 	<script src="../src/public/js/userqr.js"></script>
