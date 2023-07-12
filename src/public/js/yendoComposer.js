@@ -1,15 +1,71 @@
 (function () {
     function main() {
+        console.log('wep')
 
-    const yendoTag = document.querySelector("yendo");
+    // Get the element with the 'yendo' tag
+    const yendoElement = document.querySelector('yendo');
+    const userID = yendoElement.getAttribute('userID');
 
-    if (yendoTag) {
+    // Fields to fill
+    let deliveryUsername = document.getElementById("deliveryUsername")
+    let deliveryStateField = document.getElementById("deliveryState")
+    let deliveryRatingField = document.getElementById("rat")
+    let deliveryCityField = document.getElementById("deliveryCity")
+
+
+    // Content to fill fields to fill
+    let stateOfThisDelivery = usersAR[userID].activeInterval ? "Activo" : "Inactivo";
+
+    // Filling fields to fill
+    deliveryUsername.textContent = usersAR[userID].username
+    deliveryStateField.setAttribute("loom", stateOfThisDelivery)
+    deliveryRatingField.innerHTML = `
+    <rater rating="`+ usersAR[userID].rank +`">
+        <ul class="list-inline mb-0 gap-0">
+            <li class="list-inline-item badge rounded-pill text-light bg-black"></li>
+            <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
+            <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
+            <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
+            <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
+            <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
+        </ul>
+    </rater>
+    `
+    rateNow()
+
+    var ubicacionDelivery = getParentProvinceAndCityName(usersAR[userID].cityID);
+
+    deliveryCityField.textContent = ubicacionDelivery.ciudad + " (" + ubicacionDelivery.provincia + ")"
+
+
+    if (yendoElement) {
+
+        // QR Gen
+        let qrdinamic = document.getElementsByTagName("qrs")
+        if (qrdinamic) {
+        let qrda = Array.from(qrdinamic);
+        qrda.forEach((element) => {
+            let width = element.getAttribute("width") || "220px";
+            let height = element.getAttribute("height") || (width || "220px");
+            let colorDark = element.getAttribute("colorDark") || "#000000";
+            let colorLight = element.getAttribute("colorLight") || "#ffffff";
+    
+            if (content) {
+                var qrcode = new QRCode(element, {
+                    text: "https://yendo.vercel.app/u/" + parseInt(userID)/11 + ".html",
+                    width: parseInt(width),
+                    height: parseInt(height),
+                    colorDark : colorDark,
+                    colorLight : colorLight,
+                    correctLevel : QRCode.CorrectLevel.H
+                });
+            }
+            
+          });
+        }
 
         var switchDirec = document.getElementById('invertirDireccionesBtn');
         var pedirButton = document.getElementById('pedir');
-        let username = yendoTag.getAttribute('username')
-        let userKind = yendoTag.getAttribute('userKind')
-        let phoneNumber = yendoTag.getAttribute('phoneNumber')
         // Get the input values
         var direccionRetiro = document.getElementById('direccionRetiro');
         var direccionEntrega = document.getElementById('direccionEntrega');
@@ -21,27 +77,8 @@
         var tags = [];
         // Check the patterns for the input fields
         var direccionPattern = /^[A-Za-z0-9\s.,'¡¿ñÑáéíóúÁÉÍÓÚüÜ]+$/;
-        var activeInterval = yendoTag.getAttribute("activeInterval")
-        var state = document.getElementById("repartidorEstado")
 
-        if (operatorState(activeInterval)) {
-            state.textContent = "Activo"
-            state.classList.add("text-success");
-        } else {
-            state.textContent = "Inactivo"
-            state.classList.add("text-danger");
-        }
-
-        
-        // Set data of actual selected delivery
-        let deliveryBoy = document.getElementById("selectedDeliveryUsername")
-        let userKindSelected = document.getElementById("userKind")
-        deliveryBoy.textContent = username
-        if (userKind == "0"){
-            userKindSelected.classList.add("bi-person-check-fill")
-        } else {
-            userKindSelected.classList.add("bi-building-fill-check")
-        }
+ 
 
         switchDirec.addEventListener("click", function () {
             var tempValue = direccionRetiro.value;
@@ -65,7 +102,7 @@
             }
             var tagsString = tags.join(" ");
 
-            var mensajeRepartidor = "¡Hola "+ username +"!\n\n" +
+            var mensajeRepartidor = "¡Hola "+ usersAR[userID].username +"!\n\n" +
                             "Necesito realizar un envío con la siguiente ruta:\n\n" +
                             "Dirección de retiro: " + direccionRetiro.value + "\n" +
                             "Dirección de entrega: " + direccionEntrega.value + "\n\n" +
@@ -77,7 +114,7 @@
                             "Mensaje generado desde la App Yendo.";
             
             mensajeEncoded = encodeURIComponent(mensajeRepartidor)
-            window.open('https://wa.me/' + phoneNumber + '?text=' + mensajeEncoded, "_blank")
+            window.open('https://wa.me/' + parseInt(userID)/11 + '?text=' + mensajeEncoded, "_blank")
 
             // Optional: Reset the form after submission
             document.getElementById('direccionRetiro').value = "";

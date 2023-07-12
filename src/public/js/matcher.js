@@ -10,26 +10,50 @@ function obtenerContenidoParentesis(str) {
       return null; // El formato del string no coincide con lo esperado
     }
   }
-  
-  function obtenerIdCiudad(provincia, ciudad) {
-      
-    // Buscar la provincia en los datos
-    var provinciaEncontrada = dataAR.find(function(prov) {
-      return prov.nombre.toLowerCase() === provincia.toLowerCase();
+
+function obtenerIdCiudad(provincia, ciudad) {
+    
+  // Buscar la provincia en los datos
+  var provinciaEncontrada = citiesAR.find(function(prov) {
+    return prov.nombre.toLowerCase() === provincia.toLowerCase();
+  });
+
+  if (provinciaEncontrada) {
+    // Buscar la ciudad dentro de la provincia encontrada
+    var ciudadEncontrada = provinciaEncontrada.ciudades.find(function(ciud) {
+      return ciud.nombre.toLowerCase() === ciudad.toLowerCase();
     });
-  
-    if (provinciaEncontrada) {
-      // Buscar la ciudad dentro de la provincia encontrada
-      var ciudadEncontrada = provinciaEncontrada.ciudades.find(function(ciud) {
-        return ciud.nombre.toLowerCase() === ciudad.toLowerCase();
-      });
-  
-      if (ciudadEncontrada) {
-        return ciudadEncontrada.id;
-      } else {
-        return "Ciudad no encontrada";
-      }
+
+    if (ciudadEncontrada) {
+      return ciudadEncontrada.id;
     } else {
-      return "Provincia no encontrada";
+      return "Ciudad no encontrada";
+    }
+  } else {
+    return "Provincia no encontrada";
+  }
+}
+
+function getParentProvinceAndCityName(id) {
+  var result = {
+    provincia: null,
+    ciudad: null
+  };
+
+  for (var i = 0; i < citiesAR.length; i++) {
+    var provincia = citiesAR[i];
+    for (var j = 0; j < provincia.ciudades.length; j++) {
+      var ciudad = provincia.ciudades[j];
+      if (ciudad.id === id) {
+        result.provincia = provincia.nombre;
+        result.ciudad = ciudad.nombre;
+        break;
+      }
+    }
+    if (result.provincia !== null) {
+      break;
     }
   }
+
+  return result;
+}

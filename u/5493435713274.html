@@ -40,7 +40,7 @@
 	</div>
 	
 	<!-- Profile Info -->
-	<yendo userID="60427792846014" username="@kevindevetac" userKind="0" phoneNumber="5493435713274" cityID="1989" activeInterval="08:00/18:00(-03:00)" countryCode="ar">
+	<yendo userID="60427792846014">
 	</yendo>
 
 	<!-- Header -->
@@ -85,14 +85,16 @@
 			<h3 class="fw-bold">¿A dónde vamos?</h3>
 			<div class="btn-group mb-3">
 				<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-					Su repartidor es @kevindevetac
+					<span loom="Su repartidor es: "></span>
+					<span id="deliveryUsername"></span>
 				</button>
 				<ul class="dropdown-menu">
-					<li><a class="dropdown-item" href="#">Action</a></li>
-					<li><a class="dropdown-item" href="#">Another action</a></li>
-					<li><a class="dropdown-item" href="#">Something else here</a></li>
-					<li><hr class="dropdown-divider"></li>
-					<li><a class="dropdown-item" href="#">Separated link</a></li>
+					<li><a id="deliveryState" class="dropdown-item" loom></a></li>
+					<li id="rat" class="dropdown-item" href="#"></li>
+					<li class="dropdown-item">
+						<span class="bi bi-geo-alt"></span>
+						<span id="deliveryCity"></span>
+					</li>
 				</ul>
 			</div>
 			<div class="mx-5 mb-5">
@@ -181,19 +183,22 @@
 	<!-- App Dependencies -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="../src/public/js/app.js"></script>
-	<script src="../src/public/js/dataAR.js"></script>
-	<!-- Specific -->
-	<script src="../src/public/js/yendoComposer.js"></script>
-	<script src="../src/public/js/operatorState.js"></script>
+	<script src="../src/public/js/citiesAR.js"></script>
+	<script src="../src/public/js/usersAR.js"></script>
 	<!-- QR Generator -->
 	<script src="../src/public/js/qrcode.js"></script>
-	<script src="../src/public/js/userqr.js"></script>
+	<script src="../src/public/js/userComposer.js"></script>
 	<!-- Feedback Dependencies -->
 	<script src="../src/public/js/teller.js"></script>
 	<script src="../src/public/js/ouibounce.js"></script>
 	<!-- Internationalization -->
 	<script src="../src/public/js/loomTranslations.js"></script>
 	<script src="../src/public/js/loom.js"></script>
+	<!-- Specific -->
+	<script src="../src/public/js/yendoComposer.js"></script>
+	<script src="../src/public/js/operatorState.js"></script>
+	<script src="../src/public/js/rating.js"></script>
+	<script src="../src/public/js/matcher.js"></script>
 
 </body>
 

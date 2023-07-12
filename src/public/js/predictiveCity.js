@@ -1,7 +1,7 @@
 
 // Crear un objeto que almacene las ciudades por provincia
 var ciudadesPorProvincia = {};
-dataAR.forEach(function (provincia) {
+citiesAR.forEach(function (provincia) {
     var nombreProvincia = provincia.nombre;
     ciudadesPorProvincia[nombreProvincia] = provincia.ciudades.map(function (ciudad) {
         return ciudad.nombre + " (" + nombreProvincia + ")";
