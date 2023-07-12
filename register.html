@@ -3,21 +3,21 @@
 
 <head>
 
-  <title>Yendo - Mensajeria Descentralizada</title>
+  <title loom="Yendo - Mensajería Descentralizada">Yendo - Mensajería Descentralizada</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="Gestion mensajeria" />
+  <meta name="description" content="Gestion mensajería" />
   <meta name="author" content="@dfralan" />
   <!-- Previews -->
-  <meta name="msapplication-TileImage" content="https://yendo.vercel.app/src/public/img/yendo-500x500.png">
-  <meta property="og:site_name" content="yendo.vercel.app">
+  <meta name="msapplication-TileImage" content="https://yendo.co/src/public/img/yendo-500x500.png">
+  <meta property="og:site_name" content="yendo.co">
   <meta property="og:title" content="Yendo">
-  <meta property="og:description" content="Mensajeria Descentralizada">
-  <meta property="og:image" itemprop="image" content="https://yendo.vercel.app/src/public/img/yendo-500x500.png">
+  <meta property="og:description" content="Mensajería Descentralizada">
+  <meta property="og:image" itemprop="image" content="https://yendo.co/src/public/img/yendo-500x500.png">
   <meta property="og:type" content="website" />
   <meta property="og:image:width" content="500px">
   <meta property="og:image:height" content="500px">
-  <meta property="og:url" content="https://yendo.vercel.app">
+  <meta property="og:url" content="https://yendo.co">
   <!-- JS Dependencies -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
@@ -39,21 +39,8 @@
       </div>
   </div>
 
-
-    <!-- Loom language switcher -->
-    <loom class="nav-link btn  dropdown align-items-center d-flex position-fixed bottom-0 end-0 p-4"
-        flag="rounded">
-        <a class="nav-link dropdown-toggle btn p-2 align-items-center" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false" loom-indicator>
-        </a>
-        <ul class="dropdown-menu" loom-list>
-            <li role="button" class="dropdown-item" loom-language="ar"></li>
-            <li role="button" class="dropdown-item" loom-language="br"></li>
-        </ul>
-    </loom>
-
   <!-- Main Section -->
-  <section class="container col-xl-10 col-xxl-8 px-4 py-5 d-flex flex-column align-items-center">
+  <section class=" z-1 container col-xl-10 col-xxl-8 px-4 py-5 d-flex flex-column align-items-center">
       
       <div class="row align-items-center g-lg-5 py-5 z-3">
 
@@ -61,8 +48,8 @@
           <img src="src/public/img/rafiki.svg" alt="" width="200">
           <img style="transform: translateX(-70px);" class="position-absolute" src="src/public/img/logo.svg" alt="" width="150">
           <div>
-            <p class="fs-4 mb-0">Mensajeria descentralizada</p>
-            <a href="buscar.html" role="button" class="fs-5 text-decoration-none">Realizá un pedido</a>
+            <p class="fs-4 mb-0" loom="Mensajería descentralizada"></p>
+            <a href="buscar.html" role="button" class="fs-5 text-decoration-none" loom="Realizá un pedido"></a>
           </div>
         </div>
 
@@ -71,56 +58,53 @@
           <form class="p-3 shadow rounded-3 bg-body" id="loginForm" novalidate>
 
             <div class="mb-3" id="formType">
-              <span role="button" class="badge rounded-pill selected-pill" id="particularBtn">Particular</span>
-              <span role="button" class="badge rounded-pill text-body-tertiary" id="negocioBtn">Negocio</span>
+              <span role="button" class="badge rounded-pill selected-pill" id="particularBtn" loom="Particular"></span>
+              <span role="button" class="badge rounded-pill text-body-tertiary" id="negocioBtn" loom="Negocio"></span>
             </div>
 
             <div class="input-group has-validation mb-3">
               <span class="input-group-text rounded-0 rounded-start">@</span>
               <div class="form-floating">
                 <input type="text" class="form-control" id="formUsername" placeholder="juan1" pattern="[A-Za-z0-9-_]+" required>
-                <label for="formUsername">Nombre de usuario</label>
-                <div class="invalid-tooltip">
-                  Ingresá un usuario válido.
+                <label for="formUsername" loom="Nombre de usuario"></label>
+                <div class="invalid-tooltip" loom="Ingresá un usuario válido.">
                 </div>
               </div>
             </div>
             
             <div class="input-group has-validation mb-3">
               <span class="input-group-text rounded-0 rounded-start" id="basic-addon3" type="button" data-bs-toggle="popover" data-bs-placement="bottom"  data-bs-title="¿No encuentras tu país?" data-bs-content="Actualmente prestamos nuestros servicios solo en Argentina, envianos un mensaje especificándonos tu país para informarte cuando extendamos nuestro servicio">
-                <span>
+                <a>
                   <img src="https://hatscripts.github.io/circle-flags/flags/ar.svg" width="20">
-                </span>
+                </a>
                 +54
               </span>
               <div class="form-floating">
                 <input type="text" class="form-control" id="formNumber" placeholder="xxxxxxxxxx" required pattern="^[\d+-]{9,14}$">
-                <label for="formNumber">Número de whatsapp</label>
+                <label for="formNumber" loom="Número de whatsapp"></label>
                 <div class="invalid-tooltip">
-                  Ingresá un número válido.
                 </div>
               </div>
             </div>
 
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="formCity" placeholder="Juan" pattern="^.*\(.+\).*"required>
-              <label for="formCity">Localidad</label>
-              <div class="invalid-tooltip">
-                Ingresá tu localidad o ciudad.
+              <label for="formCity" loom="Localidad"></label>
+              <div class="invalid-tooltip" loom="Ingresá tu localidad o ciudad.">
               </div>
             </div>
             
-            <button class="w-100 btn btn-lg btn-primary fw-bold rounded-5 border-dark" type="submit">Registrarme</button>
-            <label class="mt-2">
-              Al hacer clic en "Registrarme", aceptas los términos de uso.
+            <button class="w-100 btn btn-lg btn-primary fw-bold rounded-5 border-dark" type="submit" loom="Registrarme"></button>
+            <label class="mt-2" loom="Al hacer clic en 'Registrarme', aceptas los términos de uso.">
+              
             </label>
             
           </form>
 
           <div class="py-3 px-5 w-100 text-center">
             <p>
-              <span>Creá una página para vos, o tu negocio.</span>
-              <span id="navBarTellerLaunch" role="button" class="fw-bold">¿Necesitas ayuda?</span>
+              <span loom="Creá una página para vos, o tu negocio."></span>
+              <span id="navBarTellerLaunch" role="button" class="fw-bold" loom="¿Necesitas ayuda?"></span>
             </p>
           </div>
 
@@ -129,6 +113,20 @@
       </div>
 
   </section>
+
+
+
+  <!-- Loom language switcher -->
+  <loom class="z-3 nav-link btn  dropdown align-items-center d-flex position-fixed bottom-0 end-0 p-4"
+      flag="rounded">
+      <a class="nav-link dropdown-toggle btn btn-light p-2 align-items-center" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false" loom-indicator>
+      </a>
+      <ul class="dropdown-menu" loom-list>
+          <li role="button" class="dropdown-item" loom-language="ar"></li>
+          <li role="button" class="dropdown-item" loom-language="br"></li>
+      </ul>
+  </loom>
 
   <!-- Teller Button -->
   <teller style="transition: ease-in-out 0.3s;" class="bottom-0 start-0 mb-4 ms-4" lang="en"
@@ -142,7 +140,6 @@
   <script src="src/public/js/app.js"></script>
   <script src="src/public/js/citiesAR.js"></script>
   <script src="src/public/js/predictiveCity.js"></script>
-  <script src="src/public/js/color-modes.js"></script>
   <!-- Specific -->
   <script src="src/public/js/loginForm.js"></script>
   <script src="src/public/js/matcher.js"></script>

@@ -45,7 +45,7 @@
 
         // QR Gen
         var qrcode = new QRCode(document.getElementById("qrcode"), {
-            text: "https://yendo.vercel.app/u/" + parseInt(userID)/11 + ".html",
+            text: "https://yendo.co/u/" + parseInt(userID)/11 + ".html",
             width: 200,
             height: 200,
             colorDark : "#000000",

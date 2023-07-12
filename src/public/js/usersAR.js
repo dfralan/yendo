@@ -23,4 +23,12 @@ const usersAR = {
       rank: "4.5",
       profileImg: "https://scontent.fros2-2.fna.fbcdn.net/v/t39.30808-6/344210808_236113162432935_2413550585574849855_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=-P6bDYItXDMAX81ESMl&_nc_ht=scontent.fros2-2.fna&oh=00_AfCdSbwuxNWNDpNzithZenNtr4TqQXeZ9rGHT6fsQ0c-tA&oe=64B2CBB0"
     },
+    60427543579414: {
+      cityID: "3542",
+      username: "@coopexpress_rosario",
+      userKind: "1",
+      activeInterval: "08:00/18:00(-03:00)",
+      rank: "4.0",
+      profileImg: "https://scontent.fros2-2.fna.fbcdn.net/v/t39.30808-6/308075089_511360940997403_1807329786697753045_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=8-QXBtbAb0oAX9H1Fzi&_nc_ht=scontent.fros2-2.fna&oh=00_AfA5ODMobQsOF6UjEkmmMpStT6_HBv0-h1MRH-T7vrGyaw&oe=64B472E5"
+    },
   };
