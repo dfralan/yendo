@@ -20,9 +20,13 @@ const loomTranslations = {
         "es": "Conductor no verificado",
         "br": "Motorista não verificado"
     },
-    "Te redirigiremos a la página principal en 7 segundos": {
-        "es": "Te redirigiremos a la página principal en 7 segundos",
-        "br": "Você será redirecionado para a página inicial em 7 segundos"
+    "Te redirigiremos a la página principal en ": {
+        "es": "Te redirigiremos a la página principal en ",
+        "br": "Você será redirecionado para a página inicial em "
+    },
+    "segundos...": {
+        "es": "segundos...",
+        "br": "segundos..."
     },
     "Ir a la página de inicio": {
         "es": "Ir a la página de inicio",
@@ -44,6 +48,10 @@ const loomTranslations = {
         "es": "Registrarme",
         "br": "Cadastre-se"
     },
+    "Registrate como repartidor": {
+        "es": "Registrate como repartidor",
+        "br": "Registre-se como entregador"
+    },
     "Registrate": {
         "es": "Registrarme",
         "br": "Cadastre-se"
@@ -56,6 +64,10 @@ const loomTranslations = {
         "es": "¡Genial!",
         "br": "Ótimo!"
     },
+    "Activo": {
+        "es": "Activo",
+        "br": "Ativo!"
+    },
     "Recibimos tu información, nos comunicaremos con vos en un transcurso no mayor a 24hs para verificar tu identidad.": {
         "es": "Recibimos tu información, nos pondremos en contacto contigo en un plazo de 24 horas para verificar tu identidad.",
         "br": "Recebemos suas informações, entraremos em contato com você em até 24 horas para verificar sua identidade."
@@ -63,6 +75,10 @@ const loomTranslations = {
     "¿Necesitas ayuda?": {
         "es": "¿Necesitas ayuda?",
         "br": "Precisa de ajuda?"
+    },
+    "¿A dónde vamos?": {
+        "es": "¿A dónde vamos?",
+        "br": "Aonde vamos?"
     },
     "Particular": {
         "es": "Particular",

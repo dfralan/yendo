@@ -36,7 +36,7 @@ buttonFindCityForm.addEventListener('click', function (event) {
               <h5 class="m-0 p-0 text-dark">
                 `+ deliveryUsername +`
               </h5>
-              <p class="m-0 fw-semibold text-primary">
+              <p class="m-0 fw-semibold text-primary" loom="` + deliveryState + `">
                 ` + deliveryState + `
               </p>
               <div>
