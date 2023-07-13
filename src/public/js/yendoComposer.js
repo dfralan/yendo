@@ -22,10 +22,11 @@
         }
         getUrlFromCookie()
         
-        if (usersAR[userID].username){
+        if (usersAR[userID]){
             console.log("anda")
         }
-        else{"chamuyo"}
+        else{
+            console.log("chamuyo")}
 
 
     // Fields to fill
