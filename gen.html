@@ -63,8 +63,10 @@
       for (var i = 0; i < cookies.length; i++) {
         var cookie = cookies[i].trim();
         if (cookie.indexOf("myUrlCookie=") === 0) {
-          console.log(cookie.substring("myUrlCookie=".length, cookie.length))
-          return cookie.substring("myUrlCookie=".length, cookie.length);
+          userURL = cookie.substring("myUrlCookie=".length, cookie.length)
+          var parts = userURL.split("/");
+          var extractedValue = parts[parts.length - 1];
+          console.log(extractedValue);
         }
       }
       return null; // Return null if the cookie is not found
