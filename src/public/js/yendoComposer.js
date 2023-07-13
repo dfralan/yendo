@@ -22,7 +22,7 @@
         }
         getUrlFromCookie()
         
-        if (usersAR[userID]){
+        if (usersAR[userID].username){
             console.log("anda")
         }
         else{"chamuyo"}
