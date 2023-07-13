@@ -20,8 +20,12 @@
         }
         return null; // Return null if the cookie is not found
         }
-    
         getUrlFromCookie()
+        
+        if (usersAR[userID]){
+            console.log("anda")
+        }
+        else{"chamuyo"}
 
 
     // Fields to fill

@@ -46,7 +46,6 @@
         }, 500);
       }, 1000);
     }
-    
 
     // Popover launch
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
