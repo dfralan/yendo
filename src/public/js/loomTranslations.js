@@ -4,13 +4,45 @@ const loomTranslations = {
         "es": "Frágil",
         "br": "Fragil"
     },
+    "Urgente": {
+        "es": "Urgente",
+        "br": "Urgente"
+    },
     "Frío": {
         "es": "Frío",
         "br": "Frio"
     },
+    "Pedir Ahora": {
+        "es": "Pedir Ahora",
+        "br": "Peça Agora"
+    },
+    "Ingresá la dirección de retiro.": {
+        "es": "Ingresá la dirección de retiro.",
+        "br": "Digite o endereço de retirada."
+    },
     "Efectivo": {
         "es": "Efectivo",
         "br": "Efetivo"
+    },
+    "Explayate tanto como lo creas necesario.": {
+        "es": "Explayate tanto como lo creas necesario.",
+        "br": "Expanda o quanto achar necessário."
+    },
+    "Indicaciones para el repartidor": {
+        "es": "Indicaciones para el repartidor",
+        "br": "Indicações para o entregador"
+    },
+    "Dirección de entrega": {
+        "es": "Dirección de entrega",
+        "br": "Endereço de entrega"
+    },
+    "Dirección de retiro": {
+        "es": "Dirección de retiro",
+        "br": "Endereço de retirada"
+    },
+    "Ingresá la dirección de entrega.": {
+        "es": "Ingresá la dirección de entrega.",
+        "br": "Digite o endereço de entrega."
     },
     "Yendo - Mensajería Descentralizada": {
         "es": "Yendo - Mensajería Descentralizada",

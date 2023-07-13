@@ -71,7 +71,7 @@
 			</loom>
 
 			<a id="navBarTellerLaunch" class="nav-link" loom="Need Help?" role="button" ></a>
-			<a href="register.html" role="button" type="button" class="btn btn-warning rounded-5 border-dark">Registrate como repartidor</a>
+			<a href="register.html" role="button" type="button" class="btn btn-warning rounded-5 border-dark" loom="Registrate como repartidor"></a>
 			</div>
 		</div>
 
@@ -82,7 +82,7 @@
 	<section class="flex-column pt-5">
 		<div id="envioForm" class="px-4 py-5 container col-lg-6 col-xl-5 col-md-7 mx-auto">
 
-			<h3 class="fw-bold">¿A dónde vamos?</h3>
+			<h3 class="fw-bold"loom="¿A dónde vamos?"></h3>
 			<div class="btn-group mb-3">
 				<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 					<span loom="Su repartidor es: "></span>
@@ -112,9 +112,8 @@
 						style="left: -40px; top: 10px; width: 30px;">
 					<input type="text" class="form-control" id="direccionRetiro" placeholder="name@example.com"
 						novalidate>
-					<label for="direccionRetiro">Dirección de retiro</label>
-					<div class="invalid-feedback">
-						Ingresá la dirección de retiro.
+					<label for="direccionRetiro" loom="Dirección de retiro"></label>
+					<div class="invalid-feedback" loom="Ingresá la dirección de retiro.">
 					</div>
 				</div>
 
@@ -126,18 +125,18 @@
 						style="right: -55px; top: -35px"></button>
 					<input type="text" class="form-control" id="direccionEntrega" placeholder="name@example.com"
 						novalidate>
-					<label for="direccionEntrega">Dirección de entrega</label>
-					<div class="invalid-feedback">
-						Ingresá la dirección de entrega.
+					<label for="direccionEntrega" loom="Dirección de entrega"></label>
+					<div class="invalid-feedback" loom="Ingresá la dirección de entrega.">
+						
 					</div>
 				</div>
 
 				<div class="form-floating mb-3">
 					<textarea class="form-control" placeholder="Leave a comment here" id="indicacionesEntrega"
 						style="height: 100px"></textarea>
-					<label for="indicacionesEntrega">Indicaciones para el repartidor</label>
-					<div id="indicacionesHelpBlock" class="form-text">
-						Explayate tanto como lo creas necesario.
+					<label for="indicacionesEntrega" loom="Indicaciones para el repartidor"></label>
+					<div id="indicacionesHelpBlock" class="form-text" loom="Explayate tanto como lo creas necesario.">
+						
 					</div>
 				</div>
 
@@ -146,31 +145,31 @@
 					<input type="checkbox" class="btn-check" id="btn-check-fragil" autocomplete="off">
 					<label class="btn btn-outline-danger rounded-4 btn-sm" for="btn-check-fragil">
 						<span class="bi bi-exclamation-triangle"></span>
-						Frágil
+						<span loom="Frágil"></span>
 					</label>
 
 					<input type="checkbox" class="btn-check" id="btn-check-urgente" autocomplete="off">
 					<label class="btn btn-outline-warning rounded-4 btn-sm" for="btn-check-urgente">
 						<span class="bi bi-speedometer2"></span>
-						Urgente
+						<span loom="Urgente"></span>
 					</label>
 
 					<input type="checkbox" class="btn-check" id="btn-check-frio" autocomplete="off">
 					<label class="btn btn-outline-info rounded-4 btn-sm" for="btn-check-frio">
 						<span class="bi bi-thermometer-snow"></span>
-						Frío
+						<span loom="Frío"></span>
 					</label>
 
 					<input type="checkbox" class="btn-check" id="btn-check-efectivo" autocomplete="off">
 					<label class="btn btn-outline-success rounded-4 btn-sm" for="btn-check-efectivo">
 						<span class="bi bi-cash"></span>
-						Efectivo
+						<span loom="Efectivo"></span>
 					</label>
 
 				</div>
 
 				<div class="d-grid gap-2">
-					<button id="pedir" class="btn btn-warning btn-lg fw-semibold rounded-5 border-dark" type="button" disabled>Pedir Ahora</button>
+					<button id="pedir" class="btn btn-warning btn-lg fw-semibold rounded-5 border-dark" type="button" disabled loom="Pedir Ahora"></button>
 				</div>
 
 			</div>
