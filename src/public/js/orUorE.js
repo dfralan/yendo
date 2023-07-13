@@ -26,7 +26,7 @@ buttonFindCityForm.addEventListener('click', function (event) {
         }
 
         deliveryResults.innerHTML += `
-        <a` + deliveryStateStyle + `class="text-decoration-none" href="u/`+ parseInt(key)/11 +`.html">
+        <a` + deliveryStateStyle + `class="text-decoration-none" href="https://yendo.vercel.app/`+ parseInt(key)/11 +`">
         <label role="button" class=" py-3">
           <div class="d-flex align-items-start">
             <div class="me-3">
