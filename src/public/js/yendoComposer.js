@@ -1,10 +1,28 @@
 (function () {
     function main() {
-        console.log('wep')
+
 
     // Get the element with the 'yendo' tag
     const yendoElement = document.querySelector('yendo');
-    const userID = yendoElement.getAttribute('userID');
+    var userID
+
+    function getUrlFromCookie() {
+        var cookies = document.cookie.split(";"); // Split all cookies
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            if (cookie.indexOf("myUrlCookie=") === 0) {
+            userURL = cookie.substring("myUrlCookie=".length, cookie.length)
+            var parts = userURL.split("/");
+            var extractedValue = parts[parts.length - 1];
+            console.log(extractedValue);
+            userID = (extractedValue * 11)
+            }
+        }
+        return null; // Return null if the cookie is not found
+        }
+    
+        getUrlFromCookie()
+
 
     // Fields to fill
     let deliveryUsername = document.getElementById("deliveryUsername")
@@ -45,7 +63,7 @@
 
         // QR Gen
         var qrcode = new QRCode(document.getElementById("qrcode"), {
-            text: "https://yendo.vercel.app/u/" + parseInt(userID)/11 + ".html",
+            text: "https://yendo.vercel.app/" + parseInt(userID)/11,
             width: 200,
             height: 200,
             colorDark : "#000000",
