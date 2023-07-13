@@ -41,7 +41,6 @@
         <span id="cuentaRegresivaRedireccion">7</span>
         <span loom="segundos..."></span>
       </p>
-      <meta http-equiv="refresh" content="7;url=https://yendo.vercel.app/u/gen.html">
       <a href="https://yendo.vercel.app" class="btn btn-primary" loom="Ir a la página de inicio"></a>
     </div>
   </div>
@@ -59,11 +58,19 @@
     }, 1000);
   </script>
   <script>
-    function saveUrlAsCookie() {
-      var currentUrl = window.location.href; // Get the current URL
-      document.cookie = "myUrlCookie=" + currentUrl;
+    function getUrlFromCookie() {
+      var cookies = document.cookie.split(";"); // Split all cookies
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.indexOf("myUrlCookie=") === 0) {
+          console.log(cookie.substring("myUrlCookie=".length, cookie.length))
+          return cookie.substring("myUrlCookie=".length, cookie.length);
+        }
+      }
+      return null; // Return null if the cookie is not found
     }
-    saveUrlAsCookie()
+
+    getUrlFromCookie()
 
   </script>
   <!-- Internationalization -->
