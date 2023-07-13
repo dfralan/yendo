@@ -31,36 +31,57 @@
 </head>
 
 
-    <body>
-        <div class="d-flex align-items-center justify-content-center vh-100">
-          <div class="text-center col-md-8 col-lg-6 px-4">
-                <img src="https://yendo.vercel.app/src/public/img/rafiki.svg" alt="" width="300">
-                <p class="fs-3" loom="Conductor no verificado"></p>
-                <p class="lead">
-                  <span loom="Te redirigiremos a la página principal en "></span>
-                    <span id="cuentaRegresivaRedireccion">7</span>
-                    <span loom="segundos..."></span>
-                  </p>
-                  <meta http-equiv="refresh" content="7;url=https://yendo.vercel.app">
-                <a href="https://yendo.vercel.app" class="btn btn-primary" loom="Ir a la página de inicio"></a>
-            </div>
-        </div>
-        <script>
-            var count = 7;
-            var countdownElement = document.getElementById("cuentaRegresivaRedireccion");
-          
-            var countdownInterval = setInterval(function() {
-              count--;
-              countdownElement.textContent = count;
-          
-              if (count <= 2) {
-                clearInterval(countdownInterval);
-              }
-            }, 1000);
-          </script>
-	  <!-- Internationalization -->
-    <script src="https://yendo.vercel.app/src/public/js/loom.js"></script>
-    <script src="https://yendo.vercel.app/src/public/js/loomTranslations.js"></script>
+<body>
+  <div class="d-flex align-items-center justify-content-center vh-100">
+    <div class="text-center col-md-8 col-lg-6 px-4">
+      <img src="https://yendo.vercel.app/src/public/img/rafiki.svg" alt="" width="300">
+      <p class="fs-3" loom="Conductor no verificado"></p>
+      <p class="lead">
+        <span loom="Te redirigiremos a la página principal en "></span>
+        <span id="cuentaRegresivaRedireccion">7</span>
+        <span loom="segundos..."></span>
+      </p>
+      <meta http-equiv="refresh" content="7;url=https://yendo.vercel.app">
+      <a href="https://yendo.vercel.app" class="btn btn-primary" loom="Ir a la página de inicio"></a>
+    </div>
+  </div>
+  <script>
+    var count = 7;
+    var countdownElement = document.getElementById("cuentaRegresivaRedireccion");
+
+    var countdownInterval = setInterval(function () {
+      count--;
+      countdownElement.textContent = count;
+
+      if (count <= 2) {
+        clearInterval(countdownInterval);
+      }
+    }, 1000);
+  </script>
+  <script>
+    function saveUrlAsCookie() {
+      var currentUrl = window.location.href; // Get the current URL
+      document.cookie = "myUrlCookie=" + currentUrl;
+    }
+    function getUrlFromCookie() {
+      var cookies = document.cookie.split(";"); // Split all cookies
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.indexOf("myUrlCookie=") === 0) {
+          console.log(cookie.substring("myUrlCookie=".length, cookie.length))
+          return cookie.substring("myUrlCookie=".length, cookie.length);
+        }
+      }
+      return null; // Return null if the cookie is not found
+    }
+
+    saveUrlAsCookie()
+    getUrlFromCookie()
+
+  </script>
+  <!-- Internationalization -->
+  <script src="https://yendo.vercel.app/src/public/js/loom.js"></script>
+  <script src="https://yendo.vercel.app/src/public/js/loomTranslations.js"></script>
 
 </body>
 
