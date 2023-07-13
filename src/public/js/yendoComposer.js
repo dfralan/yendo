@@ -10,8 +10,8 @@
             var cookies = document.cookie.split(";"); // Split all cookies
             for (var i = 0; i < cookies.length; i++) {
                 var cookie = cookies[i].trim();
-                if (cookie.indexOf("myUrlCookie=") === 0) {
-                    userURL = cookie.substring("myUrlCookie=".length, cookie.length)
+                if (cookie.indexOf("deliveryConstructorCookie=") === 0) {
+                    userURL = cookie.substring("deliveryConstructorCookie=".length, cookie.length)
                     var parts = userURL.split("/");
                     var extractedValue = parts[parts.length - 1];
                     console.log(extractedValue);
@@ -174,7 +174,8 @@
             });
         }
         else {
-            console.log("chamuyo")
+            console.log("No delivery match")
+            window.location.href = "https://yendo.vercel.app/no-delivery.html";
         }
 
     }
