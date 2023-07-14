@@ -15,7 +15,7 @@ const usersAR = {
       rank: "3.0",
       profileImg: "https://scontent.fros2-2.fna.fbcdn.net/v/t39.30808-6/344255982_1309057513288690_2623422176070735081_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=T4OsKmVEjogAX_aXi0_&_nc_ht=scontent.fros2-2.fna&oh=00_AfAIv2A7jwsXWnludwQVQhu1MKut-bXlD58eOg7i3Gzk9g&oe=64B33E95"
     },
-    60427792846011: {
+    60427781784854: {
       cityID: "1989",
       username: "@facudevetac",
       userKind: "0",
@@ -23,8 +23,8 @@ const usersAR = {
       rank: "4.5",
       profileImg: "https://scontent.fros2-2.fna.fbcdn.net/v/t39.30808-6/344210808_236113162432935_2413550585574849855_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=-P6bDYItXDMAX81ESMl&_nc_ht=scontent.fros2-2.fna&oh=00_AfCdSbwuxNWNDpNzithZenNtr4TqQXeZ9rGHT6fsQ0c-tA&oe=64B2CBB0"
     },
-    60427781784854: {
-      cityID: "1989",
+    60427781754: {
+      cityID: "19",
       username: "@coopexpress_rosario",
       userKind: "1",
       activeInterval: "08:00/18:00(-03:00)",
