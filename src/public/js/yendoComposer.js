@@ -126,7 +126,7 @@
                     "Mensaje generado desde la App Yendo.";
 
         
-                window.open('https://wa.me/' + parseInt(userID) / 11 + '?text=' + mensajeEncoded, "_blank")
+                window.open('https://wa.me/' + parseInt(userID) / 11 + '?text=' + mensajeRepartidor, "_blank")
 
                 // Optional: Reset the form after submission
                 document.getElementById('direccionRetiro').value = "";
