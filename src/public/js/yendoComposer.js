@@ -111,12 +111,12 @@
                 }
                 var tagsString = tags.join(" ");
 
-                alert(direccionRetiro.value)
+                let dr = direccionRetiro.value
 
                 
                 var mensajeRepartidor = "¡Hola " + usersAR[userID].username + "!\n\n" +
                     "Necesito realizar un envío con la siguiente ruta:\n\n" +
-                    "Dirección de retiro: " + direccionRetiro.value + "\n" +
+                    "Dirección de retiro: " + dr + "\n" +
                     "Dirección de entrega: " + direccionEntrega.value + "\n\n" +
                     "Indicaciones:\n" +
                     indicacionesEntrega.value + "\n\n" +
@@ -125,7 +125,7 @@
                     "¡Gracias!\n\n" +
                     "Mensaje generado desde la App Yendo.";
 
-            alert(mensajeRepartidor)
+        
                 window.open('https://wa.me/' + parseInt(userID) / 11 + '?text=' + mensajeEncoded, "_blank")
 
                 // Optional: Reset the form after submission
