@@ -112,7 +112,7 @@
                 var tagsString = tags.join(" ");
 
                 alert(direccionRetiro.value)
-return
+
                 
                 var mensajeRepartidor = "¡Hola " + usersAR[userID].username + "!\n\n" +
                     "Necesito realizar un envío con la siguiente ruta:\n\n" +
@@ -125,7 +125,7 @@ return
                     "¡Gracias!\n\n" +
                     "Mensaje generado desde la App Yendo.";
 
-                mensajeEncoded = encodeURIComponent(mensajeRepartidor)
+            alert(mensajeRepartidor)
                 window.open('https://wa.me/' + parseInt(userID) / 11 + '?text=' + mensajeEncoded, "_blank")
 
                 // Optional: Reset the form after submission
