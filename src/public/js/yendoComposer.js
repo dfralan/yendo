@@ -112,7 +112,8 @@
                 var tagsString = tags.join(" ");
 
                 alert(direccionRetiro.value)
-
+return
+                
                 var mensajeRepartidor = "¡Hola " + usersAR[userID].username + "!\n\n" +
                     "Necesito realizar un envío con la siguiente ruta:\n\n" +
                     "Dirección de retiro: " + direccionRetiro.value + "\n" +
