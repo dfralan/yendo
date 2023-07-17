@@ -65,7 +65,7 @@
 
             // QR Gen
             var qrcode = new QRCode(document.getElementById("qrcode"), {
-                text: "https://yendo.vercel.app/" + parseInt(userID) / 11,
+                text: "https://yendo.delivery/" + parseInt(userID) / 11,
                 width: 200,
                 height: 200,
                 colorDark: "#000000",
@@ -178,7 +178,7 @@
         }
         else {
             console.log("No delivery match")
-            window.location.href = "https://yendo.vercel.app/no-delivery.html";
+            window.location.href = "https://yendo.delivery/no-delivery.html";
         }
 
     }
