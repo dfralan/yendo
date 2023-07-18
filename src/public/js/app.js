@@ -9,7 +9,6 @@
 
   function main() {
 
-
     // Collapse navbar button animation
     const plusIcon = document.getElementById('navbar-toggler-icon');
 
@@ -65,6 +64,31 @@
         
       })
     }
+
+    addToHomescreen({
+      skipFirstVisit: false,
+      maxDisplayCount: 1,
+      startDelay: 0,
+      lifespan: 15,
+      displayPace: 1440,
+      icon: 'https://yendo.delivery/src/img/yendo-600x600.png',
+      message: '¡Agrega esta aplicación a tu pantalla de inicio!',
+      validLocation: ['home', 'web'],
+      onAdd: function () {
+        // Se ejecuta cuando se agrega a la pantalla de inicio
+      },
+      onPrivate: function () {
+        // Se ejecuta cuando el acceso directo se abre en modo de navegación privada
+      }
+    });
+
+    let downloadAppButton = document.getElementById("downloadTheDirectAccess")
+
+    downloadAppButton.addEventListener("click", function () {
+      console.log("wep")
+      addToHomescreen();
+  })
+    
   }
   window.addEventListener('DOMContentLoaded', () => {
     main()
