@@ -65,8 +65,8 @@ const loomTranslations = {
         "br": "Ir para a página inicial"
     },
     "Buscar repartidores": {
-        "es": "Buscar repartidores",
-        "br": "Buscar entregadores"
+        "es": "Buscar",
+        "br": "Buscar"
     },
     "Ingresá tu ciudad": {
         "es": "Ingresá tu ciudad",
