@@ -1,2 +1,3 @@
-self.addEventListener('fetch', event => {
-})
+addEventListener("fetch", (event) => {});
+
+onfetch = (event) => {};
