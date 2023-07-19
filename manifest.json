@@ -19,7 +19,8 @@
     }
   ],
   "serviceworker": {
-    "src": "sw.js"
+    "src": "sw.js",
+    "scope": "/"
   },
   "start_url": "index.html",
   "background_color": "#F9FAFC",
