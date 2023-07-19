@@ -1,83 +1,26 @@
-// Asigna un nombre único al caché
-var CACHE_NAME = 'my-site-cache-v1';
+const offlinePage = '/offline.html'; // Specify the path to your offline.html file
 
-// Archivos para cachear
-var urlsToCache = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/offline.html',
-  '/src/public/js/app.js',
-  '/src/public/css/style.css',
-  '/src/public/img/icon-192x192.png'
-];
-
-// Instalación del Service Worker
-self.addEventListener('install', function(event) {
-  // Realiza la instalación
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(function(cache) {
-        console.log('Caché abierta');
-        return cache.addAll(urlsToCache);
-      })
-  );
-});
-
-// Activación del Service Worker
-self.addEventListener('activate', function(event) {
-  event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.filter(function(cacheName) {
-          // Elimina cachés antiguas si existen
-          return cacheName !== CACHE_NAME;
-        }).map(function(cacheName) {
-          return caches.delete(cacheName);
-        })
-      );
+    caches.open('my-site-cache').then((cache) => {
+      return cache.addAll([
+        '/', // Add the URLs of your static assets to cache
+        '/index.html',
+        'src/public/css/style.css',
+        'src/public/js/script.js',
+        'src/public/img/icon-192x192.png',
+        // Add more URLs here
+      ]);
     })
   );
 });
 
-// Intercepción de las solicitudes
-self.addEventListener('fetch', function(event) {
-    // Ignora las solicitudes de extensiones de Chrome
-    if (event.request.url.startsWith('chrome-extension://')) {
-      return;
-    }
-  
-    event.respondWith(
-      caches.match(event.request)
-        .then(function(response) {
-          // Si la solicitud está en caché, devuelve la respuesta en caché
-          if (response) {
-            return response;
-          }
-  
-          // Si la solicitud no está en caché, realiza la solicitud a la red
-          return fetch(event.request)
-            .then(function(response) {
-              // Si la respuesta es exitosa y es una solicitud GET, almacena la respuesta en caché
-              if (response && response.status === 200 && event.request.method === 'GET') {
-                var responseToCache = response.clone();
-  
-                caches.open(CACHE_NAME)
-                  .then(function(cache) {
-                    // Ignora las solicitudes de extensiones de Chrome al almacenar en caché
-                    if (!event.request.url.startsWith('chrome-extension://')) {
-                      cache.put(event.request, responseToCache);
-                    }
-                  });
-              }
-  
-              return response;
-            })
-            .catch(function() {
-              // Si la solicitud falla, muestra la vista offline.html
-              return caches.match('/offline.html');
-            });
-        })
-    );
-  });
-  
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      return response || fetch(event.request).catch(() => {
+        return caches.match(offlinePage);
+      });
+    })
+  );
+});

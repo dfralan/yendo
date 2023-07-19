@@ -98,14 +98,30 @@
     <script src="src/public/js/swRegistration.js"></script>
     <script src="src/public/js/addtohomescreen.js"></script>
     <script>
-        if (
-            (("standalone" in window.navigator) && !window.navigator.standalone) // ios
-            ||
-        
-        ( !window.matchMedia('(display-mode: standalone) ').matches ) // android
-        ) { addToHomescreen ( ) ;
+        let deferredPrompt;
+      
+        window.addEventListener('beforeinstallprompt', (event) => {
+          event.preventDefault();
+          deferredPrompt = event;
+          // Show your custom install prompt button or take any other action here
+          // For example, display a button that triggers the prompt when clicked
+          // <button onclick="promptInstall()">Install App</button>
+        });
+      
+        function promptInstall() {
+          if (deferredPrompt) {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult) => {
+              if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the install prompt');
+              } else {
+                console.log('User dismissed the install prompt');
+              }
+              deferredPrompt = null;
+            });
+          }
         }
-    </script>
+      </script>
 
 </body>
 
