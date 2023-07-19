@@ -2,6 +2,7 @@
   "name": "Yendo",
   "short_name": "Yendo",
   "start_url": "/",
+  "id": "/",
   "display": "standalone",
   "background_color": "#F9FAFC",
   "theme_color": "#0d6efd",
