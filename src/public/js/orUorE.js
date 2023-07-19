@@ -65,12 +65,16 @@ buttonFindCityForm.addEventListener('click', function (event) {
   rateNow()
 
   if (!matchFound) {
+    let imgCoverBuscarPage = document.getElementById("imgCoverBuscarPage")
+
+    // Change the source of the image
+    imgCoverBuscarPage.src = "src/public/img/noDelivery.svg";
+  
     deliveryResults.innerHTML = `
     <div class="text-center">
-          <img class="d-block mx-auto mb-4" src="src/public/img/noDelivery.svg" alt="" width="160">
           <p>No hay repartidores en tu zona.</p>
           <a class="text-decoration-none" href="register.html">¿Querés ser repartidor?</a>
-        </div>
+    </div>
     `
     console.log("No deliverys found in that location."); // Log a message if no match is found
   }
