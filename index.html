@@ -70,7 +70,7 @@
                 <a href="register.html" role="button" type="button" class="btn btn-primary btn-lg px-4 gap-3 rounded-5" loom="Registrate"></a>
                 <a href="buscar.html" role="button" type="button" class="btn btn-warning btn-lg px-4 rounded-5" loom="Realizá un pedido"></a>
 
-            <button id="downloadAppButton" role="button" type="button" class="btn btn-lg" loom="Descarga la app"></button>
+            <button id="install-button" role="button" type="button" class="btn btn-lg" loom="Descarga la app"></button>
             </div>
 
         </div>
@@ -97,18 +97,18 @@
     <script src="src/public/js/loomTranslations.js"></script>
     <script src="src/public/js/swRegistration.js"></script>
     <script src="src/public/js/addtohomescreen.js"></script>
-    <script>
+    
+
+      <script>
         let deferredPrompt;
       
         window.addEventListener('beforeinstallprompt', (event) => {
           event.preventDefault();
           deferredPrompt = event;
-          // Show your custom install prompt button or take any other action here
-          // For example, display a button that triggers the prompt when clicked
-          // <button onclick="promptInstall()">Install App</button>
+          document.getElementById('install-button').style.display = 'block';
         });
       
-        function promptInstall() {
+        document.getElementById('install-button').addEventListener('click', () => {
           if (deferredPrompt) {
             deferredPrompt.prompt();
             deferredPrompt.userChoice.then((choiceResult) => {
@@ -120,7 +120,7 @@
               deferredPrompt = null;
             });
           }
-        }
+        });
       </script>
 
 </body>
