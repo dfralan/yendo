@@ -7,7 +7,7 @@ self.addEventListener('install', (event) => {
         '/', // Add the URLs of your static assets to cache
         '/index.html',
         'src/public/css/style.css',
-        'src/public/js/script.js',
+        'src/public/js/app.js',
         'src/public/img/icon-192x192.png',
         // Add more URLs here
       ]);
