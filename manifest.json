@@ -1,50 +1,41 @@
 {
-  "short_name": "Yendo",
   "name": "Yendo: Mensajería Descentralizada",
+  "short_name": "Yendo",
   "icons": [
     {
-      "src": "src/public/img/logo.svg",
+      "src": "/src/public/img/logo.svg",
       "type": "image/svg+xml",
       "sizes": "178x82"
     },
     {
-      "src": "src/public/img/icon-192x192.png",
+      "src": "/src/public/img/icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "src/public/img/icon-512x512.png",
+      "src": "/src/public/img/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "serviceworker": {
-    "src": "sw.js",
-    "scope": "/"
-  },
-  "start_url": "index.html",
+  "start_url": "/index.html",
   "background_color": "#F9FAFC",
   "display": "standalone",
   "scope": "/",
   "theme_color": "#0d6efd",
-  "shortcuts": [
-    {
-      "name": "Mensajería Descentralizada",
-      "short_name": "Yendo",
-      "description": "Automatizá tus pedidos",
-      "url": "index.html",
-      "icons": [{ "src": "src/public/img/icon-192x192.png", "sizes": "192x192" }]
-    }
-  ],
+  "serviceworker": {
+    "src": "/sw.js",
+    "scope": "/"
+  },
   "description": "Automatizá tus pedidos",
   "screenshots": [
     {
-      "src": "src/public/img/screenshot1.png",
+      "src": "/src/public/img/screenshot1.png",
       "type": "image/png",
       "sizes": "289x625"
     },
     {
-      "src": "src/public/img/screenshot2.jpg",
+      "src": "/src/public/img/screenshot2.jpg",
       "type": "image/jpg",
       "sizes": "289x625"
     }
