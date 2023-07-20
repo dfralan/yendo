@@ -3,6 +3,8 @@ const usersAR = {
       cityID: "1989",
       username: "@mrtabaco",
       userKind: "1",
+      userKind: "1",
+      categories: "",
       activeInterval: "09:00/21:00(-03:00)",
       rank: "5.0",
       profileImg: "https://scontent.fros2-1.fna.fbcdn.net/v/t39.30808-6/302704495_510930607700049_4805673295705459265_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=_OM39PoY0xAAX9F0KTL&_nc_ht=scontent.fros2-1.fna&oh=00_AfD4aqxpzdeTP486lBwrnXUi-Fsc7XO_m96gbu-8J0H0Tg&oe=64BAF18A"
