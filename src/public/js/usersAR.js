@@ -3,7 +3,6 @@ const usersAR = {
       cityID: "1989",
       username: "@mrtabaco",
       userKind: "1",
-      userKind: "1",
       categories: "",
       activeInterval: "09:00/21:00(-03:00)",
       rank: "5.0",
@@ -13,6 +12,8 @@ const usersAR = {
       cityID: "1989",
       username: "@marbi",
       userKind: "0",
+      vehicleKind: "",
+      categories: "",
       activeInterval: "08:00/18:00(-03:00)",
       rank: "4.5",
       profileImg: "https://scontent.fros2-2.fna.fbcdn.net/v/t1.6435-9/62256802_2404539729608958_3768627338867113984_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=6RqwvCOn8PgAX9Hj6n0&_nc_ht=scontent.fros2-2.fna&oh=00_AfCptYoRA9zK1OinfA2vhnQmPq_M7j-7ZYvpm0o36St-_w&oe=64D38CAA"
