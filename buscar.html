@@ -41,7 +41,7 @@
   </div>
 
   <!-- Header -->
-  <header class="stick-top bg-body-secondary navbar d-flex align-items-center navbar-expand-md px-4">
+  <header class="fixed-top bg-body-tertiary navbar d-flex align-items-center navbar-expand-md px-4">
     
     <div class="container-fluid p-0">
 
@@ -80,12 +80,20 @@
   <!-- Find delivery section -->
   <div class="px-4 py-5 my-5 text-center">
     <img id="imgCoverBuscarPage" class="d-block mx-auto mb-4" src="src/public/img/rafiki.svg" alt="" width="150">
-    <div class="col-md-8 col-lg-6 mx-auto">
-      <input type="text" class="form-control form-control-lg mb-3" id="formCity" placeholder="Ingresá tu ciudad" pattern="^.*\(.+\).*"required loom-placeholder="Ingresá tu ciudad" loom>
+    <div class="col-md-8 col-lg-6 mx-auto d-grid gap-2">
+      
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button id="buttonFindCityForm" role="button" type="button" class="btn btn-primary btn-lg px-4 gap-3 rounded-5" loom="Buscar"></button>
+        <input class="form-control form-control-lg rounded-5" type="text" id="formCity" placeholder="Ingresá tu ciudad" pattern="^.*\(.+\).*"required loom-placeholder="Ingresá tu ciudad" loom>
+        <button class="btn btn-primary btn-lg px-4 gap-3 rounded-5" type="button" id="buttonFindCityForm" role="button" loom="Buscar"></button>
+      </div>
+
+      <div id="categoryPillsContainer" class="d-flex gap-2 mb-3 flex-wrap">
+
+        
+
       </div>
     </div>
+    
 
     <!-- Delivery Results -->
     <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center text-start">
@@ -98,7 +106,7 @@
   <!-- Teller Button -->
   <teller style="transition: ease-in-out 0.3s;" class="bottom-0 start-0 mb-4 ms-4" lang="en"
       supportHours="12:00/13:59(-03:00)" tellerMode="brick" side="left" borderRadius="15" theme="light"
-      tintColor="#4367F2" appearAfter="0"
+      tintColor="#0d6efd" appearAfter="0"
       formUrl="https://docs.google.com/forms/d/e/1FAIpQLSd-JU7y43Pf0Y1DzHIrnIYyZIoQY_CxIHqu6etU-AHg4vvZSg/viewform?usp=pp_url&entry.972628122=sad&entry.131831582=pepe@pepe&entry.1647376085=Hola&entry.1069296986=hoy">
   </teller>
 
@@ -120,6 +128,7 @@
   <!-- Internationalization -->
   <script src="src/public/js/loom.js"></script>
   <script src="src/public/js/loomTranslations.js"></script>
+  <script src="src/public/js/categories.js"></script>
 
 </body>
 
