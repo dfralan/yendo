@@ -26,6 +26,11 @@
   <link rel="stylesheet" href="src/public/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="src/public/css/style.css" />
+
+  <!-- Leaflet Routing Machine CSS --><!-- Leaflet Routing Machine library -->
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
   <link rel="icon" type="image/x-icon" href="src/public/img/yendo.ico" />
   <link rel="manifest" href="manifest.json">
 
@@ -36,13 +41,13 @@
   <!-- DOM Load Animation -->
   <div class='logoLoadAnimationContainer bg-body-secondary'>
     <div class="logoLoadAnimation text-light">
-        <img src="src/public/img/logo.svg" alt="" width="150px">
+      <img src="src/public/img/logo.svg" alt="" width="150px">
     </div>
   </div>
 
   <!-- Header -->
-  <header class="fixed-top bg-body-tertiary navbar d-flex align-items-center navbar-expand-md px-4">
-    
+  <header class="z-2 fixed-top bg-body-tertiary navbar d-flex align-items-center navbar-expand-md px-4">
+
     <div class="container-fluid p-0">
 
       <!-- Logo -->
@@ -50,8 +55,19 @@
         <img style="transform: translateY(5px);" src="src/public/img/logo.svg" alt="logo yendo" width="100">
       </a>
 
-      <!-- Collapse header button -->
-      <a id="navbar-toggler-icon" class="navbar-toggler bi bi-plus fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"></a>
+      <div class="nav-link align-items-center d-flex justify-content-center">
+
+        <small class="bi bi-geo-alt-fill text-primary"></small>
+        <small class="ps-1" id="locationResult">
+          Global
+        </small>
+
+        <!-- Collapse header button -->
+        <a id="navbar-toggler-icon" class="navbar-toggler bi bi-plus fs-3" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+          aria-label="Toggle navigation"></a>
+
+      </div>
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav align-items-center">
@@ -59,16 +75,17 @@
           <!-- Loom language switcher -->
           <loom class="nav-link btn dropdown align-items-center p-0" flag="rounded">
             <a class="nav-link dropdown-toggle btn p-0 align-items-center" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false" loom-indicator>
+              aria-expanded="false" loom-indicator>
             </a>
             <ul class="dropdown-menu" loom-list>
-                <li role="button" class="dropdown-item" loom-language="ar"></li>
-                <li role="button" class="dropdown-item" loom-language="br"></li>
+              <li role="button" class="dropdown-item" loom-language="ar"></li>
+              <li role="button" class="dropdown-item" loom-language="br"></li>
             </ul>
           </loom>
 
-          <a id="navBarTellerLaunch" class="nav-link" loom="Need Help?" role="button" ></a>
-          <a href="register.html" role="button" type="button" class="btn btn-warning rounded-5" loom="Registrate como repartidor"></a>
+          <a id="navBarTellerLaunch" class="nav-link" loom="Need Help?" role="button"></a>
+          <a href="register.html" role="button" type="button" class="btn btn-warning rounded-5"
+            loom="Registrate como repartidor"></a>
         </div>
       </div>
 
@@ -76,38 +93,83 @@
 
   </header>
 
-  
+
   <!-- Find delivery section -->
   <div class="px-4 py-5 my-5 text-center">
     <img id="imgCoverBuscarPage" class="d-block mx-auto mb-4" src="src/public/img/rafiki.svg" alt="" width="150">
     <div class="col-md-8 col-lg-6 mx-auto d-grid gap-2">
-      
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <input class="form-control form-control-lg rounded-5" type="text" id="formCity" placeholder="Ingresá tu ciudad" pattern="^.*\(.+\).*"required loom-placeholder="Ingresá tu ciudad" loom>
-        <button class="btn btn-primary btn-lg px-4 gap-3 rounded-5" type="button" id="buttonFindCityForm" role="button" loom="Buscar"></button>
-      </div>
 
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <input class="form-control form-control-lg rounded-5" type="text" id="formCity" placeholder="Ingresá tu ciudad"
+          pattern="^.*\(.+\).*" required loom-placeholder="Ingresá tu ciudad" loom>
+        <button class="btn btn-primary btn-lg px-4 gap-3 rounded-5" type="button" id="buttonFindCityForm" role="button"
+          loom="Buscar"></button>
+      </div>
+      <div class="text-start px-2">
+
+        <small>
+          <span loom="Mostrando resultados en:"></span>
+          <span id="locationOfResults"></span>
+        </small>
+      </div>
       <div id="categoryPillsContainer" class="d-flex gap-2 mb-3 flex-wrap">
 
-        
-
       </div>
     </div>
-    
-
-    <!-- Delivery Results -->
-    <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center text-start">
-      <div id="deliveryResults" class="list-group d-grid gap-2 border-0">
-      </div>
-    </div>
-
   </div>
+
+
+  <!-- Delivery Results -->
+  <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center text-start">
+    <div id="deliveryResults" class="list-group d-grid gap-2 border-0">
+    </div>
+  </div>
+
+  <!-- Map -->
+  <div style="transform: translateY(-100%); transition: .2s ease-in-out;" id="confirmationLocationMap" style="background-color: rgba(0,0,0,0.5);" class="z-3 position-absolute top-0 w-100 start-0 h-100">
+    <div style="left: 50%;width: 400px; transform: translateX(-200px);" class="card container p-0 position-absolute top-0 rounded-bottom-5 rounded-top-0">
+    
+      <div id="map" style="width: 398px ;height: 300px;"></div>
+  
+      <div class="d-grid gap-2 p-4">
+  
+        <h6>¿Confirmá tu dirección?</h5>
+      
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="userStreetInput" placeholder="Calle" required>
+          <label for="userStreetInput" loom="Calle"></label>
+          <div class="invalid-tooltip" loom="Calle">
+          </div>
+        </div>
+      
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="userStreetNumberInput" placeholder="Juan" required>
+          <label for="userStreetNumberInput" loom="Número"></label>
+          <div class="invalid-tooltip" loom="Número">
+          </div>
+        </div>
+    
+        <button id="confirmAddressButton" class="w-100 btn btn-lg btn-primary fw-bold rounded-bottom-4" type="submit">
+          <span class="fs-6" loom="Confirmar">
+  
+          </span>
+        </button>
+      </div>
+  
+    </div>
+  </div>
+  
+
+  <!-- Include Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+
 
   <!-- Teller Button -->
   <teller style="transition: ease-in-out 0.3s;" class="bottom-0 start-0 mb-4 ms-4" lang="en"
-      supportHours="12:00/13:59(-03:00)" tellerMode="brick" side="left" borderRadius="15" theme="light"
-      tintColor="#0d6efd" appearAfter="0"
-      formUrl="https://docs.google.com/forms/d/e/1FAIpQLSd-JU7y43Pf0Y1DzHIrnIYyZIoQY_CxIHqu6etU-AHg4vvZSg/viewform?usp=pp_url&entry.972628122=sad&entry.131831582=pepe@pepe&entry.1647376085=Hola&entry.1069296986=hoy">
+    supportHours="12:00/13:59(-03:00)" tellerMode="brick" side="left" borderRadius="15" theme="light"
+    tintColor="#0d6efd" appearAfter="0"
+    formUrl="https://docs.google.com/forms/d/e/1FAIpQLSd-JU7y43Pf0Y1DzHIrnIYyZIoQY_CxIHqu6etU-AHg4vvZSg/viewform?usp=pp_url&entry.972628122=sad&entry.131831582=pepe@pepe&entry.1647376085=Hola&entry.1069296986=hoy">
   </teller>
 
   <!-- App Dependencies -->
@@ -120,8 +182,8 @@
   <script src="src/public/js/orUorE.js"></script>
   <script src="src/public/js/matcher.js"></script>
   <script src="src/public/js/operatorState.js"></script>
-  <script src="src/public/js/usersAR.js" ></script>
-  <script src="src/public/js/getgeo.js" ></script>
+  <script src="src/public/js/usersAR.js"></script>
+  <script src="src/public/js/getgeo.js"></script>
   <!-- QR Generator -->
   <script src="src/public/js/qrcode.js"></script>
   <!-- Feedback Dependencies -->

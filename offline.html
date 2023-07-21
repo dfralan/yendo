@@ -19,9 +19,12 @@
     }
   </style>
   <title>Sin conexión a internet</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 <body>
     <div class="text-center w-100">
+      
 
         <svg width="264" height="218" viewBox="0 0 264 218" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M131.442 217.344C203.877 217.344 262.598 211.072 262.598 203.335C262.598 195.597 203.877 189.325 131.442 189.325C59.0065 189.325 0.286133 195.597 0.286133 203.335C0.286133 211.072 59.0065 217.344 131.442 217.344Z" fill="#F5F5F5"/>
@@ -100,7 +103,41 @@
             <circle cx="150.309" cy="194.654" r="0.710046" fill="#F5F5F5"/>
             </svg>
             
+            
     </div>
+
+    <div id="map" data-lat="51.505" data-long="-0.09" style="width: 800px; height: 600px;"></div>
+
+  <!-- Include Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+  <!-- JavaScript code to create the map -->
+  <script>
+    // Get latitude and longitude from data attributes
+    const mapDiv = document.getElementById('map');
+    const lat = parseFloat(mapDiv.getAttribute('data-lat'));
+    const long = parseFloat(mapDiv.getAttribute('data-long'));
+
+    // Initialize the map
+    const map = L.map('map').setView([lat, long], 13);
+
+    // Create a tile layer and add it to the map
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    // Array of marker coordinates [latitude, longitude, popupText]
+    const markers = [
+      [lat, long, 'Marker 1'],
+      [lat + 0.01, long + 0.01, 'Marker 2'],
+      [lat - 0.02, long - 0.02, 'Marker 3']
+      // Add more markers as needed
+    ];
+
+    // Loop through the array and add markers to the map
+    markers.forEach(marker => {
+      const markerObj = L.marker([marker[0], marker[1]]).addTo(map);
+      markerObj.bindPopup(marker[2]).openPopup();
+    });
+  </script>
         
     <script>
         

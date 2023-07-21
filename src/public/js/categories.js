@@ -79,6 +79,11 @@ const categories = {
       "codigo": "015",
       "nombre": "Traslado de pasajeros",
       "descripcion": "Servicio de traslado de pasajeros, viajes, media distancia."
+    },
+    {
+      "codigo": "016",
+      "nombre": "Producto",
+      "descripcion": "Articulos"
     }
   ]
 }
@@ -137,6 +142,7 @@ function foreach(categories, containerId) {
 
   let html = '';
   categories.categorias.forEach(category => {
+    if (category.codigo === "000") {return}
     const categoryHTML = `
 
     <input type="checkbox" class="btn-check" id="btn-check-${category.nombre}" autocomplete="off">

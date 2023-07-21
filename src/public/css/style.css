@@ -15,6 +15,32 @@ body {
   border: 0 !important;
 }
 
+.pepeson {
+  transform-origin: center;
+  animation: upAndDown 2s infinite ease-in-out;
+}
+.pepeShadow {
+  transform: scaleX(1);
+  transform-origin: center;
+  animation: wider 2s infinite ease-in-out;
+}
+
+@keyframes upAndDown {
+  0% {
+      transform: translateY(0px);
+  }
+  35% {
+      transform: translateY(2px);
+  }
+}
+@keyframes wider {
+  0% {
+      transform: scaleX(1)
+  }
+  35% {
+      transform: scaleX(1.2);
+  }
+}
 
 .rotate {
   transform: rotate(45deg) scale(1.4);
