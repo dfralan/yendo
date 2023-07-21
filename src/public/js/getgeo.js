@@ -50,12 +50,12 @@
     // Llamar a la función para obtener el nombre de la calle
     getAddressFromCoordinates(latitude, longitude);
     drawOnMap(latitude, longitude);
-    elementToHide.style.transform = 'translateY(0%)';
+    elementToHide.style.display = 'block';
 
     // Add event listener to the "Hide Element" button
     confirmAddressButton.addEventListener('click', function() {
       // Hide the element by changing its style's display property to 'none'
-      elementToHide.style.transform = 'translateY(-100%)';
+    elementToHide.style.display = 'none';
     });
   }
 
