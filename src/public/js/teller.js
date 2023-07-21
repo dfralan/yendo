@@ -132,7 +132,7 @@ function main() {
         transition:'+ transitionChill + '\
         opacity: 1;\
         position: absolute!important;\
-        background-color: '+ byTheme(tintColor(), charmingGrey) + '!important;\
+        background-color: '+ byTheme(realWhite, charmingGrey) + '!important;\
         width: 50px;\
         height: 50px;\
         '+ getSide()[0] + ': 0px;\
@@ -193,7 +193,7 @@ function main() {
     #palomita{\
         transition:'+ transitionChill + '\
         opacity: 1;\
-        fill: '+ byTheme(realWhite, tintColor()) + '!important;\
+        fill: '+ tintColor() + '!important;\
         transform: scaleX(1);\
     }\
     #titleBrick{\

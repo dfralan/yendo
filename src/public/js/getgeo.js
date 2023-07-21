@@ -1,7 +1,6 @@
 (function () {
 
-  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  
   const elementToHide = document.getElementById('confirmationLocationMap');
   const confirmAddressButton = document.getElementById('confirmAddressButton');
 
@@ -46,11 +45,15 @@
     localStorage.setItem('longitude', longitude);
 
     console.log(`Latitud: ${latitude}\nLongitud: ${longitude}`);
+    
 
     // Llamar a la función para obtener el nombre de la calle
     getAddressFromCoordinates(latitude, longitude);
     drawOnMap(latitude, longitude);
-    elementToHide.style.display = 'block';
+    elementToHide.style.opacity = '1';
+
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
     // Add event listener to the "Hide Element" button
     confirmAddressButton.addEventListener('click', function() {
@@ -108,9 +111,9 @@
     const map = L.map('map').setView([lat, long], 13);
 
     // Create a tile layer and add it to the map
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-    var customIcon = L.divIcon({
+  var customIcon = L.divIcon({
       className: 'custom-icon',
       html: `<svg class="pepe" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Mi ubicación" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
       <ellipse class="pepeShadow" cx="22.5799" cy="43.4207" rx="7.10526" ry="1.57895" fill="black"/>
@@ -125,7 +128,18 @@
       iconAnchor: [22.5, 0]
     });
 
-  L.marker([lat, long], { icon: customIcon }).addTo(map);
+  // Array of marker coordinates [latitude, longitude, popupText]
+  const markers = [
+    [lat, long, 'Marker 1'],
+    // Add more markers as needed
+  ];
+
+  // Loop through the array and add markers to the map
+  markers.forEach(marker => {
+      const markerObj = L.marker([lat, long], { icon: customIcon }).addTo(map);
+      markerObj;
+    });
+
   }
 
 
@@ -136,3 +150,32 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 })();
+
+
+
+    // Puntos de inicio y destino
+    var startPoint = [-32.8913055, -60.6985319]; // Nueva York, EE. UU. (Latitud, Longitud)
+    var endPoint = [-32.9013055, -60.6985319]; // Los Ángeles, EE. UU. (Latitud, Longitud)
+
+    // Crear el mapa en el contenedor 'map'
+    var map = L.map('map2').setView([40.7128, -74.0060], 5);
+
+    // Cargar el mapa base de OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    // Agregar marcadores para los puntos de inicio y destino
+    var startMarker = L.marker(startPoint).addTo(map);
+    var endMarker = L.marker(endPoint).addTo(map);
+
+    // Create the routing control and add it to the map
+    L.Routing.control({
+      waypoints: [
+        L.latLng(startPoint[0], startPoint[1]),
+        L.latLng(endPoint[0], endPoint[1]),
+      ],
+      routeWhileDragging: true,
+    }).addTo(map);
+
+    // Agregar una ventana emergente a los marcadores con información sobre los puntos
+    startMarker.bindPopup('Punto de inicio: Nueva York, EE. UU.').openPopup();
+    endMarker.bindPopup('Punto de destino: Los Ángeles, EE. UU.').openPopup();
