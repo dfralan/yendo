@@ -19,4 +19,14 @@ const usersAR = {
       rank: "4.5",
       profileImg: "https://scontent.fros2-2.fna.fbcdn.net/v/t1.6435-9/62256802_2404539729608958_3768627338867113984_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=6RqwvCOn8PgAX9Hj6n0&_nc_ht=scontent.fros2-2.fna&oh=00_AfCptYoRA9zK1OinfA2vhnQmPq_M7j-7ZYvpm0o36St-_w&oe=64D38CAA"
     },
+    60427774553123: {
+      cityID: "1989",
+      username: "@nacho",
+      userKind: "0",
+      vehicleKind: "",
+      categories: ["007"],
+      activeInterval: "08:00/12:30(-03:00)",
+      rank: "4.0",
+      profileImg: "https://scontent.cdninstagram.com/v/t51.2885-19/271772914_457996402449788_7080675656420069119_n.jpg?stp=dst-jpg_s150x150&_nc_ht=scontent.cdninstagram.com&_nc_cat=108&_nc_ohc=Fit_znTx9jAAX87zO9M&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfCwdcdZxqwU4KYUj4J2l9Y6aCKaTGgynG5maJdNpEa6Qw&oe=64C1043C&_nc_sid=10d13b"
+    },
   };
