@@ -160,6 +160,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Crear el mapa en el contenedor 'map'
     var map = L.map('map2').setView([40.7128, -74.0060], 5);
 
+    if (!map) {return}
+
     // Cargar el mapa base de OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
