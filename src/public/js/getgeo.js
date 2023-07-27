@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 })();
 
-
+function createMap() {
 
     // Puntos de inicio y destino
     var startPoint = [-32.8913055, -60.6985319]; // Nueva York, EE. UU. (Latitud, Longitud)
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Crear el mapa en el contenedor 'map'
     var map = L.map('map2').setView([40.7128, -74.0060], 5);
 
-    if (!map) {return}
+    if (!map) {return;}
 
     // Cargar el mapa base de OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
@@ -181,3 +181,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Agregar una ventana emergente a los marcadores con información sobre los puntos
     startMarker.bindPopup('Punto de inicio: Nueva York, EE. UU.').openPopup();
     endMarker.bindPopup('Punto de destino: Los Ángeles, EE. UU.').openPopup();
+}
