@@ -187,7 +187,7 @@ function main() {
     #xBrick{\
         transition:'+ transitionChill + '\
         opacity: 0;\
-        fill: '+ byTheme(realWhite, tintColor()) + '!important;\
+        fill: '+ tintColor() + '!important;\
         transform: translateX(30px) scaleX(0);\
     }\
     #palomita{\
