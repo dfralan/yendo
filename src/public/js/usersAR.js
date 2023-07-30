@@ -1,5 +1,16 @@
 const usersAR = {
     60427779630966: {
+      cityID: "3542",
+      username: "@matiasjerosimich",
+      userKind: "0",
+      categories: ["017"],
+      locations: ["-32.891319,-60.6985393"],
+      activeInterval: "14:00/16:00(-03:00)",
+      rank: "5.0",
+      profileImg: "https://pbs.twimg.com/profile_images/1164322024665296896/Vc5qU7hj_400x400.jpg",
+      tasksAmount: "3129"
+    },
+    60427779630966: {
       cityID: "1989",
       username: "@mrtabaco",
       userKind: "1",
