@@ -84,6 +84,11 @@ const categories = {
       "codigo": "016",
       "nombre": "Producto",
       "descripcion": "Articulos"
+    },
+    {
+      "codigo": "017",
+      "nombre": "Paseador de perros",
+      "descripcion": "Perros paseo"
     }
   ]
 }
