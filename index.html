@@ -3,88 +3,84 @@
 
 <head>
 
-    <title loom="Yendo - Mensajería Descentralizada">Yendo - Mensajería Descentralizada</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Gestion mensajería" />
-    <meta name="author" content="@dfralan" />
-
-
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Yendo">
-
-    <!-- Previews -->
-    <meta name="msapplication-TileImage" content="https://yendo.delivery/src/public/img/yendo-600x600.png">
-    <meta property="og:site_name" content="yendo.delivery">
-    <meta property="og:title" content="Yendo">
-    <meta property="og:description" content="Mensajería Descentralizada">
-    <meta property="og:image" itemprop="image" content="https://yendo.delivery/src/public/img/yendo-600x600.png">
-    <meta property="og:type" content="website" />
-    <meta property="og:image:width" content="600px">
-    <meta property="og:image:height" content="600px">
-    <meta property="og:url" content="https://yendo.delivery">
-    <!-- JS Dependencies -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
-    <!-- Frame Dependencies -->
-    <link rel="stylesheet" href="src/public/css/jquery-ui-modified.css">
-    <link rel="stylesheet" href="src/public/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="src/public/css/style.css" />
-    <link rel="stylesheet" href="src/public/css/addtohomescreen.css" />
-    <link rel="icon" type="image/x-icon" href="src/public/img/yendo.ico" />
-    <link rel="manifest" href="manifest.json">
+  <title loom="Yendo - Mensajería Descentralizada">Yendo - Mensajería Descentralizada</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Gestion mensajería" />
+  <meta name="author" content="@dfralan" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Yendo">
+  <!-- Previews -->
+  <meta name="msapplication-TileImage" content="https://yendo.delivery/src/public/img/yendo-600x600.png">
+  <meta property="og:site_name" content="yendo.delivery">
+  <meta property="og:title" content="Yendo">
+  <meta property="og:description" content="Mensajería Descentralizada">
+  <meta property="og:image" itemprop="image" content="https://yendo.delivery/src/public/img/yendo-600x600.png">
+  <meta property="og:type" content="website" />
+  <meta property="og:image:width" content="600px">
+  <meta property="og:image:height" content="600px">
+  <meta property="og:url" content="https://yendo.delivery">
+  <!-- JS Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+  <!-- Frame Dependencies -->
+  <link rel="stylesheet" href="src/public/css/jquery-ui-modified.css">
+  <link rel="stylesheet" href="src/public/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="src/public/css/style.css" />
+  <link rel="stylesheet" href="src/public/css/addtohomescreen.css" />
+  <link rel="icon" type="image/x-icon" href="src/public/img/yendo.ico" />
+  <link rel="manifest" href="manifest.json">
 
 </head>
 
 <body class="bg-body-secondary">
 
-    <!-- DOM Load Animation -->
-    <div class='logoLoadAnimationContainer bg-body-secondary'>
-        <div class="logoLoadAnimation text-light">
-            <img src="src/public/img/logo.svg" alt="" width="150px">
-        </div>
-    </div>
+  <!-- DOM Load Animation -->
+  <div class='logoLoadAnimationContainer bg-body-secondary'>
+      <div class="logoLoadAnimation text-light">
+          <img src="src/public/img/logo.svg" alt="" width="150px">
+      </div>
+  </div>
 
-    <!-- Loom language switcher -->
-    <loom class="nav-link btn  dropdown align-items-center d-flex position-fixed bottom-0 end-0 p-4"
-        flag="rounded">
-        <a class="nav-link dropdown-toggle btn p-2 align-items-center" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false" loom-indicator>
-        </a>
-        <ul class="dropdown-menu" loom-list>
-            <li role="button" class="dropdown-item" loom-language="ar"></li>
-            <li role="button" class="dropdown-item" loom-language="br"></li>
-        </ul>
-    </loom>
+  <!-- Loom language switcher -->
+  <loom class="nav-link btn  dropdown align-items-center d-flex position-fixed bottom-0 end-0 p-4"
+      flag="rounded">
+      <a class="nav-link dropdown-toggle btn p-2 align-items-center" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false" loom-indicator>
+      </a>
+      <ul class="dropdown-menu" loom-list>
+          <li role="button" class="dropdown-item" loom-language="ar"></li>
+          <li role="button" class="dropdown-item" loom-language="br"></li>
+      </ul>
+  </loom>
 
-    <!-- Main Section -->
-    <section class="px-4 py-5 my-5 text-center">
-        <img style="transform: translateX(15px);" class="position-absolute" src="src/public/img/logo.svg" alt="" width="110">
-        <img class="d-block mx-auto mb-4" src="src/public/img/rafiki.svg" alt="" width="130">
-        <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4" loom="Mensajería descentralizada para todos, si sos un negocio, o un trabajador particular, con yendo podes automatizar tus pedidos y generar ingresos."></p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center d-flex">
-                <a href="register.html" role="button" type="button" class="btn btn-primary btn-lg px-4 gap-3 rounded-5 text-nowrap" loom="Registrate"></a>
-                <a href="buscar.html" role="button" type="button" class="btn btn-warning btn-lg px-4 rounded-5 text-nowrap" loom="Realizá un pedido"></a>
-                <a id="install-button" role="button" type="button" class="btn btn-light btn-lg px-4 rounded-5 text-nowrap" loom="Descarga la app"></a>
-            </div>
+  <!-- Main Section -->
+  <section class="px-4 py-5 my-5 text-center">
+      <img style="transform: translateX(15px);" class="position-absolute" src="src/public/img/logo.svg" alt="" width="110">
+      <img class="d-block mx-auto mb-4" src="src/public/img/rafiki.svg" alt="" width="130">
+      <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4" loom="Mensajería descentralizada para todos, si sos un negocio, o un trabajador particular, con yendo podes automatizar tus pedidos y generar ingresos."></p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center d-flex">
+              <a href="register.html" role="button" type="button" class="btn btn-primary btn-lg px-4 gap-3 rounded-5 text-nowrap" loom="Registrate"></a>
+              <a href="buscar.html" role="button" type="button" class="btn btn-warning btn-lg px-4 rounded-5 text-nowrap" loom="Realizá un pedido"></a>
+              <!--<a id="install-button" role="button" type="button" class="btn btn-light btn-lg px-4 rounded-5 text-nowrap" loom="Descarga la app"></a>-->
+          </div>
+      </div>
+  </section>
 
-        </div>
-    </section>
+  <!-- Teller Button -->
+  <teller style="transition: ease-in-out 0.3s;" class="bottom-0 start-0 mb-4 ms-4" lang="en"
+      supportHours="12:00/13:59(-03:00)" tellerMode="brick" side="left" borderRadius="15" theme="light"
+      tintColor="#0d6efd" appearAfter="0"
+      formUrl="https://docs.google.com/forms/d/e/1FAIpQLSd-JU7y43Pf0Y1DzHIrnIYyZIoQY_CxIHqu6etU-AHg4vvZSg/viewform?usp=pp_url&entry.972628122=sad&entry.131831582=pepe@pepe&entry.1647376085=Hola&entry.1069296986=hoy">
+  </teller>
 
-    <!-- Teller Button -->
-    <teller style="transition: ease-in-out 0.3s;" class="bottom-0 start-0 mb-4 ms-4" lang="en"
-        supportHours="12:00/13:59(-03:00)" tellerMode="brick" side="left" borderRadius="15" theme="light"
-        tintColor="#0d6efd" appearAfter="0"
-        formUrl="https://docs.google.com/forms/d/e/1FAIpQLSd-JU7y43Pf0Y1DzHIrnIYyZIoQY_CxIHqu6etU-AHg4vvZSg/viewform?usp=pp_url&entry.972628122=sad&entry.131831582=pepe@pepe&entry.1647376085=Hola&entry.1069296986=hoy">
-    </teller>
-
-    <!-- App Dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="src/public/js/app.js"></script>
+  <!-- App Dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="src/public/js/app.js"></script>
 	<!-- Specific -->
     <script src="src/public/js/loginForm.js"></script>
 	<!-- QR Generator -->
@@ -92,35 +88,34 @@
 	<!-- Feedback Dependencies -->
     <script src="src/public/js/teller.js"></script>
 	<!-- Internationalization -->
-    <script src="src/public/js/loom.js"></script>
-    <script src="src/public/js/loomTranslations.js"></script>
-    <script src="src/public/js/swRegistration.js"></script>
-    <script src="src/public/js/addtohomescreen.js"></script>
-    
-
-      <script>
-        let deferredPrompt;
-      
-        window.addEventListener('beforeinstallprompt', (event) => {
-          event.preventDefault();
-          deferredPrompt = event;
-          document.getElementById('install-button').style.display = 'block';
-        });
-      
-        document.getElementById('install-button').addEventListener('click', () => {
-          if (deferredPrompt) {
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then((choiceResult) => {
-              if (choiceResult.outcome === 'accepted') {
-                console.log('User accepted the install prompt');
-              } else {
-                console.log('User dismissed the install prompt');
-              }
-              deferredPrompt = null;
-            });
+  <script src="src/public/js/loom.js"></script>
+  <script src="src/public/js/loomTranslations.js"></script>
+  <script src="src/public/js/swRegistration.js"></script>
+  <!--
+  <script src="src/public/js/addtohomescreen.js"></script>  
+  <script>
+    let deferredPrompt;
+  
+    window.addEventListener('beforeinstallprompt', (event) => {
+      event.preventDefault();
+      deferredPrompt = event;
+      document.getElementById('install-button').style.display = 'block';
+    });
+  
+    document.getElementById('install-button').addEventListener('click', () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted the install prompt');
+          } else {
+            console.log('User dismissed the install prompt');
           }
+          deferredPrompt = null;
         });
-      </script>
+      }
+    });
+  </script>-->
 
 </body>
 

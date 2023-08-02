@@ -3,6 +3,7 @@
   
   const elementToHide = document.getElementById('confirmationLocationMap');
   const confirmAddressButton = document.getElementById('confirmAddressButton');
+  const userLocalization = document.getElementById('userLocalization')
 
   
   function getLocation() {
@@ -10,6 +11,7 @@
       navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else {
       console.log("La geolocalización no es soportada por este navegador.");
+      elementToHide.style.display = 'none';
     }
   }
 
@@ -77,11 +79,11 @@
         console.log("Se ha producido un error desconocido al obtener la ubicación.");
         break;
     }
+    elementToHide.style.display = 'none';
   }
 
   function getAddressFromCoordinates(latitude, longitude) {
 
-    const resultElement = document.getElementById("locationResult");
     const locationOfResults = document.getElementById("locationOfResults");
     const userStreetInput = document.getElementById("userStreetInput");
     const userStreetNumberInput = document.getElementById("userStreetNumberInput");
@@ -94,6 +96,12 @@
         const cityState = data.address.state;
         const streetName = data.address.road;
         const HouseNumber = data.address.house_number;
+
+        userLocalization.innerHTML = `
+        <small class="bi bi-geo-alt-fill text-primary"></small>
+        <small class="ps-1" id="locationResult">Global</small>`
+
+        let resultElement = document.getElementById("locationResult");
         resultElement.textContent = `${city} (${cityState})`;
         locationOfResults.textContent = `${city} - ${cityDistrict}`;
         userStreetInput.value = streetName
@@ -102,6 +110,7 @@
         })
         .catch(error => {
         console.error('Error al obtener la dirección:', error);
+        elementToHide.style.display = 'none';
         });
   }
 
