@@ -634,6 +634,10 @@ html {
     grid-gap: 40px;
 }
 
+.responsive-l-gap {
+    grid-gap: 40px;
+}
+
 .fixed-bottom {
     position: fixed;
     bottom: 0;
@@ -810,6 +814,10 @@ brik {
     .land {
         padding: 0 15% 0 15%;
     }
+
+    .responsive-l-gap {
+        grid-gap: 30px;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -819,6 +827,10 @@ brik {
 
     .land {
         padding: 0 40px 0 40px;
+    }
+
+    .responsive-l-gap {
+        grid-gap: 20px;
     }
 }
 
@@ -873,6 +885,10 @@ brik {
 
     .land-flag {
         padding: 0 20px 0 20px;
+    }
+
+    .responsive-l-gap {
+        grid-gap: 10px;
     }
 
     .land {
