@@ -872,7 +872,7 @@ brik {
 
     .responsive-1-of-3 {
         display: flex;
-        width: 50%;
+        width: 100%;
     }
 
     .responsive-2-of-3 {
@@ -917,16 +917,6 @@ brik {
 
     .responsive-6 {
         width: 50% - 20px;
-    }
-     
-    .responsive-1-of-3 {
-        display: flex;
-        width: 100%;
-    }
-
-    .responsive-2-of-3 {
-        display: flex;
-        width: 100%;
     }
 }
 
@@ -1125,6 +1115,12 @@ brik {
 
 .border-solid-m {
     border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.border-solid-l {
+    border-width: 1.5px;
     border-style: solid;
     border-color: transparent;
 }
