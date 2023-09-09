@@ -7,6 +7,7 @@ let brikStyleSheet = `
     --black-color: #000;
     --black-color-rgb: 0, 0, 0;
     --white-color-rgb: 255, 255, 255;
+    --grey-color: #898D9A;
     --red-color: #ff4444;
     --cyan-color: #44f6ff;
     --tint-color: #601CF2;
@@ -452,6 +453,10 @@ html {
     color: var(--black-color);
 }
 
+.color-grey {
+    color: var(--grey-color);
+}
+
 .color-white {
     color: var(--white-color);
 }
@@ -601,12 +606,20 @@ html {
     height: auto;
 }
 
+.margin-auto {
+    margin: auto
+}
+
 .flex-wrap {
     flex-wrap: wrap;
 }
 
 .xs-gap {
     grid-gap: 5px;
+}
+
+.no-gap {
+    grid-gap: 0px;
 }
 
 .s-gap {
@@ -1020,6 +1033,10 @@ brik {
     background-color: var(--black-color);
 }
 
+.bg-grey {
+    background-color: var(--grey-color);
+}
+
 .bg-body {
     background-color: var(--bg-body-color);
 }
@@ -1103,6 +1120,14 @@ brik {
 
 .border-tint {
     border-color: var(--tint-color);
+}
+
+.border-black {
+    border-color: var(--black-color);
+}
+
+.border-white {
+    border-color: var(--white-color);
 }
 
 .border-body {
