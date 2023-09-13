@@ -12,10 +12,11 @@ function init() {
     fetch(url)
         .then(res => res.text())
         .then(rep => {
-            const match = rep.match(/google\.visualization\.Query\.setResponse\(([\s\S]*)\);/);
-            if (match) {
-                const jsonResponse = JSON.parse(match[1]);
-                const data = jsonResponse.table.rows.map(row => row.c[0].v); // Extract data from the first column (A)
+            const start = rep.indexOf('{"cols":[');
+            const end = rep.indexOf('}]}');
+            if (start !== -1 && end !== -1) {
+                const jsonResponse = JSON.parse(rep.substring(start, end + 2));
+                const data = jsonResponse.rows.map(row => row.c[0].v); // Extract data from the first column (A)
                 console.log(data);
             }
         })
