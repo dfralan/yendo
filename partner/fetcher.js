@@ -17,5 +17,19 @@ function init() {
             //console.log(rep);
             const jsData = JSON.parse(rep.substr(47).slice(0, -2));
             console.log(jsData);
+            // Obtener todas las filas de la hoja de cálculo
+const rows = jsData.table.rows;
+
+// Inicializar un array para almacenar los SKU
+const skuArray = [];
+
+// Iterar a través de las filas para extraer los SKU de la columna A
+for (const row of rows) {
+  const sku = row.c[0].v; // La columna A es la primera (índice 0)
+  skuArray.push(sku);
+}
+
+// skuArray ahora contiene todos los SKU
+console.log(skuArray);
         })
 }
