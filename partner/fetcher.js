@@ -1,7 +1,7 @@
 const sheetID = '1CoqgRxK1WOkYsdZ6SPAUl9iWN2fEKm27TpzJ8YBvuLY';
 const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
 const sheetName = 'users';
-let qu = 'SELECT A WHERE ROW >= 4 AND ROW <= 200';
+let qu = 'Select A';
 const query = encodeURIComponent(qu);
 const url = `${base}&sheet=${sheetName}&tq=${query}`;
 const data = [];
