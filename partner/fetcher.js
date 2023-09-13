@@ -22,25 +22,28 @@ function init() {
 
                         // Inicializar un array para almacenar los objetos de SKU
                         const skuObjects = [];
+                        const Categories = [];
+                        const States = [];
+                        const invervalHours = [];
 
-                        // Iterar a través de las filas, comenzando desde la fila 1 para omitir el encabezado
+                        // Products constructor
                         for (let i = 1; i < rows.length; i++) {
                         const row = rows[i];
-                        if (row.c && row.c[0] && row.c[0].v) {
-                            const skuObject = {
-                            SKU: row.c[0].v,
-                            Categoria: row.c[1] ? row.c[1].v : '', // Comprueba si la columna B existe
-                            Plato: row.c[2] ? row.c[2].v : '', // Comprueba si la columna C existe
-                            // Agrega otras propiedades según tus necesidades
-                            };
-                            skuObjects.push(skuObject);
-                        }
+                            if (row.c && row.c[0] && row.c[0].v) {
+                                const skuObject = {
+                                SKU: row.c[0].v,
+                                Categoria: row.c[1] ? row.c[1].v : '',
+                                Plato: row.c[2] ? row.c[2].v : '', 
+                                Description: row.c[3] ? row.c[3].v : '', 
+                                Precio: row.c[4] ? row.c[4].v : '', 
+                                Descuento: row.c[5] ? row.c[5].v : '', 
+                                Estado: row.c[6] ? row.c[6].v : '', 
+                                };
+                                skuObjects.push(skuObject);
+                            }
                         }
 
-                        // skuObjects ahora contiene objetos para cada SKU, excluyendo la fila 0 (encabezado)
-                        // Puedes acceder a las propiedades como skuObject.SKU, skuObject.Categoria, skuObject.Plato, etc.
-
-                        // Ejemplo de cómo imprimir la categoría y el plato para cada SKU
+                        // Product iterator example
                         skuObjects.forEach((skuObject) => {
                         console.log('SKU:', skuObject.SKU);
                         console.log('Categoría:', skuObject.Categoria);
