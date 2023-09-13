@@ -1,6 +1,6 @@
 const sheetID = '1CoqgRxK1WOkYsdZ6SPAUl9iWN2fEKm27TpzJ8YBvuLY';
 const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
-const sheetName = 'users';
+const sheetName = 'yendo - plan inicial';
 let qu = 'Select A';
 const query = encodeURIComponent(qu);
 const url = `${base}&sheet=${sheetName}&tq=${query}`;
