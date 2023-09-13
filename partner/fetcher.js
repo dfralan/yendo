@@ -12,9 +12,14 @@ function init() {
     fetch(url)
         .then(res => res.text())
         .then(rep => {
-            const jsData = JSON.parse(rep.substr(47).slice(0, -2));
-            console.log(jsData);
-            const data = jsData.table.rows.map(row => row.c[0].v); // Extract data from the first column (A)
-            console.log(data);
+            const match = rep.match(/google\.visualization\.Query\.setResponse\(([\s\S]*)\);/);
+            if (match) {
+                const jsonResponse = JSON.parse(match[1]);
+                const data = jsonResponse.table.rows.map(row => row.c[0].v); // Extract data from the first column (A)
+                console.log(data);
+            }
         })
+        .catch(error => {
+            console.error(error);
+        });
 }
