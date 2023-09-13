@@ -19,8 +19,8 @@ function init() {
             console.log(jsData);
             const colz = [];
             jsData.table.cols.forEach((heading) => {
-                if (heading.label) {
-                    colz.push(heading.label.toLowerCase().replace(/\s/g, ''));
+                if (heading.label === 'SKU') {
+                    console.log('oki')
                 }
             })
             jsData.table.rows.forEach((main) => {
