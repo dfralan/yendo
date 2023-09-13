@@ -25,8 +25,10 @@ const skuArray = [];
 
 // Iterar a través de las filas para extraer los SKU de la columna A
 for (const row of rows) {
-  const sku = row.c[0].v; // La columna A es la primera (índice 0)
-  skuArray.push(sku);
+  if (row.c && row.c[0] && row.c[0].v) {
+    const sku = row.c[0].v; // La columna A es la primera (índice 0)
+    skuArray.push(sku);
+  }
 }
 
 // skuArray ahora contiene todos los SKU
