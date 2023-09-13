@@ -1,6 +1,6 @@
 const sheetID = '1CoqgRxK1WOkYsdZ6SPAUl9iWN2fEKm27TpzJ8YBvuLY';
 const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
-const sheetName = 'yendo - plan inicial';
+const sheetName = 'carta - plan inicial';
 let qu = 'Select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T';
 const query = encodeURIComponent(qu);
 const url = `${base}&sheet=${sheetName}&tq=${query}`;
@@ -14,24 +14,37 @@ function init() {
     fetch(url)
         .then(res => res.text())
         .then(rep => {
-            //console.log(rep);
             const jsData = JSON.parse(rep.substr(47).slice(0, -2));
             console.log(jsData);
-            // Obtener todas las filas de la hoja de cálculo
-const rows = jsData.table.rows;
 
-// Inicializar un array para almacenar los SKU
-const skuArray = [];
+            const rows = jsData.table.rows;
 
-// Iterar a través de las filas para extraer los SKU de la columna A
+// Inicializar un array para almacenar los objetos de SKU
+const skuObjects = [];
+
+// Iterar a través de las filas para construir objetos para cada SKU
 for (const row of rows) {
   if (row.c && row.c[0] && row.c[0].v) {
-    const sku = row.c[0].v; // La columna A es la primera (índice 0)
-    skuArray.push(sku);
+    const skuObject = {
+      SKU: row.c[0].v,
+      Categoria: row.c[1] ? row.c[1].v : '', // Comprueba si la columna B existe
+      Plato: row.c[2] ? row.c[2].v : '', // Comprueba si la columna C existe
+      // Agrega otras propiedades según tus necesidades
+    };
+    skuObjects.push(skuObject);
   }
 }
 
-// skuArray ahora contiene todos los SKU
-console.log(skuArray);
+// skuObjects ahora contiene objetos para cada SKU
+// Puedes acceder a las propiedades como skuObject.SKU, skuObject.Categoria, skuObject.Plato, etc.
+
+// Ejemplo de cómo imprimir la categoría y el plato para cada SKU
+skuObjects.forEach((skuObject) => {
+  console.log('SKU:', skuObject.SKU);
+  console.log('Categoría:', skuObject.Categoria);
+  console.log('Plato:', skuObject.Plato);
+  // Agrega otras propiedades según tus necesidades
+});
+
         })
 }
