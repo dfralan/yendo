@@ -25,7 +25,7 @@
         // Extract the last 11 characters from the stored URL to check if contains an UserID from a delivery
         function getUserIdFromURL() {
             last11Characters = storedURL.slice(-11);
-            userID = last11Characters
+            userID = (parseInt(last11Characters) * 11)
         }
         getUserIdFromURL()
 
