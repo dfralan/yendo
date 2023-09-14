@@ -1,4 +1,4 @@
-const sheetID = '1CoqgRxK1WOkYsdZ6SPAUl9iWN2fEKm27TpzJ8YBvuLY';
+const sheetID = '1vF3AkCM5jxXWHg-U1h_Bi2orQdc2_uBNGIJgIcX64EE';
 const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
 const sheetName = 'carta - plan inicial';
 let qu = 'Select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T';
