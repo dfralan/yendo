@@ -1,6 +1,6 @@
-function deleteCookie(cookieName) {
-    document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+function deleteCookie() {
+    // Delete localstorage currentURL if any
+    localStorage.removeItem('currentUrl');
 }
 
-// Uso de la función para eliminar una cookie específica
-deleteCookie("deliveryConstructorCookie");
+deleteCookie();

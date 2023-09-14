@@ -5,61 +5,65 @@
         // Get the element with the 'yendo' tag
         const yendoElement = document.querySelector('yendo');
         var userID
+        var storedURL
 
-        function getUrlFromCookie() {
-            var cookies = document.cookie.split(";"); // Split all cookies
-            for (var i = 0; i < cookies.length; i++) {
-                var cookie = cookies[i].trim();
-                if (cookie.indexOf("deliveryConstructorCookie=") === 0) {
-                    userURL = cookie.substring("deliveryConstructorCookie=".length, cookie.length)
-                    var parts = userURL.split("/");
-                    var extractedValue = parts[parts.length - 1];
-                    console.log(extractedValue);
-                    userID = (extractedValue * 11)
-                }
-            }
-            return null; // Return null if the cookie is not found
+        // Get stored URL and set it in the variable
+        function setStoredURL() {
+            storedURL = localStorage.getItem('currentUrl');
         }
-        getUrlFromCookie()
+        setStoredURL()
 
+        // Check if the URL is from partner division
+        function isPartner() {
+            var partnerRegex = /partner/i;
+            if (partnerRegex.test(storedURL)) {
+                window.location.href = "https://yendo.delivery/partner/menu.html";
+            }
+        }
+        isPartner()
+
+        // Extract the last 11 characters from the stored URL to check if contains an UserID from a delivery
+        function getUserIdFromURL() {
+            last11Characters = storedURL.slice(-11);
+            userID = last11Characters
+        }
+        getUserIdFromURL()
+
+        // Match to see if there is an delivery with that number
         if (usersAR[userID]) {
-            console.log("anda")
-        
+            // Fields to fill
+            let deliveryUsername = document.getElementById("deliveryUsername")
+            let deliveryStateField = document.getElementById("deliveryState")
+            let deliveryRatingField = document.getElementById("rat")
+            let deliveryCityField = document.getElementById("deliveryCity")
+            let deliveryUsernameQR = document.getElementById("deliveryUsernameQR")
+            let deliveryCityQR = document.getElementById("deliveryCityQR")
 
+            // Content to fill fields to fill
+            let stateOfThisDelivery = usersAR[userID].activeInterval ? "Activo" : "Inactivo";
 
-        // Fields to fill
-        let deliveryUsername = document.getElementById("deliveryUsername")
-        let deliveryStateField = document.getElementById("deliveryState")
-        let deliveryRatingField = document.getElementById("rat")
-        let deliveryCityField = document.getElementById("deliveryCity")
-        let deliveryUsernameQR = document.getElementById("deliveryUsernameQR")
-        let deliveryCityQR = document.getElementById("deliveryCityQR")
+            // Filling fields to fill
+            deliveryUsername.textContent = usersAR[userID].username
+            deliveryUsernameQR.textContent = usersAR[userID].username
+            deliveryStateField.setAttribute("loom", stateOfThisDelivery)
+            deliveryRatingField.innerHTML = `
+                <rater rating="`+ usersAR[userID].rank + `">
+                    <ul class="list-inline mb-0 gap-0">
+                        <li class="list-inline-item badge rounded-pill text-light bg-black"></li>
+                        <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
+                        <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
+                        <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
+                        <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
+                        <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
+                    </ul>
+                </rater>
+                `
+            rateNow()
 
-        // Content to fill fields to fill
-        let stateOfThisDelivery = usersAR[userID].activeInterval ? "Activo" : "Inactivo";
+            var ubicacionDelivery = getParentProvinceAndCityName(usersAR[userID].cityID);
 
-        // Filling fields to fill
-        deliveryUsername.textContent = usersAR[userID].username
-        deliveryUsernameQR.textContent = usersAR[userID].username
-        deliveryStateField.setAttribute("loom", stateOfThisDelivery)
-        deliveryRatingField.innerHTML = `
-            <rater rating="`+ usersAR[userID].rank + `">
-                <ul class="list-inline mb-0 gap-0">
-                    <li class="list-inline-item badge rounded-pill text-light bg-black"></li>
-                    <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
-                    <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
-                    <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
-                    <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
-                    <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
-                </ul>
-            </rater>
-            `
-        rateNow()
-
-        var ubicacionDelivery = getParentProvinceAndCityName(usersAR[userID].cityID);
-
-        deliveryCityField.textContent = ubicacionDelivery.ciudad + " (" + ubicacionDelivery.provincia + ")"
-        deliveryCityQR.textContent = ubicacionDelivery.ciudad + " (" + ubicacionDelivery.provincia + ")"
+            deliveryCityField.textContent = ubicacionDelivery.ciudad + " (" + ubicacionDelivery.provincia + ")"
+            deliveryCityQR.textContent = ubicacionDelivery.ciudad + " (" + ubicacionDelivery.provincia + ")"
 
 
 
