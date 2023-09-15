@@ -31,10 +31,10 @@ const data = [];
             const States = [];
             const invervalHours = [];
 
-            // Construct products
+            // Construct products (Columns A to G)
             for (let i = 1; i < rows.length; i++) {
                 const row = rows[i];
-                const Products = {
+                const Product = {
                     SKU: row.c[0] && row.c[0].v ? row.c[0].v : '',
                     Categoria: row.c[1] && row.c[1].v ? row.c[1].v : '',
                     Plato: row.c[2] && row.c[2].v ? row.c[2].v : '', 
@@ -43,15 +43,24 @@ const data = [];
                     Descuento: row.c[5] && row.c[5].v ? row.c[5].v : '', 
                     Estado: row.c[6] && row.c[6].v ? row.c[6].v : '', 
                     };
-                    Products.push(Products);
+                    Products.push(Product);
             }
 
-            // 
+            // Construct Categories Array (Column I)
+            for (let i = 1; i < rows.length; i++) {
+                const category = rows[i].c[8] && rows[i].c[8].v ? rows[i].c[8].v : '';
+                Categories.push(category);
+            }
 
             Products.forEach((Products) => {
                 console.log('SKU:', Products.SKU);
                 console.log('Categoría:', Products.Categoria);
                 console.log('Plato:', Products.Plato);
+            });
+
+            // Log the extracted categories
+            Categories.forEach((category, index) => {
+                console.log(`Category ${index + 1}: ${category}`);
             });
 
         })
