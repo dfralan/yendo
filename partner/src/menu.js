@@ -30,7 +30,7 @@ function init() {
                         for (let i = 1; i < rows.length; i++) {
                             console.log('wep')
                         const row = rows[i];
-                            if (row.c && row.c[0] && row.c[0].v) {
+                            
                                 const skuObject = {
                                 SKU: row.c[0].v,
                                 Categoria: row.c[1] ? row.c[1].v : '',
@@ -41,7 +41,7 @@ function init() {
                                 Estado: row.c[6] ? row.c[6].v : '', 
                                 };
                                 skuObjects.push(skuObject);
-                            }
+                            
                         }
 
                         // Product iterator example
