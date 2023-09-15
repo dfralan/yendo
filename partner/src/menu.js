@@ -32,12 +32,13 @@ function init() {
                         const row = rows[i];
                             
                                 const skuObject = {
-                                Categoria: row.c[1] ? row.c[1].v : '',
-                                Plato: row.c[2] ? row.c[2].v : '', 
-                                Description: row.c[3] ? row.c[3].v : '', 
-                                Precio: row.c[4] ? row.c[4].v : '', 
-                                Descuento: row.c[5] ? row.c[5].v : '', 
-                                Estado: row.c[6] ? row.c[6].v : '', 
+                                SKU: row.c[0] && row.c[0].v ? row.c[0].v : '',
+                                Categoria: row.c[1] && row.c[1].v ? row.c[1].v : '',
+                                Plato: row.c[2] && row.c[2].v ? row.c[2].v : '', 
+                                Description: row.c[3] && row.c[3].v ? row.c[3].v : '', 
+                                Precio: row.c[4] && row.c[4].v ? row.c[4].v : '', 
+                                Descuento: row.c[5] && row.c[5].v ? row.c[5].v : '', 
+                                Estado: row.c[6] && row.c[6].v ? row.c[6].v : '', 
                                 };
                                 skuObjects.push(skuObject);
                             
