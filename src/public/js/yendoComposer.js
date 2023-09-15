@@ -15,8 +15,7 @@
 
         // Check if the URL is from partner division
         function isPartner() {
-            var partnerRegex = /partner/i;
-            if (partnerRegex.test(storedURL)) {
+            if (storedURL.includes("partner")) {
                 window.location.href = "https://yendo.delivery/partner/menu.html";
             }
         }
