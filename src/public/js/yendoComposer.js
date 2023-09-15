@@ -24,10 +24,10 @@
 
         // Extract the last 11 characters from the stored URL to check if contains an UserID from a delivery
         function getUserIdFromURL() {
-            last11Characters = storedURL.slice(-11);
-            var last11CharactersToNumber = parseInt(last11Characters);
-            if (!isNaN(last11CharactersToNumber)) { 
-                userID = (last11CharactersToNumber * 11)
+            last13Characters = storedURL.slice(-13);
+            var last13CharactersToNumber = parseInt(last13Characters);
+            if (!isNaN(last13CharactersToNumber)) { 
+                userID = (last13CharactersToNumber * 11)
             } else {
                 window.location.href = "https://yendo.delivery/no-delivery.html";
             }
