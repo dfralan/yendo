@@ -1,14 +1,12 @@
 (function () {
     function main() {
 
-
-        // Get the element with the 'yendo' tag
-        const yendoElement = document.querySelector('yendo');
         var userID
         const storedURL = localStorage.getItem('currentUrl');
         
         if (storedURL.includes("partner")) {
             window.location.href = "https://yendo.delivery/partner/menu.html";
+            return
         }
         
         const last13Characters = parseInt(storedURL.slice(-13))
