@@ -28,7 +28,6 @@ const data = [];
             // Inicializar arrays
             const Products = [];
             const Categories = [];
-            const States = [];
             const invervalHours = [];
 
             // Construct products (Columns A to G)
