@@ -1,21 +1,18 @@
 (function () {
     function main() {
 
-        var userID
         const storedURL = localStorage.getItem('currentUrl');
+        const last13Characters = parseInt(storedURL.slice(-13))
+        var userID
         
         if (storedURL.includes("partner")) {
             window.location.href = "https://yendo.delivery/partner/menu.html";
             return
         }
         
-        const last13Characters = parseInt(storedURL.slice(-13))
-        
-        if (!isNaN(last13Characters)) { 
+        else if (!isNaN(last13Characters)) { 
             userID = (last13Characters * 11)
-        } else {
-            window.location.href = "https://yendo.delivery/no-delivery.html";
-        }
+        } 
 
         // Match to see if there is an delivery with that number
         if (usersAR[userID]) {
