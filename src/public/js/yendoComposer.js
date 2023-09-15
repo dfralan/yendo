@@ -15,8 +15,10 @@
 
         // Check if the URL is from partner division
         function isPartner() {
+            console.log('wep')
+            console.log(storedURL)
             if (storedURL.includes("partner")) {
-                window.location.href = "https://yendo.delivery/partner/menu.html";
+                //window.location.href = "https://yendo.delivery/partner/menu.html";
             }
         }
         isPartner()
@@ -28,7 +30,7 @@
             if (!isNaN(last13CharactersToNumber)) { 
                 userID = (last13CharactersToNumber * 11)
             } else {
-                window.location.href = "https://yendo.delivery/no-delivery.html";
+                //window.location.href = "https://yendo.delivery/no-delivery.html";
             }
         }
         getUserIdFromURL()
