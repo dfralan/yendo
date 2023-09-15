@@ -18,7 +18,7 @@
             console.log('wep')
             console.log(storedURL)
             if (storedURL.includes("partner")) {
-                //window.location.href = "https://yendo.delivery/partner/menu.html";
+                window.location.href = "https://yendo.delivery/partner/menu.html";
             }
         }
         isPartner()
