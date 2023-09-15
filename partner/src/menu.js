@@ -14,7 +14,12 @@ function init() {
     fetch(url)
         .then(res => res.text())
         .then(rep => {
-            const jsData = JSON.parse(rep.substr(47).slice(0, -2));
+            // Extract the JSON portion of the response
+            const startIndex = rep.indexOf('{');
+            const endIndex = rep.lastIndexOf('}');
+            const jsonData = rep.slice(startIndex, endIndex + 1);
+
+            const jsData = JSON.parse(jsonData);
             console.log(jsData);
 
             // Obtener todas las filas de la hoja de cálculo

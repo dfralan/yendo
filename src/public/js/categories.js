@@ -89,6 +89,16 @@ const categories = {
       "codigo": "017",
       "nombre": "Paseador de perros",
       "descripcion": "Perros paseo"
+    },
+    {
+      "codigo": "018",
+      "nombre": "Resto",
+      "descripcion": "Local Gastronómico"
+    },
+    {
+      "codigo": "018",
+      "nombre": "Hotel",
+      "descripcion": "Complejo hotelero"
     }
   ]
 }
