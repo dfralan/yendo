@@ -32,7 +32,6 @@ function init() {
                         const row = rows[i];
                             
                                 const skuObject = {
-                                SKU: row.c[0].v,
                                 Categoria: row.c[1] ? row.c[1].v : '',
                                 Plato: row.c[2] ? row.c[2].v : '', 
                                 Description: row.c[3] ? row.c[3].v : '', 
