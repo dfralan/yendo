@@ -5,35 +5,19 @@
         // Get the element with the 'yendo' tag
         const yendoElement = document.querySelector('yendo');
         var userID
-        var storedURL
-
-        // Get stored URL and set it in the variable
-        function setStoredURL() {
-            storedURL = localStorage.getItem('currentUrl');
+        const storedURL = localStorage.getItem('currentUrl');
+        
+        if (storedURL.includes("partner")) {
+            window.location.href = "https://yendo.delivery/partner/menu.html";
         }
-        setStoredURL()
-
-        // Check if the URL is from partner division
-        function isPartner() {
-            console.log('wep')
-            console.log(storedURL)
-            if (storedURL.includes("partner")) {
-                window.location.href = "https://yendo.delivery/partner/menu.html";
-            }
+        
+        const last13Characters = parseInt(storedURL.slice(-13))
+        
+        if (!isNaN(last13Characters)) { 
+            userID = (last13Characters * 11)
+        } else {
+            window.location.href = "https://yendo.delivery/no-delivery.html";
         }
-        isPartner()
-
-        // Extract the last 11 characters from the stored URL to check if contains an UserID from a delivery
-        function getUserIdFromURL() {
-            last13Characters = storedURL.slice(-13);
-            var last13CharactersToNumber = parseInt(last13Characters);
-            if (!isNaN(last13CharactersToNumber)) { 
-                userID = (last13CharactersToNumber * 11)
-            } else {
-                //window.location.href = "https://yendo.delivery/no-delivery.html";
-            }
-        }
-        getUserIdFromURL()
 
         // Match to see if there is an delivery with that number
         if (usersAR[userID]) {
@@ -187,7 +171,7 @@
             });
         }
         else {
-            //window.location.href = "https://yendo.delivery/no-delivery.html";
+            window.location.href = "https://yendo.delivery/no-delivery.html";
         }
 
     }
