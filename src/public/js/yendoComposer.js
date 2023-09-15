@@ -187,7 +187,7 @@
             });
         }
         else {
-            window.location.href = "https://yendo.delivery/no-delivery.html";
+            //window.location.href = "https://yendo.delivery/no-delivery.html";
         }
 
     }
