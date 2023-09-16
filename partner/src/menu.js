@@ -83,6 +83,7 @@ function generateHash(inputText) {
                     const rotativoMenuElement = document.getElementById('rotativo')
                     rotativoMenuElement.innerText = Rotativo
                 }
+                setRotativo()
                 
 
                 Products.forEach((Products) => {
