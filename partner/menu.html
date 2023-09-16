@@ -19,136 +19,45 @@
 <body>
 
     <!-- Header -->
-    <div class="display-flex z-1 flex-col m-gap x-padded no-padded-left no-padded-right">
-        <div style="fill: #039768;" class="display-flex flex-wrap w-100 land">
-            <div class="responsive-2-of-3 xs-padded">
-                <h1 class="w-100 padded border-solid-l display-flex border-black full-center text-center">JAPANESE FOOD</h1>
-            </div>
-            <div class="responsive-1-of-3 xs-padded">
-                <h1 class="w-100 padded border-solid-l display-flex border-black full-center text-center">MENU</h1>
-            </div>
-            <div class="responsive-1-of-3 xs-padded">
-                <div class="w-100 padded border-solid-l border-black full-center text-center display-flex flex-col">
-                    <h2>SHITAKE</h2>
-                    <h3>RESTAURANT</h3>
-                </div>
-            </div>
-            <div class="responsive-2-of-3 xs-padded">
-                <h1 id="scrollingDiv" class="w-100 padded border-solid-l display-flex border-black h-center overflow-scroll no-wrap">RAMEN - SUSHI - WOK - GREEN TEA</h1>
-            </div>
+    <div id="header" class="display-flex flex-col w-100">
+        <div class="land bg-body display-flex flex-col full-center">
+            <img width="100%" src="https://scontent.fros2-1.fna.fbcdn.net/v/t39.30808-6/326320474_500787765505899_2100819312855970565_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=52f669&_nc_ohc=ynghcWf6bfwAX-lDyz2&_nc_ht=scontent.fros2-1.fna&oh=00_AfAcb3OtEHCqczNlBnuv3HDiOIuCvq4vkMQVE311T_xQrQ&oe=650B0761" alt="">
+            <img style="height: 100px; width: 100px; transform: translateY(-30px);" class="bg-body cover rounded-max" src="https://scontent.fros2-1.fna.fbcdn.net/v/t39.30808-1/326793075_3145582082371477_863522241889190080_n.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=754033&_nc_ohc=GeaBOSseuQIAX8GKahS&_nc_ht=scontent.fros2-1.fna&oh=00_AfBpUxsKwmhJ4VxXj4mllM_1oNjccXZKFfedgtLLS14xfw&oe=650B1F14" alt="">
         </div>
     </div>
 
-    <!-- Logo -->
-    <div class="land display-flex flex-col full-center">
-        <img width="50%" src="https://yendo.delivery/partner/demo/src/fish.svg" alt="">
+    <!-- Rotativo -->
+    <div id="rotativo" class="display-flex w-100 land overflow-scroll no-wrap">
+        <h2 class="padded no-padded-left no-padded-right">RAMEN - SUSHI - WOK - GREEN TEA - RAMEN - SUSHI - WOK - GREEN TEA - RAMEN - SUSHI - WOK - GREEN TEA - RAMEN - SUSHI - WOK - GREEN TEA</h2>
     </div>
 
-    <!-- Menu -->
-    <div class="display-flex z-1 flex-col m-gap x-padded no-padded-left no-padded-right">
-        <div style="fill: #039768;" class="display-flex flex-wrap w-100 land">
+    <!-- Contenedor de categorías -->
+    <div id="categoriesContainer" class="display-flex flex-wrap w-100 land">
 
-            <!-- Category -->
-            <div class="responsive-1-of-3 xs-padded">
-                <div class="w-100 padded border-solid-l display-flex border-black full-center text-center">
-                    <img width="50%" src="https://yendo.delivery/partner/demo/src/dish-1.svg" alt="">
-                </div>
+        <!-- Categoría -->
+        <div id="categoryHash" class="responsive-2 display-flex flex-col">
+            <div class="steady-1-of-3 bg-secondary padded">
+                Entrada
             </div>
-            <div class="responsive-2-of-3 xs-padded">
-                <div class="w-100 padded border-solid-l display-flex border-black full-center text-center">
-                    <div class="display-flex flex-col flex-start w-100 s-gap">
-                        
-                        <div class="display-flex flex-col text-left">
-                            <div class="display-flex flex-row spaced">
-                                <h3>Product</h3>
-                                <h3>$2.300</h3>
-                            </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga praesentium minus illo.</p>
-                        </div>
-                        
-                        <div class="display-flex flex-col text-left">
-                            <div class="display-flex flex-row spaced">
-                                <h3>Product</h3>
-                                <h3>$2.300</h3>
-                            </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga praesentium minus illo.</p>
-                        </div>
+
+            <!-- Producto -->
+            <div class="w-100 display-flex flex-row bg-tertiary">
+                <div class="steady-2-of-3 padded display-flex flex-col s-gap">
+                    <h3 class="bg-secondary">
+                        Papas fritas
+                    </h3>
+                    <div class="">
+                        Incluyen cheddar
                     </div>
-
                 </div>
-            </div>
-
-            <!-- Category -->
-            <div class="responsive-2-of-3 xs-padded">
-                <div class="w-100 padded border-solid-l display-flex border-black full-center text-center">
-                    <div class="display-flex flex-col flex-start w-100 s-gap">
-                        
-                        <div class="display-flex flex-col text-left">
-                            <div class="display-flex flex-row spaced">
-                                <h3>Product</h3>
-                                <h3>$2.300</h3>
-                            </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga praesentium minus illo.</p>
-                        </div>
-                        
-                        <div class="display-flex flex-col text-left">
-                            <div class="display-flex flex-row spaced">
-                                <h3>Product</h3>
-                                <h3>$2.300</h3>
-                            </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga praesentium minus illo.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="responsive-1-of-3 xs-padded">
-                <div class="w-100 padded border-solid-l display-flex border-black full-center text-center">
-                    <img width="50%" src="https://yendo.delivery/partner/demo/src/dish-2.svg" alt="">
-                </div>
-            </div>
-
-            <!-- Category -->
-            <div class="responsive-1-of-3 xs-padded">
-                <div class="w-100 padded border-solid-l display-flex border-black full-center text-center">
-                    <img width="50%" src="https://yendo.delivery/partner/demo/src/dish-3.svg" alt="">
-                </div>
-            </div>
-            <div class="responsive-2-of-3 xs-padded">
-                <div class="w-100 padded border-solid-l display-flex border-black full-center text-center">
-                    <div class="display-flex flex-col flex-start w-100 s-gap">
-                        
-                        <div class="display-flex flex-col text-left">
-                            <div class="display-flex flex-row spaced">
-                                <h3>Product</h3>
-                                <h3>$2.300</h3>
-                            </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga praesentium minus illo.</p>
-                        </div>
-                        
-                        <div class="display-flex flex-col text-left">
-                            <div class="display-flex flex-row spaced">
-                                <h3>Product</h3>
-                                <h3>$2.300</h3>
-                            </div>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga praesentium minus illo.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Footer -->
-            <div class="w-100 xs-padded">
-                <div class="w-100 padded border-solid-l display-flex border-black full-center text-center">
-                    <h4>yendo.delivery</h4>
+                <div class="steady-1-of-3 padded">
+                    $1200
                 </div>
             </div>
 
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="https://yendo.delivery/partner/src/menu.js"></script>
     <script src="https://yendo.delivery/partner/src/brik.js"></script>
 

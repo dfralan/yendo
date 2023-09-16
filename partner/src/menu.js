@@ -1,12 +1,4 @@
-function generateHash(inputText) {
-  let hash = 0;
-  for (let i = 0; i < inputText.length; i++) {
-    const char = inputText.charCodeAt(i);
-    hash = (hash << 5) - hash + char;
-  }
-  return hash.toString();
-}
-
+// Function to extract the username from the url entered by the user
 function extractUserFromUrl(url) {
     const regex = /\/partner\/([^\/]+)/;
     const match = url.match(regex);
@@ -16,20 +8,33 @@ function extractUserFromUrl(url) {
     return null;
 }
 
+// Function to generate a simple and non secure at all hash
+function generateHash(inputText) {
+  let hash = 0;
+  for (let i = 0; i < inputText.length; i++) {
+    const char = inputText.charCodeAt(i);
+    hash = (hash << 5) - hash + char;
+  }
+  return hash.toString();
+}
+
 (function () {
 
-    // Extract userName from URL and convert to Hash to match to see if exist
+    // Extract userName from URL stored in local storage and convert to Hash to match to see if exist in Partners List
     const storedURL = localStorage.getItem('currentUrl');
     const userName = extractUserFromUrl(storedURL)
     const userHash = generateHash(userName)
 
+    // If it doesnt match any partner redirect to main page
     if (!partnersAR[userHash]){
         window.location.href = "https://yendo.delivery/partner";
+
+    // Otherwise 'joyi', construct url to fetch data
     } else {
         const sheetID = partnersAR[userHash]?.menuId
         const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
         const sheetName = 'carta - plan inicial';
-        let qu = 'Select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y';
+        const qu = 'Select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y';
         const query = encodeURIComponent(qu);
         const url = `${base}&sheet=${sheetName}&tq=${query}`;
         const data = [];
@@ -46,7 +51,6 @@ function extractUserFromUrl(url) {
                 // Inicializar arrays
                 const Products = [];
                 const Categories = [];
-                const invervalHours = [];
 
                 // Construct products (Columns A to G)
                 for (let i = 1; i < rows.length; i++) {
