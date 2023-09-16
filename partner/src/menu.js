@@ -140,7 +140,7 @@ function generateHash(inputText) {
                             
                             let productElement = `
                                 <div class="steady-2-of-3 padded display-flex flex-col s-gap">
-                                    <h3 class="bg-secondary">
+                                    <h3 class="">
                                         ${Product.Plato}
                                     </h3>
                                     <div class="">
