@@ -18,7 +18,7 @@ function extractUserFromUrl(url) {
 
 (function () {
 
-    // Extract userHash from URL
+    // Extract userName from URL and convert to Hash to match to see if exist
     const storedURL = localStorage.getItem('currentUrl');
     const userName = extractUserFromUrl(storedURL)
     const userHash = generateHash(userName)
