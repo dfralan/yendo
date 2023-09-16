@@ -33,6 +33,9 @@ const data = [];
     console.log(storedURL)
     console.log(userName)
     console.log(userHash)
+    if (partnersAR[userHash]){
+        console.log('there is user here')
+    }
     
     // Fetch menu from user
     fetch(url)
