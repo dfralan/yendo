@@ -49,7 +49,7 @@ function generateHash(inputText) {
     if (!partnersAR[userHash]){
         window.location.href = "https://yendo.delivery/partner";
 
-    // Otherwise 'joyi', construct url to fetch data
+    // Otherwise, construct url to fetch data
     } else {
         const sheetID = partnersAR[userHash]?.menuId
         const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
@@ -101,23 +101,12 @@ function generateHash(inputText) {
                 const Rotativo = rows[0].c[21].v;
                 const rotativoMenuElement = document.getElementById('rotativo')
                 rotativoMenuElement.innerText = Rotativo
-                
-                
-
-                Products.forEach((Products) => {
-                    console.log('SKU:', Products.SKU);
-                    console.log('Categoría:', Products.Categoria);
-                    console.log('Plato:', Products.Plato);
-                });
 
                 // Log the extracted categories
                 Categories.forEach((category, index) => {
 
                     const newCategory = document.createElement('div');
-
-                    // Set an id for the new div
                     newCategory.id = generateHash(category);
-
                     newCategory.classList.add('responsive-2', 'display-flex', 'flex-col');
 
                     let categoryElement = `
@@ -127,7 +116,6 @@ function generateHash(inputText) {
                         <div class="productContainer w-100 display-flex flex-col">
                         </div>
                     `
-
                     newCategory.innerHTML = categoryElement
 
                     if (categoryContainer) {
@@ -135,6 +123,13 @@ function generateHash(inputText) {
                     } else {
                         return
                     }
+                });
+
+
+                Products.forEach((Products) => {
+                    console.log('SKU:', Products.SKU);
+                    console.log('Categoría:', Products.Categoria);
+                    console.log('Plato:', Products.Plato);
                 });
 
             })
