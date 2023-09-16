@@ -134,10 +134,28 @@ function generateHash(inputText) {
                         const productContainerDiv = parentDiv.querySelector('.productContainer');
                       
                         if (productContainerDiv) {
-                            console.log('si bebe')
-                          productContainerDiv.style.backgroundColor = 'blue';  // For example, setting background color to blue
+
+                            const newProduct = document.createElement('div');
+                            newProduct.classList.add('w-100', 'display-flex', 'flex-row', 'bg-tertiary');
+                            
+                            let productElement = `
+                                <div class="steady-2-of-3 padded display-flex flex-col s-gap">
+                                    <h3 class="bg-secondary">
+                                        ${Product.Plato}
+                                    </h3>
+                                    <div class="">
+                                        ${Product.Description}
+                                    </div>
+                                </div>
+                                <div class="steady-1-of-3 padded">
+                                    ${Product.Precio}
+                                </div>
+                            `
+
+                            newProduct.innerHTML = productElement
+
                         } else {
-                          console.log('No element with class "productContainer" found inside the div with id "weso".');
+                            console.log('No element with class "productContainer" found inside the div with id "weso".');
                         }
                     }
 
