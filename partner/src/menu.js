@@ -107,7 +107,7 @@ function generateHash(inputText) {
 
                     const newCategory = document.createElement('div');
                     newCategory.id = generateHash(category);
-                    newCategory.classList.add('responsive-2', 'display-flex', 'flex-col');
+                    newCategory.classList.add('responsive-2', 'display-flex', 'flex-col', 'padded');
 
                     let categoryElement = `
                         <div style="background-color: #1B406B;" class="steady-1-of-3 color-white padded">
@@ -135,11 +135,8 @@ function generateHash(inputText) {
                       
                         if (productContainerDiv) {
 
-                            console.log(Product.Categoria)
-                            console.log(generateHash(Product.Categoria));
-
                             const newProduct = document.createElement('div');
-                            newProduct.classList.add('w-100', 'display-flex', 'flex-row', 'bg-tertiary');
+                            newProduct.classList.add('w-100', 'display-flex', 'flex-row');
                             
                             let productElement = `
                                 <div class="steady-2-of-3 padded display-flex flex-col s-gap">
