@@ -127,9 +127,19 @@ function generateHash(inputText) {
 
 
                 Products.forEach((Product) => {
-                    console.log('SKU:', Product.SKU);
-                    console.log('Categoría:', Product.Categoria);
-                    console.log('Plato:', Product.Plato);
+
+                    const parentDiv = document.getElementById(Product.Categoria);
+                    if (parentDiv) {
+                        // Use querySelector to target the desired element
+                        const productContainerDiv = parentDiv.querySelector('.productContainer');
+                      
+                        if (productContainerDiv) {
+                          productContainerDiv.style.backgroundColor = 'blue';  // For example, setting background color to blue
+                        } else {
+                          console.log('No element with class "productContainer" found inside the div with id "weso".');
+                        }
+                    }
+
                 });
 
             })
