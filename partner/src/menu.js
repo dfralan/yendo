@@ -130,13 +130,14 @@ function generateHash(inputText) {
 
                     const parentDiv = document.getElementById(generateHash(Product.Categoria));
                     if (parentDiv) {
-                        console.log(Product.Categoria)
-                        console.log(generateHash(Product.Categoria));
                         // Use querySelector to target the desired element
                         const productContainerDiv = parentDiv.querySelector('.productContainer');
                       
                         if (productContainerDiv) {
 
+                            console.log(Product.Categoria)
+                            console.log(generateHash(Product.Categoria));
+                            
                             const newProduct = document.createElement('div');
                             newProduct.classList.add('w-100', 'display-flex', 'flex-row', 'bg-tertiary');
                             
