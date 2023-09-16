@@ -7,6 +7,15 @@ function generateHash(inputText) {
   return hash.toString();
 }
 
+function extractUserFromUrl(url) {
+    const regex = /\/partner\/([^\/]+)/;
+    const match = url.match(regex);
+    if (match && match[1]) {
+      return match[1];
+    }
+    return null;
+}
+
 const sheetID = '1vF3AkCM5jxXWHg-U1h_Bi2orQdc2_uBNGIJgIcX64EE';
 const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
 const sheetName = 'carta - plan inicial';
@@ -16,7 +25,16 @@ const url = `${base}&sheet=${sheetName}&tq=${query}`;
 const data = [];
 
 (function () {
+
+    // Extract userHash from URL
+    const storedURL = localStorage.getItem('currentUrl');
+    const userName = extractUserFromUrl(storedURL)
+    const userHash = generateHash(userName)
+    console.log(storedURL)
+    console.log(userName)
+    console.log(userHash)
     
+    // Fetch menu from user
     fetch(url)
         .then(res => res.text())
         .then(rep => {
