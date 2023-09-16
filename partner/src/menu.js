@@ -51,7 +51,6 @@ function generateHash(inputText) {
                 // Inicializar arrays
                 const Products = [];
                 const Categories = [];
-                const Rotativo = rows[1].c[22]?.v;
 
                 // Construct products (Columns A to G)
                 for (let i = 1; i < rows.length; i++) {
@@ -79,11 +78,10 @@ function generateHash(inputText) {
                 }
 
                 // Set rotativo en el menú
-                function setRotativo() {
-                    const rotativoMenuElement = document.getElementById('rotativo')
-                    rotativoMenuElement.innerText = Rotativo
-                }
-                setRotativo()
+                const Rotativo = rows[0].c[21].v;
+                const rotativoMenuElement = document.getElementById('rotativo')
+                rotativoMenuElement.innerText = Rotativo
+                
                 
 
                 Products.forEach((Products) => {
