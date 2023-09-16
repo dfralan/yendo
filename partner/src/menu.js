@@ -128,12 +128,13 @@ function generateHash(inputText) {
 
                 Products.forEach((Product) => {
 
-                    const parentDiv = document.getElementById(Product.Categoria);
+                    const parentDiv = document.getElementById(generateHash(Product.Categoria));
                     if (parentDiv) {
                         // Use querySelector to target the desired element
                         const productContainerDiv = parentDiv.querySelector('.productContainer');
                       
                         if (productContainerDiv) {
+                            console.log('si bebe')
                           productContainerDiv.style.backgroundColor = 'blue';  // For example, setting background color to blue
                         } else {
                           console.log('No element with class "productContainer" found inside the div with id "weso".');
