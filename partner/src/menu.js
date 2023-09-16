@@ -126,10 +126,10 @@ function generateHash(inputText) {
                 });
 
 
-                Products.forEach((Products) => {
-                    console.log('SKU:', Products.SKU);
-                    console.log('Categoría:', Products.Categoria);
-                    console.log('Plato:', Products.Plato);
+                Products.forEach((Product) => {
+                    console.log('SKU:', Product.SKU);
+                    console.log('Categoría:', Product.Categoria);
+                    console.log('Plato:', Product.Plato);
                 });
 
             })
