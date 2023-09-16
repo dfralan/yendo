@@ -130,7 +130,8 @@ function generateHash(inputText) {
 
                     const parentDiv = document.getElementById(generateHash(Product.Categoria));
                     if (parentDiv) {
-                        console.log('wep')
+                        console.log(Product.Categoria)
+                        console.log(generateHash(Product.Categoria));
                         // Use querySelector to target the desired element
                         const productContainerDiv = parentDiv.querySelector('.productContainer');
                       
