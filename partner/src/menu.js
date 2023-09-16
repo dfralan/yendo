@@ -107,7 +107,7 @@ function generateHash(inputText) {
 
                     const newCategory = document.createElement('div');
                     newCategory.id = generateHash(category);
-                    newCategory.classList.add('responsive-2', 'display-flex', 'flex-col', 'padded');
+                    newCategory.classList.add('responsive-2', 'display-flex', 'flex-col', 'padded', 'no-padded-left', 'no-padded-right');
 
                     let categoryElement = `
                         <div style="background-color: #1B406B;" class="steady-1-of-3 color-white padded">
