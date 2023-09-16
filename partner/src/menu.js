@@ -1,3 +1,23 @@
+let categoryElement = `
+    <!-- Contenedor de categorías -->
+    <div id="categoriesContainer" class="display-flex flex-wrap w-100 land">
+
+        <!-- Categoría -->
+        <div id="categoryHash" class="responsive-2 display-flex flex-col">
+            <div style="background-color: #1B406B;" class="steady-1-of-3 color-white padded">
+                Entrada
+            </div>
+
+            <!-- Contenedor de productos -->
+            <div class="productContainer w-100 display-flex flex-col">
+
+
+            </div>
+
+        </div>
+    </div>
+`
+
 // Function to extract the username from the url entered by the user
 function extractUserFromUrl(url) {
     const regex = /\/partner\/([^\/]+)/;
@@ -38,6 +58,7 @@ function generateHash(inputText) {
         const query = encodeURIComponent(qu);
         const url = `${base}&sheet=${sheetName}&tq=${query}`;
         const data = [];
+        const categoryContainer = document.getElementById('categoriesContainer');
     
         // Fetch menu from user
         fetch(url)
@@ -91,7 +112,29 @@ function generateHash(inputText) {
 
                 // Log the extracted categories
                 Categories.forEach((category, index) => {
-                    console.log(`Category ${index + 1}: ${category}`);
+
+                    const newCategory = document.createElement('div');
+
+                    // Set an id for the new div
+                    newCategory.id = generateHash(category);
+
+                    newCategory.classList.add('responsive-2', 'display-flex', 'flex-col');
+
+                    let categoryElement = `
+                        <div style="background-color: #1B406B;" class="steady-1-of-3 color-white padded">
+                            ${category}
+                        </div>
+                        <div class="productContainer w-100 display-flex flex-col">
+                        </div>
+                    `
+
+                    newCategory.innerHTML = categoryElement
+
+                    if (categoryContainer) {
+                        categoryContainer.appendChild(newCategory);
+                    } else {
+                        return
+                    }
                 });
 
             })
