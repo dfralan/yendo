@@ -51,7 +51,7 @@ function generateHash(inputText) {
                 // Inicializar arrays
                 const Products = [];
                 const Categories = [];
-                const Rotativo = rows[1].c[21].v;
+                const Rotativo = rows[1].c[21]?.v;
 
                 // Construct products (Columns A to G)
                 for (let i = 1; i < rows.length; i++) {
