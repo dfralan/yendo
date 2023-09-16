@@ -137,7 +137,7 @@ function generateHash(inputText) {
 
                             console.log(Product.Categoria)
                             console.log(generateHash(Product.Categoria));
-                            
+
                             const newProduct = document.createElement('div');
                             newProduct.classList.add('w-100', 'display-flex', 'flex-row', 'bg-tertiary');
                             
@@ -156,6 +156,8 @@ function generateHash(inputText) {
                             `
 
                             newProduct.innerHTML = productElement
+
+                            productContainerDiv.appendChild(newProduct);
 
                         } else {
                             console.log('No element with class "productContainer" found inside the div with id "weso".');
