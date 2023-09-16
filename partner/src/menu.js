@@ -16,24 +16,23 @@ function extractUserFromUrl(url) {
     return null;
 }
 
-var sheetID = '';
-const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
-const sheetName = 'carta - plan inicial';
-let qu = 'Select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y';
-const query = encodeURIComponent(qu);
-const url = `${base}&sheet=${sheetName}&tq=${query}`;
-const data = [];
-
 (function () {
 
     // Extract userHash from URL
     const storedURL = localStorage.getItem('currentUrl');
     const userName = extractUserFromUrl(storedURL)
     const userHash = generateHash(userName)
+
     if (!partnersAR[userHash]){
         window.location.href = "https://yendo.delivery/partner";
     } else {
-        sheetID = partnersAR[userHash]?.menuId
+        const sheetID = partnersAR[userHash]?.menuId
+        const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
+        const sheetName = 'carta - plan inicial';
+        let qu = 'Select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y';
+        const query = encodeURIComponent(qu);
+        const url = `${base}&sheet=${sheetName}&tq=${query}`;
+        const data = [];
     
         // Fetch menu from user
         fetch(url)
