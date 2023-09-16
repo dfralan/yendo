@@ -129,6 +129,8 @@ function generateHash(inputText) {
 
                 Products.forEach((Product) => {
 
+                    console.log(Product)
+
                     const parentDiv = document.getElementById(generateHash(Product.Categoria));
                     if (parentDiv) {
                         // Use querySelector to target the desired element
