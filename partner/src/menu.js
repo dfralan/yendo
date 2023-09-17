@@ -93,7 +93,7 @@ function generateHash(inputText) {
                     console.log(category)
                     const newCategory = document.createElement('div');
                     newCategory.id = generateHash(category);
-                    newCategory.classList.add('responsive-2', 'display-flex', 'flex-col', 'padded');
+                    newCategory.classList.add('responsive-2', 'display-flex', 'flex-col', 'padded', 'm-gap');
 
                     let categoryElement = `
                         <h2 style="background-color: #1B406B;" class="w-fit color-white s-padded font-500 max-width-100 wrap overflow-scroll">
