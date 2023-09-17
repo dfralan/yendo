@@ -83,9 +83,23 @@ function generateHash(inputText) {
                 }
 
                 // Set rotativo en el menú
-                const Rotativo = rows[0].c[21].v;
-                const rotativoMenuElement = document.getElementById('rotativo')
-                rotativoMenuElement.innerText = Rotativo.repeat(20);
+const Rotativo = rows[0].c[21].v;
+const rotativoMenuElement = document.getElementById('rotativo');
+const repeatedRotativo = (Rotativo + ' ').repeat(20).trim();  // Add a space after Rotativo and then repeat
+rotativoMenuElement.innerText = repeatedRotativo;
+
+// Set up automatic scrolling
+let scrollPosition = 0;
+const scrollSpeed = 2; // Adjust this value to control the scrolling speed
+
+const scrollInterval = setInterval(() => {
+  scrollPosition += scrollSpeed;
+  if (scrollPosition >= rotativoMenuElement.scrollWidth - rotativoMenuElement.clientWidth) {
+    scrollPosition = 0;
+  }
+  rotativoMenuElement.scrollLeft = scrollPosition;
+}, 50);  // Adjust the interval (in milliseconds) to control the smoothness of the scrolling
+
 
                 // Log the extracted categories
                 Categories.forEach((category, index) => {
