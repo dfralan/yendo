@@ -125,7 +125,7 @@ function generateHash(inputText) {
 
                             const newProduct = document.createElement('div');
                             newProduct.classList.add('w-100', 'display-flex', 'flex-row');
-                            const estado = (Product.Estado !== 'Disponible' && Product.Estado !== '') ? '' : `<span class='font-300 rounded-s'> ${Product.Estado}</span>`
+                            const estado = (Product.Estado !== 'Disponible' && Product.Estado !== '') ? '' : `<span class='font-300 rounded-s'> [${Product.Estado}]</span>`
 
                             
                             let productElement = `
@@ -133,7 +133,7 @@ function generateHash(inputText) {
                                     <div style='color: #1B406B' class='display-flex h-center flex-row spaced'>
                                         <h3 class="font-500 width-fit wrap overflow-scroll">
                                             ${Product.Plato}
-                                            [${estado}]
+                                            ${estado}
                                         </h3>
                                         <h4 class="steady-1-of-3 text-right display-flex flex-end font-300">
                                             ${Product.Precio}
