@@ -89,7 +89,7 @@ function generateHash(inputText) {
                 rotativoMenuElement.innerText = repeatedRotativo;
 
                 const scrollSpeed = 2; // Adjust the scrolling speed as needed
-const rotativoContent = document.getElementById('rotativo');
+var rotativoContent = document.getElementById('rotativo');
 
 function scrollHorizontally() {
     rotativoContent.scrollLeft += scrollSpeed;
