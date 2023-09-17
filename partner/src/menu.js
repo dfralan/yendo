@@ -136,7 +136,7 @@ function generateHash(inputText) {
                                     </div>
                                 </div>
                                 <div class="steady-1-of-3 padded">
-                                    ${Product.Precio}
+                                    $ ${Product.Precio}
                                 </div>
                             `
 
