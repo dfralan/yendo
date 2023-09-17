@@ -85,7 +85,7 @@ function generateHash(inputText) {
                 // Set rotativo en el menú
                 const Rotativo = rows[0].c[21].v;
                 const rotativoMenuElement = document.getElementById('rotativo')
-                rotativoMenuElement.innerText = Rotativo
+                rotativoMenuElement.innerText = Rotativo.repeat(20);
 
                 // Log the extracted categories
                 Categories.forEach((category, index) => {
