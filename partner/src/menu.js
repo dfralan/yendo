@@ -83,18 +83,23 @@ function generateHash(inputText) {
                 }
 
                 // Set rotativo en el menú
-const Rotativo = rows[0].c[21].v;
-const rotativoMenuElement = document.getElementById('rotativo');
-const repeatedRotativo = (Rotativo + ' ').repeat(20).trim();  // Add a space after Rotativo and then repeat
+                const Rotativo = rows[0].c[21].v;
+                const rotativoMenuElement = document.getElementById('rotativo')
+                const repeatedRotativo = (Rotativo + ' ').repeat(20).trim();  // Add a space after Rotativo and then repeat
+                rotativoMenuElement.innerText = repeatedRotativo;
 
-function updateScroll() {
-    repeatedRotativo = repeatedRotativo.substring(1) + repeatedRotativo[0];  // Shift the content to the left
-    rotativoMenuElement.innerText = repeatedRotativo;
+                const scrollSpeed = 2; // Adjust the scrolling speed as needed
+const rotativoContent = document.getElementById('rotativo');
+
+function scrollHorizontally() {
+    rotativoContent.scrollLeft += scrollSpeed;
+
+    if (rotativoContent.scrollLeft >= rotativoContent.scrollWidth - rotativoContent.offsetWidth) {
+        rotativoContent.scrollLeft = 0;
+    }
 }
 
-// Update the scroll every 100 milliseconds (adjust as needed for your desired speed)
-const scrollInterval = setInterval(updateScroll, 100);
-
+setInterval(scrollHorizontally, 50); // Adjust the interval for smoother/faster scrolling
 
                 // Log the extracted categories
                 Categories.forEach((category, index) => {
