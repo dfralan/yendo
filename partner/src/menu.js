@@ -30,13 +30,17 @@ function extractUserFromUrl(url) {
 
 // Function to generate a simple and non secure at all hash
 function generateHash(inputText) {
-  let hash = 0;
-  for (let i = 0; i < inputText.length; i++) {
-    const char = inputText.charCodeAt(i);
-    hash = (hash << 5) - hash + char;
-  }
-  return hash.toString();
+    // Trim white spaces at the beginning and end, and convert to lowercase
+    const trimmedAndLowercasedText = inputText.trim().toLowerCase();
+  
+    let hash = 0;
+    for (let i = 0; i < trimmedAndLowercasedText.length; i++) {
+      const char = trimmedAndLowercasedText.charCodeAt(i);
+      hash = (hash << 5) - hash + char;
+    }
+    return hash.toString();
 }
+  
 
 (function () {
 
