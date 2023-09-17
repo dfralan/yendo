@@ -695,8 +695,8 @@ html {
     opacity: 1;
 }
 
-.box-to-border {
-    box-sizing: border-box;
+w-fit {
+    width: max-content;
 }
 
 .brick {
