@@ -135,7 +135,7 @@ function generateHash(inputText) {
                                         ${Product.Description}
                                     </div>
                                 </div>
-                                <div class="steady-1-of-3 padded">
+                                <div class="steady-1-of-3 padded text-right">
                                     $ ${Product.Precio}
                                 </div>
                             `
