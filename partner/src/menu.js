@@ -125,7 +125,7 @@ function generateHash(inputText) {
 
                             const newProduct = document.createElement('div');
                             newProduct.classList.add('w-100', 'display-flex', 'flex-row');
-                            const estado = (Product.Estado !== 'Disponible' && Product.Estado !== '') ? `<span>${Product.Estado}</span>` : ''
+                            const estado = (Product.Estado !== 'Disponible' && Product.Estado !== '') ? '' : `<span>${Product.Estado}</span>`
 
                             
                             let productElement = `
