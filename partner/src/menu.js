@@ -96,9 +96,9 @@ function generateHash(inputText) {
                     newCategory.classList.add('responsive-2', 'display-flex', 'flex-col', 'padded', 'no-padded-left', 'no-padded-right');
 
                     let categoryElement = `
-                        <h2 style="background-color: #1B406B;" class="w-fit color-white s-padded font-500 max-width-100 wrap overflow-scroll">
+                        <h3 style="background-color: #1B406B;" class="w-fit color-white s-padded font-500 max-width-100 wrap overflow-scroll">
                             ${category}
-                        </h2>
+                        </h3>
                         <div class="productContainer w-100 display-flex flex-col">
                         </div>
                     `
@@ -130,17 +130,17 @@ function generateHash(inputText) {
                             
                             let productElement = `
                                 <div class="steady-2-of-3 padded display-flex flex-col s-gap">
-                                    <h3 class="font-500 max-width-100 wrap overflow-scroll">
+                                    <h4 class="font-500 max-width-100 wrap overflow-scroll">
                                         ${Product.Plato}
                                         ${estado}
-                                    </h3>
-                                    <div class="max-width-100 wrap overflow-scroll">
+                                    </h4>
+                                    <p class="max-width-100 wrap overflow-scroll">
                                         ${Product.Description}
-                                    </div>
+                                    </p>
                                 </div>
-                                <h3 class="steady-1-of-3 padded text-right display-flex flex-end font-500">
+                                <h4 class="steady-1-of-3 padded text-right display-flex flex-end font-500">
                                     $ ${Product.Precio}
-                                </h3>
+                                </h4>
                             `
 
                             newProduct.innerHTML = productElement
