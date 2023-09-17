@@ -99,7 +99,7 @@ function generateHash(inputText) {
                         <h2 style="background-color: #1B406B;" class="w-fit color-white s-padded font-500 max-width-100 wrap overflow-scroll">
                             ${category}
                         </h2>
-                        <div style="background-color: #232323;" class="productContainer w-100 display-flex flex-col ">
+                        <div class="productContainer w-100 display-flex flex-col ">
                         </div>
                     `
                     newCategory.innerHTML = categoryElement
@@ -129,7 +129,7 @@ function generateHash(inputText) {
 
                             
                             let productElement = `
-                                <div class="steady-2-of-3 display-flex flex-col s-gap">
+                                <div class="w-100 display-flex flex-col s-gap">
                                     <div style='border-color: #1B406B; color: #1B406B' class='display-flex flex-row spaced border-solid border-left-none border-right-none border-top-none'>
                                         <h3 class="font-500 width-fit wrap overflow-scroll">
                                             ${Product.Plato}
