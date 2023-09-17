@@ -130,17 +130,17 @@ function generateHash(inputText) {
                             
                             let productElement = `
                                 <div class="steady-2-of-3 padded display-flex flex-col s-gap">
-                                    <h3 class="">
+                                    <h4 class="font-500">
                                         ${Product.Plato}
                                         ${estado}
-                                    </h3>
+                                    </h4>
                                     <div class="">
                                         ${Product.Description}
                                     </div>
                                 </div>
-                                <h3 class="steady-1-of-3 padded text-right display-flex flex-end">
+                                <h4 class="steady-1-of-3 padded text-right display-flex flex-end font-500">
                                     $ ${Product.Precio}
-                                </h3>
+                                </h4>
                             `
 
                             newProduct.innerHTML = productElement
