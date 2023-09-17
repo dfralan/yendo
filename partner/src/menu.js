@@ -124,12 +124,12 @@ function generateHash(inputText) {
                         if (productContainerDiv) {
 
                             const newProduct = document.createElement('div');
-                            newProduct.classList.add('w-100', 'display-flex', 'flex-row');
+                            newProduct.classList.add('w-100', 'display-flex', 'flex-row', 'border-solid', 'border-black');
                             const estado = (Product.Estado !== 'Disponible' && Product.Estado !== '') ? '' : `<span class='font-s font-400 xs-padded rounded-s bg-black color-white'>${Product.Estado}</span>`
 
                             
                             let productElement = `
-                                <div class="steady-2-of-3 padded display-flex flex-col s-gap border-solid border-black">
+                                <div class="steady-2-of-3 padded display-flex flex-col s-gap">
                                     <h3 class="font-500 max-width-100 wrap overflow-scroll">
                                         ${Product.Plato}
                                         ${estado}
