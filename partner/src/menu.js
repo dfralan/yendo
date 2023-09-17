@@ -125,11 +125,14 @@ function generateHash(inputText) {
 
                             const newProduct = document.createElement('div');
                             newProduct.classList.add('w-100', 'display-flex', 'flex-row');
+                            const estado = (Product.Estado !== 'Disponible' && Product.Estado !== '') ? `<span>${Product.Estado}</span>` : ''
+
                             
                             let productElement = `
                                 <div class="steady-2-of-3 padded display-flex flex-col s-gap">
                                     <h3 class="">
                                         ${Product.Plato}
+                                        ${estado}
                                     </h3>
                                     <div class="">
                                         ${Product.Description}
