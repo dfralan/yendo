@@ -695,7 +695,7 @@ html {
     opacity: 1;
 }
 
-w-fit {
+.w-fit {
     width: max-content;
 }
 
