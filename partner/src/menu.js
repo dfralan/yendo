@@ -96,7 +96,7 @@ function generateHash(inputText) {
                     newCategory.classList.add('responsive-2', 'display-flex', 'flex-col', 'padded', 'no-padded-left', 'no-padded-right');
 
                     let categoryElement = `
-                        <h2 style="background-color: #1B406B;" class="w-fit color-white padded font-500 max-width-100 wrap">
+                        <h2 style="background-color: #1B406B;" class="w-fit color-white padded font-500 max-width-100 wrap overflow-scroll">
                             ${category}
                         </h2>
                         <div class="productContainer w-100 display-flex flex-col">
@@ -130,11 +130,11 @@ function generateHash(inputText) {
                             
                             let productElement = `
                                 <div class="steady-2-of-3 padded display-flex flex-col s-gap">
-                                    <h3 class="font-500 max-width-100 wrap">
+                                    <h3 class="font-500 max-width-100 wrap overflow-scroll">
                                         ${Product.Plato}
                                         ${estado}
                                     </h3>
-                                    <div class="max-width-100 wrap">
+                                    <div class="max-width-100 wrap overflow-scroll">
                                         ${Product.Description}
                                     </div>
                                 </div>
