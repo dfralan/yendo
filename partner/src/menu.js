@@ -129,18 +129,21 @@ function generateHash(inputText) {
 
                             
                             let productElement = `
-                                <div style='border-color: #1B406B' class="steady-2-of-3 padded display-flex flex-col s-gap border-solid border-left-none border-right-none border-top-none">
-                                    <h3 class="font-500 max-width-100 wrap overflow-scroll">
-                                        ${Product.Plato}
-                                        ${estado}
-                                    </h3>
+                                <div class="steady-2-of-3 padded display-flex flex-col s-gap">
+                                    <div style='border-color: #1B406B' class='display-flex flex-row spaced border-solid border-left-none border-right-none border-top-none'>
+                                        <h3 class="font-500 max-width-100 wrap overflow-scroll">
+                                            ${Product.Plato}
+                                            ${estado}
+                                        </h3>
+                                        <h4 class="steady-1-of-3 padded text-right display-flex flex-end font-300">
+                                            ${Product.Precio}
+                                        </h4>
+                                    </div>
                                     <p class="max-width-100 wrap overflow-scroll">
                                         ${Product.Description}
                                     </p>
                                 </div>
-                                <h3 class="steady-1-of-3 padded text-right display-flex flex-end font-500">
-                                    $ ${Product.Precio}
-                                </h3>
+                                
                             `
 
                             newProduct.innerHTML = productElement
