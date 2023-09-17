@@ -78,7 +78,7 @@ function generateHash(inputText) {
                 const Categories = [];
 
                 // Construct products (Columns A to G)
-                for (let i = 1; i < rows.length; i++) {
+                for (let i = 0; i < rows.length; i++) {
                     const row = rows[i];
                     const Product = {
                         SKU: row.c[0] && row.c[0].v ? row.c[0].v : '',
@@ -93,7 +93,7 @@ function generateHash(inputText) {
                 }
 
                 // Construct Categories Array (Column I)
-                for (let i = 1; i < rows.length; i++) {
+                for (let i = 0; i < rows.length; i++) {
                     const category = rows[i].c[8] && rows[i].c[8].v !== null && rows[i].c[8].v !== undefined && rows[i].c[8].v !== '' ? rows[i].c[8].v : null;
                     // Only push non-empty categories
                     if (category !== null) {
