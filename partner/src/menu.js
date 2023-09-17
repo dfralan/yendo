@@ -99,7 +99,7 @@ function generateHash(inputText) {
                         <h2 style="background-color: #1B406B;" class="w-fit color-white s-padded font-500 max-width-100 wrap overflow-scroll">
                             ${category}
                         </h2>
-                        <div class="productContainer w-100 display-flex flex-col m-gap">
+                        <div class="productContainer w-100 display-flex flex-col l-gap">
                         </div>
                     `
                     newCategory.innerHTML = categoryElement
