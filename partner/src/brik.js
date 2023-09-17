@@ -163,6 +163,10 @@ html {
     max-width: 100%;
 }
 
+.w-fit {
+    width: max-content;
+}
+
 .w-100 {
     width: 100%;
 }
@@ -693,10 +697,6 @@ html {
 
 .show-my-child:hover .child {
     opacity: 1;
-}
-
-.w-fit {
-    width: max-content;
 }
 
 .brick {
