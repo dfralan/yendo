@@ -1,22 +1,3 @@
-let categoryElement = `
-    <!-- Contenedor de categorías -->
-    <div id="categoriesContainer" class="display-flex flex-wrap w-100 land">
-
-        <!-- Categoría -->
-        <div id="categoryHash" class="responsive-2 display-flex flex-col">
-            <div style="background-color: #1B406B;" class="steady-1-of-3 color-white padded">
-                Entrada
-            </div>
-
-            <!-- Contenedor de productos -->
-            <div class="productContainer w-100 display-flex flex-col">
-
-
-            </div>
-
-        </div>
-    </div>
-`
 
 // Function to extract the username from the url entered by the user
 function extractUserFromUrl(url) {
@@ -115,7 +96,7 @@ function generateHash(inputText) {
                     newCategory.classList.add('responsive-2', 'display-flex', 'flex-col', 'padded', 'no-padded-left', 'no-padded-right');
 
                     let categoryElement = `
-                        <div style="background-color: #1B406B;" class="steady-1-of-3 color-white padded">
+                        <div style="background-color: #1B406B;" class="color-white padded">
                             ${category}
                         </div>
                         <div class="productContainer w-100 display-flex flex-col">
