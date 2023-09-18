@@ -124,12 +124,12 @@ function generateHash(inputText) {
 
                     const newCategory = document.createElement('div');
                     newCategory.id = categoryHash
-                    newCategory.classList.add('responsive-2', 'display-flex', 'flex-col', 'padded');
+                    newCategory.classList.add('l-gap', 'responsive-2', 'display-flex', 'flex-col', 'padded');
 
                     let categoryElement = `
-                        <h2 style="background-color: ${partnerTintColor};" class="w-fit color-white s-padded font-500 max-width-100 wrap overflow-scroll">
+                        <h3 style="background-color: ${partnerTintColor};" class="w-fit color-white s-padded font-500 max-width-100 wrap overflow-scroll">
                             ${category}
-                        </h2>
+                        </h3>
                         <div class="productContainer w-100 display-flex flex-col l-gap">
                         </div>
                     `
