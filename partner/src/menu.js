@@ -175,24 +175,7 @@ function generateHash(inputText) {
                     }
 
                 });
-
-                // Select the <teller> element
-const tellerElement = document.querySelector('teller');
-
-// Set the attributes
-tellerElement.setAttribute('keyCodeTeller', 'dbcadceaeea4b522e42b160db3953980');
-tellerElement.setAttribute('lang', 'en');
-tellerElement.setAttribute('supportHours', '9:00/02:00(-03:00)');
-tellerElement.setAttribute('username', 'Teller by Unirvana');
-tellerElement.setAttribute('tellerMode', 'brick');
-tellerElement.setAttribute('userColor', '#1B406B');
-tellerElement.setAttribute('side', 'left');
-tellerElement.setAttribute('borderRadius', '15');
-tellerElement.setAttribute('theme', 'light');
-tellerElement.setAttribute('appearAfter', '20');
-tellerElement.setAttribute('callToAction', 'Sugerencias ✏️');
-tellerElement.setAttribute('formUrl', 'https://docs.google.com/forms/d/e/1FAIpQLScWvqoWZtQIH4Akp_s-RmUveN-XyjqmS7s7jzkZChwCgfC2-g/viewform?usp=pp_url&entry.1324983604=a&entry.514815962=b&entry.99634262=c&entry.892467723=d');
-
+                
 
             })
     }
