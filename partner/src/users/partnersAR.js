@@ -12,6 +12,6 @@ const partnersAR = {
       menuId: '1vF3AkCM5jxXWHg-U1h_Bi2orQdc2_uBNGIJgIcX64EE',
       tellerId: '1vF3AkCM5jxXWHg-U1h_Bi2orQdc2_uBNGIJgIcX64EE',
       tintColor: '#1B406B',
-      theme: 'light',
+      contrastColor: 'white',
     }
 };

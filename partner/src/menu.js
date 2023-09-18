@@ -37,6 +37,7 @@ function generateHash(inputText) {
     // Otherwise, construct url to fetch data
     } else {
         const sheetID = partnersAR[userHash]?.menuId
+        const partnerTintColor = partnersAR[userHash]?.tintColor
         const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
         const sheetName = 'carta - plan inicial';
         const qu = 'Select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y';
@@ -86,11 +87,11 @@ function generateHash(inputText) {
                 const Rotativo = rows[0].c[21].v;
                 const rotativoMenuElement = document.getElementById('rotativo')
                 let rotation = `
-                <div class="horizontal-scrolling-items__item">
+                <div style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
                     ${Rotativo}&nbsp
                 </div>
                 
-                <div class="horizontal-scrolling-items__item">
+                <div style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
                     ${Rotativo}&nbsp
                 </div>
                 ` 
@@ -104,7 +105,7 @@ function generateHash(inputText) {
                     newCategory.classList.add('responsive-2', 'display-flex', 'flex-col', 'padded', 'm-gap');
 
                     let categoryElement = `
-                        <h2 style="background-color: #1B406B;" class="w-fit color-white s-padded font-500 max-width-100 wrap overflow-scroll">
+                        <h2 style="background-color: ${partnerTintColor};" class="w-fit color-white s-padded font-500 max-width-100 wrap overflow-scroll">
                             ${category}
                         </h2>
                         <div class="productContainer w-100 display-flex flex-col l-gap">
@@ -134,7 +135,7 @@ function generateHash(inputText) {
 
                             
                             let productElement = `
-                                <div style='color: #1B406B' class="w-100 display-flex flex-col xs-gap">
+                                <div style='color: ${partnerTintColor}' class="w-100 display-flex flex-col xs-gap">
                                     <div class='display-flex h-bottom flex-row spaced'>
                                         <h3 class="font-600 width-fit wrap overflow-scroll">
                                             ${Product.Plato}
@@ -144,7 +145,7 @@ function generateHash(inputText) {
                                             ${Product.Precio}
                                         </h4>
                                     </div>
-                                    <div style='border-color: #1B406B;' class='border-solid'></div>
+                                    <div style='border-color: ${partnerTintColor};' class='border-solid'></div>
                                     <p class="font-300 max-width-100 wrap overflow-scroll">
                                         ${Product.Description}
                                     </p>
