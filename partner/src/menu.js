@@ -83,32 +83,28 @@ function generateHash(inputText) {
                 }
 
                 // Set rotativo en el menú
-const Rotativo = rows[0].c[21].v;
-const rotativoMenuElement = document.getElementById('rotativo');
-const repeatedRotativo = (Rotativo + ' ').repeat(20).trim();  // Add a space after Rotativo and then repeat
-rotativoMenuElement.innerText = repeatedRotativo;
+                const Rotativo = rows[0].c[21].v;
+                const rotativoMenuElement = document.getElementById('rotativo')
+                const repeatedRotativo = (Rotativo + ' ').repeat(20).trim();  // Add a space after Rotativo and then repeat
+                rotativoMenuElement.innerText = repeatedRotativo;
 
-const scrollSpeed = 1; // Adjust the scrolling speed as needed
+                let scrollAmount = 1;
 
-function scrollHorizontally() {
-    const scrollableElement = rotativoMenuElement;
-
-    // Check if the scroll position exceeds the width of the content
-    if (scrollableElement.scrollLeft >= scrollableElement.scrollWidth - scrollableElement.offsetWidth) {
-        scrollableElement.scrollLeft = 0; // Reset to the beginning
-    } else {
-        scrollableElement.scrollLeft += scrollSpeed; // Scroll by the speed
+function scroll() {
+    rotativoMenuElement.scrollLeft += scrollAmount;
+    if (rotativoMenuElement.scrollLeft >= rotativoMenuElement.scrollWidth - rotativoMenuElement.clientWidth || rotativoMenuElement.scrollLeft <= 0) {
+        scrollAmount = -scrollAmount;
     }
 }
 
-function animateScroll() {
-    console.log('we')
-    scrollHorizontally();
-    setTimeout(animateScroll, 20); // Adjust the interval for smoother scrolling
-}
+// Set the scroll interval
+const scrollInterval = setInterval(scroll, 20);
 
-// Start the scrolling animation
-animateScroll();
+// Stop the scroll after 10 seconds (10000 milliseconds)
+setTimeout(() => {
+    clearInterval(scrollInterval);  // Stop the scrolling
+}, 10000);
+
                 
 
                 // Log the extracted categories
