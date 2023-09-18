@@ -26,39 +26,23 @@
         </div>
     </div>
 
+    <style>
+        .horizontal-scrolling-items {
+            display: flex;
+            font-size: 40px;
+            width: 2600px;
+            animation-name: infiniteScroll;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    </style>
+
     <!-- Rotativo -->
-    <div class="display-flex w-100 land no-wrap">
-        <div id="rotativo" class="services-ticker-block padded no-padded-left no-padded-right overflow-scroll no-wrap">
-            <div class="stb_line_single">
-                <a href="#" class="stb-item">
-                <span>${Rotativo}&nbsp; &nbsp; - </span>
-                </a>
-                <a href="#" class="stb-item">
-                <span>${Rotativo}&nbsp; &nbsp; - </span>
-                </a>
-                <a href="#" class="stb-item">
-                <span>${Rotativo}&nbsp; &nbsp; - </span>
-                </a>
-                <a href="#" class="stb-item">
-                <span>${Rotativo}&nbsp; &nbsp; - </span>
-                </a>
-                <a href="#" class="stb-item">
-                <span>${Rotativo}&nbsp; &nbsp; - </span>
-                </a>
-                <a href="#" class="stb-item">
-                <span>${Rotativo}&nbsp; &nbsp; - </span>
-                </a>
-                <a href="#" class="stb-item">
-                <span>${Rotativo}&nbsp; &nbsp; - </span>
-                </a>
-                <a href="#" class="stb-item">
-                <span>${Rotativo}&nbsp; &nbsp; - </span>
-                </a>
-                <a href="#" class="stb-item">
-                <span>${Rotativo}&nbsp; &nbsp; - &nbsp; &nbsp;</span>
-                </a>
-            </div>
+    <div class="display-flex w-100 land no-wrap overflow-hidden">
+        <div id="rotativo" class="horizontal-scrolling-items">
         </div>
+          
     </div>
 
     <!-- Contenedor de categorías -->
