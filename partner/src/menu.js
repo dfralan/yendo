@@ -87,13 +87,13 @@ function generateHash(inputText) {
                 const Rotativo = rows[0].c[21].v;
                 const rotativoMenuElement = document.getElementById('rotativo')
                 let rotation = `
-                <div style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
+                <span style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
                     ${Rotativo}&nbsp
-                </div>
+                </span>
                 
-                <div style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
+                <span style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
                     ${Rotativo}&nbsp
-                </div>
+                </span>
                 ` 
                 rotativoMenuElement.innerHTML = rotation;
                 
