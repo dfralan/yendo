@@ -209,6 +209,8 @@ function generateHash(inputText) {
                                 `
                                 rotativoMenuElement.innerHTML = rotativoElement
                                 console.clear();
+
+                                let gsap = rotativoMenuElement
                 
                 gsap.utils.toArray(".stb_line_single").forEach((line, i) => {
                   const speed = 2; // (in pixels per second)
