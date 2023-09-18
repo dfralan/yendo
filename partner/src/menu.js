@@ -103,8 +103,6 @@ function generateHash(inputText) {
 
                 // Log the extracted categories
                 Categories.forEach((category, index) => {
-
-                    console.log(category)
                     const newCategory = document.createElement('div');
                     newCategory.id = generateHash(category);
                     newCategory.classList.add('responsive-2', 'display-flex', 'flex-col', 'padded', 'm-gap');
@@ -127,9 +125,6 @@ function generateHash(inputText) {
 
 
                 Products.forEach((Product) => {
-
-                    console.log(Product)
-
                     const parentDiv = document.getElementById(generateHash(Product.Categoria));
                     if (parentDiv) {
                         // Use querySelector to target the desired element
