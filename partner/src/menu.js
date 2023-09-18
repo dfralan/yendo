@@ -86,11 +86,11 @@ function generateHash(inputText) {
                 const Rotativo = rows[0].c[21].v;
                 const rotativoMenuElement = document.getElementById('rotativo')
                 let rotation = `
-                <div class="no-wrap">
+                <div class="horizontal-scrolling-items__item">
                     ${Rotativo}&nbsp
                 </div>
                 
-                <div class="no-wrap">
+                <div class="horizontal-scrolling-items__item">
                     ${Rotativo}&nbsp
                 </div>
                 ` 
