@@ -94,7 +94,7 @@ function generateHash(inputText) {
                     ${Rotativo}&nbsp
                 </div>
                 ` 
-                rotativoMenuElement.innerText = rotation;
+                rotativoMenuElement.innerHTML = rotation;
                 
 
                 // Log the extracted categories
