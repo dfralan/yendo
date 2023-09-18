@@ -120,6 +120,7 @@ function generateHash(inputText) {
                     newCategoryAccessButton.classList.add('s-padded', 'bg-black', 'color-white', 'decoration-none', 'no-wrap');
                     newCategoryAccessButton.setAttribute('href', ('#'+categoryHash))
                     newCategoryAccessButton.innerText = category;
+                    newCategoryAccessButton.style.backgroundColor = partnerTintColor;
 
                     const newCategory = document.createElement('div');
                     newCategory.id = categoryHash
