@@ -88,18 +88,15 @@ function generateHash(inputText) {
                 const repeatedRotativo = (Rotativo + ' ').repeat(20).trim();  // Add a space after Rotativo and then repeat
                 rotativoMenuElement.innerText = repeatedRotativo;
 
-                function scrollText() {
-                    // Scroll the element horizontally by 1 pixel
-                    rotativoMenuElement.scrollLeft += 1;
-                }
-            
-                // Set the interval to scroll every 50 milliseconds (adjust as needed)
-                const scrollInterval = setInterval(scrollText, 25);
-            
-                // Stop the scrolling after a certain duration (e.g., 5000 milliseconds = 5 seconds)
-                setTimeout(() => {
-                    clearInterval(scrollInterval); // Clear the scrolling interval
-                }, 5000);
+                const flavoursScrollWidth = rotativoMenuElement.scrollWidth;
+
+                window.addEventListener('load', () => {
+                self.setInterval(() => {
+                    if (rotativoMenuElement.scrollLeft !== flavoursScrollWidth) {
+                        rotativoMenuElement.scrollTo(rotativoMenuElement.scrollLeft + 1, 0);
+                    }
+                }, 15);
+                });
 
                 
 
