@@ -88,23 +88,23 @@ function generateHash(inputText) {
                 const rotativoMenuElement = document.getElementById('rotativo')
                 let rotation = `
                 <span style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
-                    ${Rotativo}&nbsp
+                    ${Rotativo}&nbsp-&nbsp
                 </span>
                 
                 <span style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
-                    ${Rotativo}&nbsp
+                    ${Rotativo}&nbsp-&nbsp
                 </span>
                 
                 <span style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
-                    ${Rotativo}&nbsp
+                    ${Rotativo}&nbsp-&nbsp
                 </span>
                 
                 <span style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
-                    ${Rotativo}&nbsp
+                    ${Rotativo}&nbsp-&nbsp
                 </span>
                 
                 <span style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
-                    ${Rotativo}&nbsp
+                    ${Rotativo}&nbsp-&nbsp
                 </span>
                 ` 
                 rotativoMenuElement.innerHTML = rotation;
