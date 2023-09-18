@@ -87,7 +87,6 @@ function generateHash(inputText) {
                 const rotativoMenuElement = document.getElementById('rotativo')
                 const repeatedRotativo = (Rotativo + ' ').repeat(20).trim();  // Add a space after Rotativo and then repeat
                 rotativoMenuElement.innerText = repeatedRotativo;
-
                 let scrollAmount = 1;
 
 function scroll() {
@@ -104,8 +103,6 @@ const scrollInterval = setInterval(scroll, 20);
 setTimeout(() => {
     clearInterval(scrollInterval);  // Stop the scrolling
 }, 10000);
-
-                
 
                 // Log the extracted categories
                 Categories.forEach((category, index) => {
