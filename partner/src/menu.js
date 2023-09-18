@@ -84,15 +84,14 @@ function generateHash(inputText) {
 
                 // Set rotativo en el menú
                 const Rotativo = rows[0].c[21].v;
-                
-
-                window.addEventListener('load', () => {
-                self.setInterval(() => {
-                    const rotativoMenuElement = document.getElementById('rotativo')
+                var rotativoMenuElement = document.getElementById('rotativo')
                 const repeatedRotativo = (Rotativo + ' ').repeat(20).trim();  // Add a space after Rotativo and then repeat
                 rotativoMenuElement.innerText = repeatedRotativo;
 
                 const flavoursScrollWidth = rotativoMenuElement.scrollWidth;
+
+                window.addEventListener('load', () => {
+                self.setInterval(() => {
                     if (rotativoMenuElement.scrollLeft !== flavoursScrollWidth) {
                         rotativoMenuElement.scrollTo(rotativoMenuElement.scrollLeft + 1, 0);
                     }
