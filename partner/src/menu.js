@@ -87,22 +87,28 @@ function generateHash(inputText) {
                 const rotativoMenuElement = document.getElementById('rotativo')
                 const repeatedRotativo = (Rotativo + ' ').repeat(20).trim();  // Add a space after Rotativo and then repeat
                 rotativoMenuElement.innerText = repeatedRotativo;
-                let scrollAmount = 1;
 
-function scroll() {
-    rotativoMenuElement.scrollLeft += scrollAmount;
-    if (rotativoMenuElement.scrollLeft >= rotativoMenuElement.scrollWidth - rotativoMenuElement.clientWidth || rotativoMenuElement.scrollLeft <= 0) {
-        scrollAmount = -scrollAmount;
-    }
+
+// Set the horizontal scroll position to the leftmost edge of the element.
+rotativoMenuElement.scrollLeft = 0;
+
+// Create a function to scroll the element horizontally.
+function scrollRotativoMenuElement() {
+  // Get the current horizontal scroll position.
+  const scrollPosition = rotativoMenuElement.scrollLeft;
+
+  // If the scroll position is equal to the width of the element,
+  // reset it to the leftmost edge.
+  if (scrollPosition === rotativoMenuElement.offsetWidth) {
+    rotativoMenuElement.scrollLeft = 0;
+  } else {
+    // Otherwise, increment the scroll position by 1 pixel.
+    rotativoMenuElement.scrollLeft += 1;
+  }
 }
 
-// Set the scroll interval
-const scrollInterval = setInterval(scroll, 20);
-
-// Stop the scroll after 10 seconds (10000 milliseconds)
-setTimeout(() => {
-    clearInterval(scrollInterval);  // Stop the scrolling
-}, 10000);
+// Start the automatic scroll.
+setInterval(scrollRotativoMenuElement, 100);
 
                 // Log the extracted categories
                 Categories.forEach((category, index) => {
