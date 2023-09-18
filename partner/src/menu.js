@@ -88,7 +88,7 @@ function generateHash(inputText) {
                 const repeatedRotativo = (Rotativo + ' ').repeat(20).trim();  // Add a space after Rotativo and then repeat
                 rotativoMenuElement.innerText = repeatedRotativo;
 
-
+                
 // Set the horizontal scroll position to the leftmost edge of the element.
 rotativoMenuElement.scrollLeft = 0;
 
@@ -96,6 +96,9 @@ rotativoMenuElement.scrollLeft = 0;
 function scrollRotativoMenuElement() {
   // Get the current horizontal scroll position.
   const scrollPosition = rotativoMenuElement.scrollLeft;
+
+  // Log the scroll position to the console.
+  console.log(`Scroll position: ${scrollPosition}`);
 
   // If the scroll position is equal to the width of the element,
   // reset it to the leftmost edge.
