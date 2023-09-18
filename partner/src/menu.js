@@ -103,12 +103,12 @@ function scrollHorizontally() {
 
 function animateScroll() {
     scrollHorizontally();
-    requestAnimationFrame(animateScroll);
+    setTimeout(animateScroll, 20); // Adjust the interval for smoother scrolling
 }
 
 // Start the scrolling animation
 animateScroll();
-
+                
 
                 // Log the extracted categories
                 Categories.forEach((category, index) => {
