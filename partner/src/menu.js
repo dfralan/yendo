@@ -94,6 +94,18 @@ function generateHash(inputText) {
                 <span style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
                     ${Rotativo}&nbsp
                 </span>
+                
+                <span style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
+                    ${Rotativo}&nbsp
+                </span>
+                
+                <span style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
+                    ${Rotativo}&nbsp
+                </span>
+                
+                <span style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
+                    ${Rotativo}&nbsp
+                </span>
                 ` 
                 rotativoMenuElement.innerHTML = rotation;
                 
