@@ -88,26 +88,17 @@ function generateHash(inputText) {
                 const repeatedRotativo = (Rotativo + ' ').repeat(20).trim();  // Add a space after Rotativo and then repeat
                 rotativoMenuElement.innerText = repeatedRotativo;
 
-                let scrollValue = 0;
-                const scrollSpeed = 1; // Adjust the scrolling speed
-              
                 function scrollText() {
-                  scrollValue += scrollSpeed;
-                  rotativoMenuElement.style.transform = `translateX(-${scrollValue}px)`;
-              
-                  // Reset the scroll position when it reaches the end
-                  if (scrollValue >= rotativoMenuElement.scrollWidth) {
-                    scrollValue = 0;
-                    rotativoMenuElement.style.transform = `translateX(0)`;
-                  }
+                    // Scroll the element horizontally by 1 pixel
+                    rotativoMenuElement.scrollLeft += 1;
                 }
-              
-                // Set an interval to continuously scroll the text
-                const scrollInterval = setInterval(scrollText, 20); // Adjust the interval for smoothness
-              
+            
+                // Set the interval to scroll every 50 milliseconds (adjust as needed)
+                const scrollInterval = setInterval(scrollText, 25);
+            
                 // Stop the scrolling after a certain duration (e.g., 5000 milliseconds = 5 seconds)
                 setTimeout(() => {
-                  clearInterval(scrollInterval); // Clear the scrolling interval
+                    clearInterval(scrollInterval); // Clear the scrolling interval
                 }, 5000);
 
                 
