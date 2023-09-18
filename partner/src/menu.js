@@ -176,41 +176,9 @@ function generateHash(inputText) {
                                 // Set rotativo en el menú
                                 const Rotativo = rows[0].c[21].v;
                                 const rotativoMenuElement = document.getElementById('rotativo')
-                                let rotativoElement = `
-                                <div class="stb_line_single">
-                                    <a href="#" class="stb-item">
-                                    <span>${Rotativo}&nbsp; &nbsp; - </span>
-                                    </a>
-                                    <a href="#" class="stb-item">
-                                    <span>${Rotativo}&nbsp; &nbsp; - </span>
-                                    </a>
-                                    <a href="#" class="stb-item">
-                                    <span>${Rotativo}&nbsp; &nbsp; - </span>
-                                    </a>
-                                    <a href="#" class="stb-item">
-                                    <span>${Rotativo}&nbsp; &nbsp; - </span>
-                                    </a>
-                                    <a href="#" class="stb-item">
-                                    <span>${Rotativo}&nbsp; &nbsp; - </span>
-                                    </a>
-                                    <a href="#" class="stb-item">
-                                    <span>${Rotativo}&nbsp; &nbsp; - </span>
-                                    </a>
-                                    <a href="#" class="stb-item">
-                                    <span>${Rotativo}&nbsp; &nbsp; - </span>
-                                    </a>
-                                    <a href="#" class="stb-item">
-                                    <span>${Rotativo}&nbsp; &nbsp; - </span>
-                                    </a>
-                                    <a href="#" class="stb-item">
-                                    <span>${Rotativo}&nbsp; &nbsp; - &nbsp; &nbsp;</span>
-                                    </a>
-                                </div>
-                                `
-                                rotativoMenuElement.innerHTML = rotativoElement
+                                
                                 console.clear();
-
-                                let gsap = rotativoMenuElement
+                                
                 
                 gsap.utils.toArray(".stb_line_single").forEach((line, i) => {
                   const speed = 2; // (in pixels per second)
