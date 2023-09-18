@@ -31,10 +31,6 @@
             from {transform: translateX(0)}
             to {transform: translateX(-50%)}
         }
-        .container {
-            width: 100%;
-            overflow-x: hidden;
-        }
         .horizontal-scrolling-items {
             display: flex;
             width: 2600px;
@@ -49,8 +45,8 @@
     </style>
 
     <!-- Rotativo -->
-    <div class="container">
-        <h1 id="rotativo" class="land horizontal-scrolling-items">
+    <div class="land overflow-hidden">
+        <h1 id="rotativo" class="horizontal-scrolling-items">
         </h1>    
     </div>
 
