@@ -102,6 +102,7 @@ function scrollHorizontally() {
 }
 
 function animateScroll() {
+    console.log('we')
     scrollHorizontally();
     setTimeout(animateScroll, 20); // Adjust the interval for smoother scrolling
 }
