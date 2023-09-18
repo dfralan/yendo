@@ -113,8 +113,16 @@ function generateHash(inputText) {
 
                 // Log the extracted categories
                 Categories.forEach((category, index) => {
+
+                    let categoryHash = generateHash(category)
+
+                    const newCategoryAccessButton = document.createElement('a')
+                    newCategoryAccessButton.classList.add('s-padded', 'bg-black', 'color-white', 'decoration-none', 'no-wrap');
+                    newCategoryAccessButton.setAttribute('href', `'#${categoryHash}'`)
+                    newCategoryAccessButton.innerText = category;
+
                     const newCategory = document.createElement('div');
-                    newCategory.id = generateHash(category);
+                    newCategory.id = categoryHash
                     newCategory.classList.add('responsive-2', 'display-flex', 'flex-col', 'padded', 'm-gap');
 
                     let categoryElement = `
@@ -128,6 +136,7 @@ function generateHash(inputText) {
 
                     if (categoryContainer) {
                         categoryContainer.appendChild(newCategory);
+                        categoriesDirectAccessContainer.appendChild(newCategoryAccessButton);
                     } else {
                         return
                     }
