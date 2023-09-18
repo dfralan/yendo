@@ -45,6 +45,7 @@ function generateHash(inputText) {
         const url = `${base}&sheet=${sheetName}&tq=${query}`;
         const data = [];
         const categoryContainer = document.getElementById('categoriesContainer');
+        const categoriesDirectAccessContainer = document.getElementById('categoriesDirectAccessContainer');
     
         // Fetch menu from user
         fetch(url)
