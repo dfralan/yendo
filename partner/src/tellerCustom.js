@@ -82,8 +82,8 @@ function main(){
         display:'+ complementsComposer()[2]+';\
         position: fixed!important;\
         z-index: 100000;\
-        '+ getSide()[0] +': 30px!important;\
-        bottom: 30px!important;\
+        '+ getSide()[0] +': 20px!important;\
+        bottom: 20px!important;\
         background-color: transparent!important;\
     }\
     .transparentBG{\
