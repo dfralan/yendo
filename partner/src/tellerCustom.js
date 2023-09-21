@@ -119,6 +119,7 @@ function main(){
         border-width: '+ getSide()[3] +';\
       }\
     #buttonFatherBrick{\
+        white-space: nowrap;\
         display: flex;\
         flex-direction: row;\
         align-items: center;\
