@@ -6,6 +6,5 @@ function saveUrl() {
     localStorage.removeItem('currentUrl');
     // Save the current URL to Local Storage
     localStorage.setItem('currentUrl', currentUrl);
-    
 }
 saveUrl()
