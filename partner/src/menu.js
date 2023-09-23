@@ -164,7 +164,7 @@ function generateHash(inputText) {
                                             ${Product.Plato}
                                             ${estado}
                                         </h3>
-                                        <h4 class="steady-1-of-3 text-right display-flex flex-end font-300">
+                                        <h4 class="steady-33 text-right display-flex flex-end font-300">
                                             ${Product.Precio}
                                         </h4>
                                     </div>
