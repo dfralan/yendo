@@ -187,13 +187,13 @@ function main() {
     #xBrick{\
         transition:'+ transitionChill + '\
         opacity: 0;\
-        fill: '+ tintColor() + '!important;\
+        fill: '+ byTheme(tintColor(), charmingGrey) + '!important;\
         transform: translateX(30px) scaleX(0);\
     }\
     #palomita{\
         transition:'+ transitionChill + '\
         opacity: 1;\
-        fill: '+ tintColor() + '!important;\
+        fill: '+ byTheme(tintColor(), charmingGrey) + '!important;\
         transform: scaleX(1);\
     }\
     #titleBrick{\

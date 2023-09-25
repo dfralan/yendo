@@ -122,7 +122,7 @@ function kiujdgrsghsss(){
         opacity: 1;\
         box-shadow: 0 1px 2px rgba(0,0,0,0.2);\
         position: absolute!important;\
-        background-color: '+ byTheme(realWhite, charmingGrey) +'!important;\
+        background-color: '+ byTheme(userColor(), charmingGrey) +'!important;\
         width: 50px;\
         height: 50px;\
         '+ getSide()[0] +': 0px;\
