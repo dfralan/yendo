@@ -26,7 +26,7 @@ const partnersAR = {
     subscriptionKind: "inicial",
     profileImg: "https://lh5.googleusercontent.com/p/AF1QipMePfh29x8ZmgnBY4MxxA4zCUOKElAZmyWmrsTI=w203-h114-k-no",
     menuId: '1fp8703N19NkmTkjCcYBTrxsH8gu7--f9vilk2sjgZGI',
-    tintColor: 'white',
+    tintColor: '#1B406B',
     contrastColor: '#222222',
     wspNumber: '5493412825529'
   }
