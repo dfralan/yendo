@@ -39,6 +39,7 @@ function generateHash(inputText) {
         const sheetID = partnersAR[userHash]?.menuId
         const partnerTintColor = partnersAR[userHash]?.tintColor
         const coverMenu = `https://yendo.delivery/partner/src/img/${userName}-portada.jpg`
+        const profilePictureMenu = `https://yendo.delivery/partner/src/img/${userName}-profile.jpg`
         const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
         const sheetName = 'carta - plan inicial';
         const qu = 'Select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y';
@@ -85,11 +86,10 @@ function generateHash(inputText) {
                     }
                 }
                 function changeImage() {
-                    // Get a reference to the image element with the specified ID
                     const portadaImage = document.getElementById('portadaMenu');
-                  
-                    // Update the src attribute to a new image URL
+                    const profileImage = document.getElementById('profilePicture');
                     portadaImage.src = coverMenu;
+                    profileImage.src = profilePictureMenu;
                 }
                 changeImage()
 
