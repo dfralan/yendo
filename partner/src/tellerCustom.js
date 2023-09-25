@@ -138,16 +138,24 @@ function kiujdgrsghsss(){
         transform: scale(1.05);\
     }\
     \
-    #buttonFeedbackBrick{\
+    #buttonFatherBrick{\
+        white-space: nowrap;\
+        display: flex;\
+        flex-direction: row;\
+        align-items: center;\
         transition:'+transitionChill+'\
         opacity: 1;\
-        display: inline-block\
-        background-color: transparent;\
-        width: 35px;\
-        height: 35px;\
-        margin: 7px 7.5px 8px 7.5px;\
-        border-radius: none !important;\
-        border: none!important;\
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2);\
+        position: absolute!important;\
+        color: '+ byTheme(realWhite, charmingGrey) +' !important;\
+        fill: '+ byTheme(realWhite, charmingGrey) +' !important;\
+        background-color: '+ byTheme(userColor(), charmingGrey) +'!important;\
+        width: auto;\
+        height: auto;\
+        padding: 1px;\
+        '+ getSide()[0] +': 0px;\
+        bottom: 0px!important;\
+        border-radius: '+ userBorderRadius() +'px;\
         cursor: pointer!important;\
     }\
     #buttonFeedbackBrick:hover{\
