@@ -14,5 +14,20 @@ const partnersAR = {
     tintColor: '#1B406B',
     contrastColor: 'white',
     wspNumber: '5493415807460'
+  },
+  5624572006: {
+    cityID: "3538",
+    username: "bien-de-aca-pueblo-esther",
+    userKind: "1",
+    categories: ["017"],
+    locations: ["-32.8739917,-60.7587183"],
+    activeInterval: "09:00/02:00(-03:00)",
+    rank: "5.0",
+    subscriptionKind: "inicial",
+    profileImg: "https://lh5.googleusercontent.com/p/AF1QipMePfh29x8ZmgnBY4MxxA4zCUOKElAZmyWmrsTI=w203-h114-k-no",
+    menuId: '1fp8703N19NkmTkjCcYBTrxsH8gu7--f9vilk2sjgZGI',
+    tintColor: 'white',
+    contrastColor: '#222222',
+    wspNumber: '5493412825529'
   }
 };

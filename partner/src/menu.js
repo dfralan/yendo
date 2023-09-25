@@ -9,18 +9,23 @@ function extractUserFromUrl(url) {
     return null;
 }
 
-// Function to generate a simple and non secure at all hash
 function generateHash(inputText) {
-    // Trim white spaces at the beginning and end, and convert to lowercase
     const trimmedAndLowercasedText = inputText.trim().toLowerCase();
-  
+
     let hash = 0;
     for (let i = 0; i < trimmedAndLowercasedText.length; i++) {
-      const char = trimmedAndLowercasedText.charCodeAt(i);
-      hash = (hash << 5) - hash + char;
+        const char = trimmedAndLowercasedText.charCodeAt(i);
+        hash = (hash << 5) - hash + char;
     }
+
+    // Take the absolute value to ensure it's non-negative
+    hash = Math.abs(hash);
+
     return hash.toString();
 }
+
+console.log(`wep ${generateHash('bien-de-aca-pueblo-esther')}`)
+console.log(`cb ${generateHash('casablanca-rosario')}`)
   
 
 (function () {
@@ -29,7 +34,6 @@ function generateHash(inputText) {
     const storedURL = localStorage.getItem('currentUrl');
     const userName = extractUserFromUrl(storedURL)
     const userHash = generateHash(userName)
-    console.log(`wep ${userHash}`)
 
     // If it doesnt match any partner redirect to main page
     if (!partnersAR[userHash]){
