@@ -122,7 +122,7 @@ function kiujdgrsghsss(){
         opacity: 1;\
         box-shadow: 0 1px 2px rgba(0,0,0,0.2);\
         position: absolute!important;\
-        background-color: '+ byTheme(userColor(), charmingGrey) +'!important;\
+        background-color: '+ byTheme(realWhite, charmingGrey) +'!important;\
         width: 50px;\
         height: 50px;\
         '+ getSide()[0] +': 0px;\
@@ -143,7 +143,7 @@ function kiujdgrsghsss(){
         opacity: 1;\
         box-shadow: 0 1px 2px rgba(0,0,0,0.2);\
         position: absolute!important;\
-        background-color: '+ byTheme(realWhite, charmingGrey) +'!important;\
+        background-color: '+ byTheme(userColor(), charmingGrey) +'!important;\
         width: 50px;\
         height: 50px;\
         '+ getSide()[0] +': 0px;\
@@ -179,13 +179,13 @@ function kiujdgrsghsss(){
     #xBrick{\
         transition:'+transitionChill+'\
         opacity: 0;\
-        fill: '+ userColor() +'!important;\
+        fill: '+byTheme(realWhite,charmingGrey)+'!important;\
         transform: translateX(30px) scaleX(0);\
     }\
     #palomita{\
         transition:'+transitionChill+'\
         opacity: 1;\
-        fill: '+ userColor() +'!important;\
+        fill: '+byTheme(realWhite,charmingGrey)+'!important;\
         transform: scaleX(1);\
     }\
     #titleBrick{\
