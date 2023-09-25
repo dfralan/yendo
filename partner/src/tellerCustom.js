@@ -127,6 +127,7 @@ function main(){
         box-shadow: 0 1px 2px rgba(0,0,0,0.2);\
         position: absolute!important;\
         color: '+ byTheme(realWhite, charmingGrey) +' !important;\
+        fill: '+ byTheme(realWhite, charmingGrey) +' !important;\
         background-color: '+ byTheme(userColor(), charmingGrey) +'!important;\
         width: auto;\
         height: auto;\
