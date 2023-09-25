@@ -152,7 +152,7 @@ function kiujdgrsghsss(){
         background-color: '+ byTheme(userColor(), charmingGrey) +'!important;\
         width: auto;\
         height: auto;\
-        padding: 1px;\
+        padding: 15px;\
         '+ getSide()[0] +': 0px;\
         bottom: 0px!important;\
         border-radius: '+ userBorderRadius() +'px;\
