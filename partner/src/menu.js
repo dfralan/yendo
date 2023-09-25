@@ -9,6 +9,7 @@ function extractUserFromUrl(url) {
     return null;
 }
 
+// Function to generate a simple and non secure at all hash
 function generateHash(inputText) {
     const trimmedAndLowercasedText = inputText.trim().toLowerCase();
 
@@ -23,9 +24,6 @@ function generateHash(inputText) {
 
     return hash.toString();
 }
-
-console.log(`wep ${generateHash('bien-de-aca-pueblo-esther')}`)
-console.log(`cb ${generateHash('casablanca-rosario')}`)
   
 
 (function () {
