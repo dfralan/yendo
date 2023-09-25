@@ -38,6 +38,7 @@ function generateHash(inputText) {
     } else {
         const sheetID = partnersAR[userHash]?.menuId
         const partnerTintColor = partnersAR[userHash]?.tintColor
+        const coverMenu = `https://yendo.delivery/partner/src/img/${userName}-portada.jpg`
         const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
         const sheetName = 'carta - plan inicial';
         const qu = 'Select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y';
@@ -83,6 +84,14 @@ function generateHash(inputText) {
                         Categories.push(category);
                     }
                 }
+                function changeImage() {
+                    // Get a reference to the image element with the specified ID
+                    const portadaImage = document.getElementById('portadaMenu');
+                  
+                    // Update the src attribute to a new image URL
+                    portadaImage.src = coverMenu;
+                }
+                changeImage()
 
                 // Set rotativo en el menú
                 const Rotativo = rows[0].c[21].v;
