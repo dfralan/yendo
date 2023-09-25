@@ -38,6 +38,7 @@ function generateHash(inputText) {
     } else {
         const sheetID = partnersAR[userHash]?.menuId
         const partnerTintColor = partnersAR[userHash]?.tintColor
+        const wspNumber = partnersAR[userHash]?.wspNumber
         const coverMenu = `https://yendo.delivery/partner/src/img/${userName}-portada.jpg`
         const profilePictureMenu = `https://yendo.delivery/partner/src/img/${userName}-profile.jpg`
         const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
@@ -92,6 +93,16 @@ function generateHash(inputText) {
                     profileImage.src = profilePictureMenu;
                 }
                 changeImage()
+
+
+                function setWspButton() {
+                    // Get a reference to the anchor element with the specified ID
+                    const partnerWspLink = document.getElementById('partnerWspNumber');
+                  
+                    // Update the href attribute to a new URL
+                    partnerWspLink.href = `https://wa.me/${wspNumber}`;  // Replace with the desired URL
+                }
+                setWspButton()
 
                 // Set rotativo en el menú
                 const Rotativo = rows[0].c[21].v;

@@ -13,5 +13,6 @@ const partnersAR = {
     tellerForm: 'https://docs.google.com/forms/d/e/1FAIpQLScWvqoWZtQIH4Akp_s-RmUveN-XyjqmS7s7jzkZChwCgfC2-g/viewform?usp=pp_url&entry.1324983604=a&entry.514815962=b&entry.99634262=c&entry.892467723=d',
     tintColor: '#1B406B',
     contrastColor: 'white',
+    wspNumber: '5493415807460'
   }
 };
