@@ -14,14 +14,6 @@ function toggleAccessPassModal(){
     }
 }
 
-function toggleClientZone(){
-    const clientZone = document.getElementById('clientZone');
-    if (clientZone.classList.contains("display-none")){
-      clientZone.classList.remove("display-none");
-    } else {
-      clientZone.classList.add("display-none");
-    }
-}
 
 function attemptAccessPass() {
   
