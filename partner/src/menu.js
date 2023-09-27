@@ -253,7 +253,7 @@ function generateHash(inputText) {
                     console.log('executing teller bebop')
                     teller()
 
-                }
+                }addTellerElement()
                 
                 
 
