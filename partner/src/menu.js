@@ -41,6 +41,7 @@ function generateHash(inputText) {
     } else {
         const sheetID = partnersAR[userHash]?.menuId
         const partnerTintColor = partnersAR[userHash]?.tintColor
+        const partnerContrastColor = partnersAR[userHash]?.contrastColor
         const wspNumber = partnersAR[userHash]?.wspNumber
         const coverMenu = `https://yendo.delivery/partner/src/users/img/${userName}-portada.jpg`
         const profilePictureMenu = `https://yendo.delivery/partner/src/users/img/${userName}-profile.jpg`
@@ -104,8 +105,19 @@ function generateHash(inputText) {
                   
                     // Update the href attribute to a new URL
                     partnerWspLink.href = `https://wa.me/${wspNumber}`;  // Replace with the desired URL
-                }
-                setWspButton()
+                }setWspButton()
+                
+
+                function setBackgroundColor() {
+
+                    // Set the background color of the body
+                    document.body.style.backgroundColor = partnerContrastColor;
+                    
+                    // Set color of rotativo container
+                    let rotativoContainer = document.getElementById('rotativoContainer')
+                    rotativoContainer.style.backgroundColor = partnerTintColor;
+
+                }setBackgroundColor()
 
                 // Set rotativo en el menú
                 const Rotativo = rows[0].c[21].v;
