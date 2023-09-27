@@ -33,6 +33,8 @@ function generateHash(inputText) {
     const userName = extractUserFromUrl(storedURL)
     const userHash = generateHash(userName)
 
+    console.log(storedURL)
+
     if (!storedURL){
         window.location.href = "https://yendo.delivery/partner";
     }
