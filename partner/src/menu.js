@@ -101,9 +101,9 @@ function generateHash(inputText) {
                 }
                 function changeImage() {
                     const portadaImage = document.getElementById('portadaMenu');
-                    const profileImage = document.getElementById('profilePicture');
+                    //const profileImage = document.getElementById('profilePicture');
                     portadaImage.src = coverMenu;
-                    profileImage.src = profilePictureMenu;
+                    //profileImage.src = profilePictureMenu;
                 }
                 changeImage()
 
