@@ -32,7 +32,7 @@ const partnersAR = {
     menuId: '1fp8703N19NkmTkjCcYBTrxsH8gu7--f9vilk2sjgZGI',
     tellerForm: '',
     tintColor: '#FFFFFF',
-    contrastColor: '#363435',
+    contrastColor: '#000000',
     accentColor: '#E0FF1A',
     wspNumber: '5493412825529',
     theme: 'dark',
