@@ -33,7 +33,7 @@ const partnersAR = {
     tellerForm: '',
     tintColor: '#FFFFFF',
     contrastColor: '#363435',
-    accentColor: '#1B406B',
+    accentColor: '#E0FF1A',
     wspNumber: '5493412825529',
     theme: 'dark',
     partnerStyle: 'modern',
