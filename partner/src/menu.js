@@ -206,7 +206,7 @@ function generateHash(inputText) {
                                     return `<span style='color: ${partnerAccentColor}' class='font-300'> [${a}]</span>`
                                 }
                                 if (partnerStyle == 'modern'){
-                                    return `<small style='color: ${partnerContrastColor}; background-color: ${partnerAccentColor}' class='font-300 xs-padded'> ${a}</small>`
+                                    return `<small style='color: ${partnerContrastColor}; background-color: ${partnerAccentColor}' class='font-400 xs-padded'> ${a}</small>`
                                 }
                             }
 
