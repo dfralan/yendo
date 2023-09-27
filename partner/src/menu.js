@@ -115,7 +115,7 @@ function generateHash(inputText) {
                     
                     // Set color of rotativo container
                     let rotativoContainer = document.getElementById('rotativoContainer')
-                    //rotativoContainer.style.backgroundColor = partnerTintColor;
+                    rotativoContainer.style.backgroundColor = partnerContrastColor;
 
                 }setBackgroundColor()
 
