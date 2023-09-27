@@ -28,7 +28,7 @@ const partnersAR = {
     profileImg: "https://lh5.googleusercontent.com/p/AF1QipMePfh29x8ZmgnBY4MxxA4zCUOKElAZmyWmrsTI=w203-h114-k-no",
     menuId: '1fp8703N19NkmTkjCcYBTrxsH8gu7--f9vilk2sjgZGI',
     tintColor: '#FFFFFF',
-    contrastColor: '#222222',
+    contrastColor: '#363435',
     accentColor: '#1B406B',
     wspNumber: '5493412825529'
   }
