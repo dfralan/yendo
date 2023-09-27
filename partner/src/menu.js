@@ -32,10 +32,13 @@ function generateHash(inputText) {
     const storedURL = localStorage.getItem('currentUrl');
     const userName = extractUserFromUrl(storedURL)
     const userHash = generateHash(userName)
-    
+
+    if (!storedURL){
+        window.location.href = "https://yendo.delivery/partner";
+    }
 
     // If it doesnt match any partner redirect to main page
-    if (!partnersAR[userHash] || !storedURL){
+    if (!partnersAR[userHash]){
         window.location.href = "https://yendo.delivery/partner";
 
     // Otherwise, construct url to fetch data
