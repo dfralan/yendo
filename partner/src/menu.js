@@ -118,13 +118,21 @@ function generateHash(inputText) {
                 
 
                 function setBackgroundColor() {
+                    let rotativoContainer = document.getElementById('rotativoContainer')
 
                     // Set the background color of the body
                     document.body.style.backgroundColor = partnerContrastColor;
                     
                     // Set color of rotativo container
-                    let rotativoContainer = document.getElementById('rotativoContainer')
-                    rotativoContainer.style.backgroundColor = partnerContrastColor;
+                    
+                    if (partnerStyle == 'modern'){
+                        rotativoContainer.style.backgroundColor = partnerAccentColor;
+                        rotativoContainer.style.boxShadow = '0 4px 8px ' + partnerAccentColor;
+                    } 
+                    if (partnerStyle == 'classic'){
+                        rotativoContainer.style.backgroundColor = partnerContrastColor;
+                    }
+                    
 
                 }setBackgroundColor()
 
