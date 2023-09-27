@@ -224,6 +224,10 @@ html {
     overflow: scroll;
 }
 
+.overflow-x-scroll {
+    overflow-x: scroll;
+}
+
 .overflow-y-hidden {
     overflow-y: hidden !important;
 }
