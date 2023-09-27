@@ -31,11 +31,15 @@ function generateHash(inputText) {
     // Extract userName from URL stored in local storage and convert to Hash to match to see if exist in Partners List
     const storedURL = localStorage.getItem('currentUrl');
 
+
+
     if (!storedURL){
         window.location.href = "https://yendo.delivery/partner";
     }
     const userName = extractUserFromUrl(storedURL)
     const userHash = generateHash(userName)
+
+    console.log(generateHash('demo'))
 
     // If it doesnt match any partner redirect to main page
     if (!partnersAR[userHash]){
