@@ -250,6 +250,7 @@ function generateHash(inputText) {
                     // Agrega el div al DOM
                     document.body.appendChild(divElement);
 
+                    console.log('executing teller bebop')
                     teller()
 
                 }
