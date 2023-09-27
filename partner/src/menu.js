@@ -166,7 +166,7 @@ function generateHash(inputText) {
 
                     const newCategory = document.createElement('div');
                     newCategory.id = categoryHash
-                    newCategory.classList.add('l-gap', 'responsive-2', 'display-flex', 'flex-col', 'padded');
+                    newCategory.classList.add('l-gap', 'responsive-3', 'display-flex', 'flex-col', 'padded');
 
                     let categoryElement = `
                         <h3 style="background-color: ${partnerTintColor}; color: ${partnerContrastColor}" class="w-fit s-padded font-500 max-width-100 wrap overflow-scroll">
