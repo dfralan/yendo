@@ -250,15 +250,8 @@ function generateHash(inputText) {
                     // Agrega el div al DOM
                     document.body.appendChild(divElement);
 
-                    // Crea un elemento script
-                    var script = document.createElement('script');
                     
-                    // Asigna el src del script al CDN
-                    script.src = 'https://cdn.jsdelivr.net/gh/dfralan/Teller@main/teller.js';
-                    
-                    // Agrega el script al DOM
-                    document.body.appendChild(script);
-                }addTellerElement()
+                }
                 
                 
 
