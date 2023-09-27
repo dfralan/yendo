@@ -232,6 +232,10 @@ html {
     overflow-y: hidden !important;
 }
 
+.overflow-y-visible {
+    overflow-y: visible !important;
+}
+
 .cursor-pointer {
     cursor: pointer;
 }
