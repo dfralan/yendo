@@ -49,6 +49,7 @@ function generateHash(inputText) {
         const partnerThemeMode = partnersAR[userHash]?.theme
         const partnerTellerForm = partnersAR[userHash]?.tellerForm
         const wspNumber = partnersAR[userHash]?.wspNumber
+        const partnerFontFamily = partnersAR[userHash]?.fontFamily
         const coverMenu = `https://yendo.delivery/partner/src/users/img/${userName}-portada.jpg`
         const profilePictureMenu = `https://yendo.delivery/partner/src/users/img/${userName}-profile.jpg`
         const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
@@ -230,37 +231,40 @@ function generateHash(inputText) {
                 });
 
                 function addTellerElement() {
-                    // Crea un elemento div
-                    var divElement = document.createElement('div');
-                
-                    // Crea un elemento teller
-                    var tellerElement = document.createElement('teller');
+                    if (partnerTellerForm === '') {return} else {
+                        // Crea un elemento div
+                        var divElement = document.createElement('div');
                     
-                    // Configura los atributos
-                    tellerElement.setAttribute('style', 'bottom: 20px !important; left: 20px !important;');
-                    tellerElement.setAttribute('lang', 'en');
-                    tellerElement.setAttribute('supportHours', '09:00/13:59(-03:00)');
-                    tellerElement.setAttribute('username', 'Teller by Unirvana');
-                    tellerElement.setAttribute('tellerMode', 'brick');
-                    tellerElement.setAttribute('userColor', partnerTintColor);
-                    tellerElement.setAttribute('theme', partnerThemeMode);
-                    tellerElement.setAttribute('side', 'left');
-                    tellerElement.setAttribute('borderRadius', '25');
-                    tellerElement.setAttribute('appearAfter', '5');
-                    tellerElement.setAttribute('callToAction', 'Compartanos su experiencia');
-                    tellerElement.setAttribute('formUrl', partnerTellerForm);
-                
-                    // Agrega el elemento teller al div
-                    divElement.appendChild(tellerElement);
-                
-                    // Agrega el div al DOM
-                    document.body.appendChild(divElement);
-                    teller()
+                        // Crea un elemento teller
+                        var tellerElement = document.createElement('teller');
+                        
+                        // Configura los atributos
+                        tellerElement.setAttribute('style', 'bottom: 20px !important; left: 20px !important;');
+                        tellerElement.setAttribute('lang', 'en');
+                        tellerElement.setAttribute('supportHours', '09:00/13:59(-03:00)');
+                        tellerElement.setAttribute('username', 'Teller by Unirvana');
+                        tellerElement.setAttribute('tellerMode', 'brick');
+                        tellerElement.setAttribute('userColor', partnerTintColor);
+                        tellerElement.setAttribute('theme', partnerThemeMode);
+                        tellerElement.setAttribute('side', 'left');
+                        tellerElement.setAttribute('borderRadius', '25');
+                        tellerElement.setAttribute('appearAfter', '5');
+                        tellerElement.setAttribute('callToAction', 'Compartanos su experiencia');
+                        tellerElement.setAttribute('formUrl', partnerTellerForm);
+                    
+                        // Agrega el elemento teller al div
+                        divElement.appendChild(tellerElement);
+                    
+                        // Agrega el div al DOM
+                        document.body.appendChild(divElement);
+                        teller()
+                        }
+                }addTellerElement()
 
-                }
-                if (partnerTellerForm === '') {return} else {
-                    addTellerElement()
-                }
+                function setFontFamily() {
+                    // Set the font-family for the body to 'Urbanist'
+                    document.body.style.fontFamily = partnerFontFamily;
+                }setFontFamily()
 
                 
                 
