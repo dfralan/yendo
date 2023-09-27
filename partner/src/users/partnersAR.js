@@ -16,6 +16,7 @@ const partnersAR = {
     accentColor: '#1B406B',
     wspNumber: '5493415807460',
     theme: 'light',
+    style: 'classic',
     fontFamily: "'Roboto', sans-serif"
   },
   5624572006: {
@@ -34,7 +35,8 @@ const partnersAR = {
     contrastColor: '#363435',
     accentColor: '#1B406B',
     wspNumber: '5493412825529',
-    theme: 'lidarkght',
+    theme: 'dark',
+    partnerStyle: 'modern',
     fontFamily: "'Urbanist', sans-serif"
   }
 };

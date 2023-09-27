@@ -45,7 +45,9 @@ function generateHash(inputText) {
     } else {
         const sheetID = partnersAR[userHash]?.menuId
         const partnerTintColor = partnersAR[userHash]?.tintColor
+        const partnerAccentColor = partnersAR[userHash]?.accentColor
         const partnerContrastColor = partnersAR[userHash]?.contrastColor
+        const partnerStyle = partnersAR[userHash]?.partnerStyle
         const partnerThemeMode = partnersAR[userHash]?.theme
         const partnerTellerForm = partnersAR[userHash]?.tellerForm
         const wspNumber = partnersAR[userHash]?.wspNumber
@@ -197,7 +199,18 @@ function generateHash(inputText) {
 
                             const newProduct = document.createElement('div');
                             newProduct.classList.add('w-100', 'display-flex', 'flex-row');
-                            const estado = (Product.Estado !== 'Disponible' && Product.Estado !== '') ? `<span class='font-300 rounded-s'> [${Product.Estado}]</span>` : ''
+
+                            function labelConstructorByStyle(a){
+                                if (partnerStyle == 'classic'){
+                                    return `<span style='color: ${partnerAccentColor}' class='font-300'> [${a}]</span>`
+                                }
+                                if (partnerStyle == 'modern'){
+                                    return `<span style='color: ${partnerContrastColor}; background-color: ${partnerAccentColor}' class='font-300 rounded-s xs-padded'> [${a}]</span>`
+                                }
+
+                            }
+
+                            const estado = (Product.Estado !== 'Disponible' && Product.Estado !== '') ? labelConstructorByStyle(Product.Estado) : ''
 
                             
                             let productElement = `
