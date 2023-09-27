@@ -127,13 +127,12 @@ function generateHash(inputText) {
                     
                     if (partnerStyle == 'modern'){
                         rotativoContainer.style.backgroundColor = partnerAccentColor;
-                        rotativoContainer.style.boxShadow = '0 4px 8px ' + partnerAccentColor;
+                        rotativoContainer.style.boxShadow = '0 10px 8px ' + partnerAccentColor;
                     } 
                     if (partnerStyle == 'classic'){
                         rotativoContainer.style.backgroundColor = partnerContrastColor;
                     }
                     
-
                 }setBackgroundColor()
 
                 // Set rotativo en el menú
