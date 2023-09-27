@@ -152,10 +152,11 @@ function generateHash(inputText) {
                     let categoryHash = generateHash(category)
 
                     const newCategoryAccessButton = document.createElement('a')
-                    newCategoryAccessButton.classList.add('s-padded', 'color-white', 'decoration-none', 'no-wrap');
+                    newCategoryAccessButton.classList.add('s-padded', 'decoration-none', 'no-wrap');
                     newCategoryAccessButton.setAttribute('href', ('#'+categoryHash))
                     newCategoryAccessButton.innerText = category;
                     newCategoryAccessButton.style.backgroundColor = partnerTintColor;
+                    newCategoryAccessButton.style.color = partnerContrastColor;
 
                     const newCategory = document.createElement('div');
                     newCategory.id = categoryHash
