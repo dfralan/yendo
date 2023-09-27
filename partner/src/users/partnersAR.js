@@ -16,7 +16,7 @@ const partnersAR = {
     accentColor: '#1B406B',
     wspNumber: '5493415807460',
     theme: 'light',
-    style: 'classic',
+    partnerStyle: 'classic',
     fontFamily: "'Roboto', sans-serif"
   },
   5624572006: {

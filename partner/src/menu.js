@@ -202,8 +202,6 @@ function generateHash(inputText) {
 
                             function labelConstructorByStyle(a){
                                 if (partnerStyle == 'classic'){
-
-                                console.log(a)
                                     return `<span style='color: ${partnerAccentColor}' class='font-300'> [${a}]</span>`
                                 }
                                 if (partnerStyle == 'modern'){
