@@ -222,6 +222,44 @@ function generateHash(inputText) {
                     }
 
                 });
+
+                function addTellerElement() {
+                    // Crea un elemento div
+                    var divElement = document.createElement('div');
+                
+                    // Crea un elemento teller
+                    var tellerElement = document.createElement('teller');
+                    
+                    // Configura los atributos
+                    tellerElement.setAttribute('style', 'bottom: 20px !important; left: 20px !important;');
+                    tellerElement.setAttribute('lang', 'en');
+                    tellerElement.setAttribute('supportHours', '09:00/13:59(-03:00)');
+                    tellerElement.setAttribute('username', 'Teller by Unirvana');
+                    tellerElement.setAttribute('tellerMode', 'brick');
+                    tellerElement.setAttribute('userColor', '#1B406B');
+                    tellerElement.setAttribute('theme', 'light');
+                    tellerElement.setAttribute('side', 'left');
+                    tellerElement.setAttribute('borderRadius', '25');
+                    tellerElement.setAttribute('appearAfter', '5');
+                    tellerElement.setAttribute('callToAction', 'Give us some feedback');
+                    tellerElement.setAttribute('formUrl', 'https://docs.google.com/forms/d/e/1FAIpQLScWvqoWZtQIH4Akp_s-RmUveN-XyjqmS7s7jzkZChwCgfC2-g/viewform?usp=pp_url&entry.1324983604=a&entry.514815962=b&entry.99634262=c&entry.892467723=d');
+                
+                    // Agrega el elemento teller al div
+                    divElement.appendChild(tellerElement);
+                
+                    // Agrega el div al DOM
+                    document.body.appendChild(divElement);
+
+                    // Crea un elemento script
+                    var script = document.createElement('script');
+                    
+                    // Asigna el src del script al CDN
+                    script.src = 'https://cdn.jsdelivr.net/gh/dfralan/Teller@main/teller.js';
+                    
+                    // Agrega el script al DOM
+                    document.body.appendChild(script);
+                }addTellerElement()
+                
                 
 
             })
