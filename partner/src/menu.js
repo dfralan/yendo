@@ -207,7 +207,7 @@ function generateHash(inputText) {
                                 if (partnerStyle == 'modern'){
                                     return `<span style='color: ${partnerContrastColor}; background-color: ${partnerAccentColor}' class='font-300 rounded-s xs-padded'> [${a}]</span>`
                                 }
-
+                                console.log(a)
                             }
 
                             const estado = (Product.Estado !== 'Disponible' && Product.Estado !== '') ? labelConstructorByStyle(Product.Estado) : ''
