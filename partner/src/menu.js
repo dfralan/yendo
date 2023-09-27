@@ -200,12 +200,13 @@ function generateHash(inputText) {
                             const newProduct = document.createElement('div');
                             newProduct.classList.add('w-100', 'display-flex', 'flex-row');
 
+                            // Constructor de etiquetas de estados
                             function labelConstructorByStyle(a){
                                 if (partnerStyle == 'classic'){
                                     return `<span style='color: ${partnerAccentColor}' class='font-300'> [${a}]</span>`
                                 }
                                 if (partnerStyle == 'modern'){
-                                    return `<span style='color: ${partnerContrastColor}; background-color: ${partnerAccentColor}' class='font-300 rounded-s xs-padded'> [${a}]</span>`
+                                    return `<span style='color: ${partnerContrastColor}; background-color: ${partnerAccentColor}' class='font-300 rounded-s xs-padded'> ${a}</span>`
                                 }
                             }
 
