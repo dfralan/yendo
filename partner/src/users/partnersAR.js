@@ -14,7 +14,8 @@ const partnersAR = {
     tintColor: '#1B406B',
     contrastColor: '#FFFFFF',
     accentColor: '#1B406B',
-    wspNumber: '5493415807460'
+    wspNumber: '5493415807460',
+    theme: 'light'
   },
   5624572006: {
     subscriptionKind: "inicial",
@@ -27,9 +28,11 @@ const partnersAR = {
     rank: "5.0",
     profileImg: "https://lh5.googleusercontent.com/p/AF1QipMePfh29x8ZmgnBY4MxxA4zCUOKElAZmyWmrsTI=w203-h114-k-no",
     menuId: '1fp8703N19NkmTkjCcYBTrxsH8gu7--f9vilk2sjgZGI',
+    tellerForm: '',
     tintColor: '#FFFFFF',
     contrastColor: '#363435',
     accentColor: '#1B406B',
-    wspNumber: '5493412825529'
+    wspNumber: '5493412825529',
+    theme: 'lidarkght'
   }
 };

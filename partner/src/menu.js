@@ -42,6 +42,8 @@ function generateHash(inputText) {
         const sheetID = partnersAR[userHash]?.menuId
         const partnerTintColor = partnersAR[userHash]?.tintColor
         const partnerContrastColor = partnersAR[userHash]?.contrastColor
+        const partnerThemeMode = partnersAR[userHash]?.theme
+        const partnerTellerForm = partnersAR[userHash]?.tellerForm
         const wspNumber = partnersAR[userHash]?.wspNumber
         const coverMenu = `https://yendo.delivery/partner/src/users/img/${userName}-portada.jpg`
         const profilePictureMenu = `https://yendo.delivery/partner/src/users/img/${userName}-profile.jpg`
@@ -236,24 +238,26 @@ function generateHash(inputText) {
                     tellerElement.setAttribute('supportHours', '09:00/13:59(-03:00)');
                     tellerElement.setAttribute('username', 'Teller by Unirvana');
                     tellerElement.setAttribute('tellerMode', 'brick');
-                    tellerElement.setAttribute('userColor', '#1B406B');
-                    tellerElement.setAttribute('theme', 'light');
+                    tellerElement.setAttribute('userColor', partnerTintColor);
+                    tellerElement.setAttribute('theme', partnerThemeMode);
                     tellerElement.setAttribute('side', 'left');
                     tellerElement.setAttribute('borderRadius', '25');
                     tellerElement.setAttribute('appearAfter', '5');
-                    tellerElement.setAttribute('callToAction', 'Give us some feedback');
-                    tellerElement.setAttribute('formUrl', 'https://docs.google.com/forms/d/e/1FAIpQLScWvqoWZtQIH4Akp_s-RmUveN-XyjqmS7s7jzkZChwCgfC2-g/viewform?usp=pp_url&entry.1324983604=a&entry.514815962=b&entry.99634262=c&entry.892467723=d');
+                    tellerElement.setAttribute('callToAction', 'Compartanos su experiencia');
+                    tellerElement.setAttribute('formUrl', partnerTellerForm);
                 
                     // Agrega el elemento teller al div
                     divElement.appendChild(tellerElement);
                 
                     // Agrega el div al DOM
                     document.body.appendChild(divElement);
-
-                    console.log('executing teller bebop')
                     teller()
 
-                }addTellerElement()
+                }
+                if (partnerTellerForm === '') {return} else {
+                    addTellerElement()
+                }
+
                 
                 
 
