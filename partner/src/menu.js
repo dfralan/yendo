@@ -128,9 +128,11 @@ function generateHash(inputText) {
                     if (partnerStyle == 'modern'){
                         rotativoContainer.style.backgroundColor = partnerAccentColor;
                         rotativoContainer.style.boxShadow = '0 10px 8px ' + partnerAccentColor;
+                        rotativoContainer.style.color = partnerContrastColor;
                     } 
                     if (partnerStyle == 'classic'){
                         rotativoContainer.style.backgroundColor = partnerContrastColor;
+                        rotativoContainer.style.color = partnerTintColor;
                     }
                     
                 }setBackgroundColor()
@@ -139,23 +141,23 @@ function generateHash(inputText) {
                 const Rotativo = rows[0].c[21].v;
                 const rotativoMenuElement = document.getElementById('rotativo')
                 let rotation = `
-                <span style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
+                <span  class="horizontal-scrolling-items__item">
                     ${Rotativo}&nbsp-&nbsp
                 </span>
                 
-                <span style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
+                <span class="horizontal-scrolling-items__item">
                     ${Rotativo}&nbsp-&nbsp
                 </span>
                 
-                <span style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
+                <span  class="horizontal-scrolling-items__item">
                     ${Rotativo}&nbsp-&nbsp
                 </span>
                 
-                <span style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
+                <span  class="horizontal-scrolling-items__item">
                     ${Rotativo}&nbsp-&nbsp
                 </span>
                 
-                <span style='color: ${partnerTintColor}' class="horizontal-scrolling-items__item">
+                <span  class="horizontal-scrolling-items__item">
                     ${Rotativo}&nbsp-&nbsp
                 </span>
                 ` 
