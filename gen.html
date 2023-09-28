@@ -45,7 +45,7 @@
 				background-color: white;
 				width: 100%;
 				height: 100%;
-				z-index: 99999;
+				z-index: 999999;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -280,12 +280,21 @@
 			</div>
 		</div>
 
-		<!-- Teller Feedback Widget Button -->
-		<teller style="transition: ease-in-out 0.3s;" class="bottom-0 start-0 mb-4 ms-4" lang="en"
-			supportHours="12:00/13:59(-03:00)" tellerMode="brick" side="left" borderRadius="15" theme="light"
-			tintColor="#0d6efd" appearAfter="0"
-			formUrl="https://docs.google.com/forms/d/e/1FAIpQLSd-JU7y43Pf0Y1DzHIrnIYyZIoQY_CxIHqu6etU-AHg4vvZSg/viewform?usp=pp_url&entry.972628122=sad&entry.131831582=pepe@pepe&entry.1647376085=Hola&entry.1069296986=hoy">
-		</teller>
+		<!-- Feedback button -->
+		<teller 
+			style="bottom: 20px !important; left: 20px !important;"
+			lang="en"
+			supportHours="09:00/13:59(-03:00)"
+			username="Teller by Unirvana"
+			tellerMode="brick"
+			userColor="#039768"
+			theme="light"
+			side="left"
+			borderRadius="25"
+			appearAfter="5"
+			callToAction="¿Necesitas asistencia?"
+			formUrl="https://docs.google.com/forms/d/e/1FAIpQLSdpgab-bhAdoFrIO7hqw2woqA7dIzxNHZa5sXCoMGfHT7NNCg/viewform?usp=pp_url&entry.1085830910=nice&entry.601918770=pepe&entry.1067325052=naranja&entry.52853599=pepe"
+		></teller>
 
 		<!-- App Dependencies -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -295,7 +304,7 @@
 		<!-- QR Generator -->
 		<script src="src/public/js/qrcode.js"></script>
 		<!-- Feedback Dependencies -->
-		<script src="src/public/js/teller.js"></script>
+    	<script src="https://cdn.jsdelivr.net/gh/dfralan/Teller@main/teller.js"></script>
 		<!-- Internationalization -->
 		<script src="src/public/js/loomTranslations.js"></script>
 		<script src="src/public/js/loom.js"></script>
