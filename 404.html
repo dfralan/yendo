@@ -24,18 +24,24 @@
   <link rel="icon" type="image/svg+xml" href="https://yendo.delivery/src/public/img/yendo.svg">
   <style>
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
       background-color: black;
     }
 
     .center-container {
+      background-color: black;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
       display: flex;
       justify-content: center;
       align-items: center;
+      -webkit-animation: dissapear 0.3s forwards; /* Safari and Chrome */
+      -moz-animation: dissapear 0.3s forwards; /* Firefox */
+      -ms-animation: dissapear 0.3s forwards; /* Internet Explorer */
+      -o-animation: dissapear 0.3s forwards; /* Opera */
+      animation: dissapear 2s forwards; /* Standard syntax */
     }
 
     @keyframes fadeIn {
@@ -47,6 +53,22 @@
       }
       100% {
         opacity: 0;
+      }
+    }
+
+
+    @keyframes dissapear {
+      0% {
+        opacity: 1;
+        display: flex;
+      }
+      99.99% {
+        opacity: 0;
+        display: flex;
+      }
+      100% {
+        opacity: 0;
+        display: none;
       }
     }
 
