@@ -126,6 +126,9 @@ function generateHash(inputText) {
 
                     // Set the background color of the body
                     document.body.style.backgroundColor = partnerContrastColor;
+
+                    // Set the background color of direct access categories buttons container
+                    categoriesDirectAccessContainer.style.backgroundColor = partnerTintColor;
                     
                     // Set color of rotativo container
                     
