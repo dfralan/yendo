@@ -51,28 +51,6 @@ body {
     font-weight: 300;
 }
 
-.logoLoadAnimationContainer{
-    position: absolute;
-    top: 0;
-    background-color: var(--bs-body-bg);
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    z-index: 1000000000000000000 !important;
-    text-align: center;
-}
-
-.logoLoadAnimation {
-    color: var(--bs-body-color);
-    position: absolute;
-    width: 100px;
-    height: 50px;
-    top: 40%;
-    left: 50%;
-    margin-left: -75px; /* margin is -0.5 * dimension */
-}
-
 .logoSuper {
   position: absolute;
   width: 44px;
