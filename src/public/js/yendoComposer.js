@@ -6,9 +6,8 @@
         var userID
         
         if (storedURL.includes("partner")) {
-            setTimeout(function() {
-                window.location.href = "https://yendo.delivery/partner/menu.html";
-            }, 2000);
+            window.location.href = "https://yendo.delivery/partner/menu.html";
+            return
         }
         
         else if (!isNaN(last13Characters)) { 
