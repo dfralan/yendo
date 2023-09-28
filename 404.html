@@ -36,11 +36,11 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-      		animation: fadeOut 1s ease 1s;
-			-webkit-animation: fadeOut 1s ease 1s;
-			-moz-animation: fadeOut 1s ease 1s;
-			-ms-animation: fadeOut 1s ease 1s;
-			-o-animation: fadeOut 1s ease 1s;
+            animation: fadeOut 1s forwards 1s;
+			-webkit-animation: fadeOut 1s forwards 1s;
+			-moz-animation: fadeOut 1s forwards 1s;
+			-ms-animation: fadeOut 1s forwards 1s;
+			-o-animation: fadeOut 1s forwards 1s;
 		}
 
 		.logoLoadAnimation {
@@ -64,19 +64,17 @@
 			}
 		}
 
-
-
 		@keyframes fadeOut {
 			0% {
 				opacity: 1;
-        display: flex;
+                display: flex;
 			}
 			50% {
 				opacity: 0;
 			}
 			100% {
 				opacity: 0;
-        display: none;
+            display: none;
 			}
 		}
 	  </style>
