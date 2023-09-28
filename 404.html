@@ -36,6 +36,11 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+      animation: fadeOut 1s ease 1s;
+			-webkit-animation: fadeOut 1s ease 1s;
+			-moz-animation: fadeOut 1s ease 1s;
+			-ms-animation: fadeOut 1s ease 1s;
+			-o-animation: fadeOut 1s ease 1s;
 		}
 
 		.logoLoadAnimation {
@@ -56,6 +61,22 @@
 			}
 			100% {
 				opacity: 0;
+			}
+		}
+
+
+
+		@keyframes fadeOut {
+			0% {
+				opacity: 1;
+        display: flex;
+			}
+			50% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 0;
+        display: none;
 			}
 		}
 	  </style>
