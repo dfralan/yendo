@@ -131,7 +131,6 @@ function generateHash(inputText) {
                     
                     if (partnerStyle == 'modern'){
                         rotativoContainer.style.backgroundColor = partnerAccentColor;
-                        rotativoContainer.style.boxShadow = '0 10px 8px ' + partnerAccentColor;
                         rotativoContainer.style.color = partnerContrastColor;
                     } 
                     if (partnerStyle == 'classic'){
