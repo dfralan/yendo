@@ -6,6 +6,11 @@ const categories = {
       "descripcion": "Usuario final."
     },
     {
+      "codigo": "007",
+      "nombre": "Envíos",
+      "descripcion": "Servicios de entrega de paquetes y documentos, mensajería, cadetería"
+    },
+    {
       "codigo": "001",
       "nombre": "Cerrajería",
       "descripcion": "Servicios de cerrajería para apertura de puertas, cambio de cerraduras, duplicado de llaves, etc."
@@ -34,11 +39,6 @@ const categories = {
       "codigo": "006",
       "nombre": "Electricidad",
       "descripcion": "Instalación, reparación y mantenimiento de sistemas eléctricos en hogares y oficinas."
-    },
-    {
-      "codigo": "007",
-      "nombre": "Envíos",
-      "descripcion": "Servicios de entrega de paquetes y documentos, mensajería, cadetería"
     },
     {
       "codigo": "008",
@@ -148,6 +148,8 @@ const vehicleKind = {
   ]
 }
 
+var categoriesN = 0
+
 function foreach(categories, containerId) {
   const container = document.getElementById(containerId);
   if (!container) {
@@ -157,15 +159,24 @@ function foreach(categories, containerId) {
 
   let html = '';
   categories.categorias.forEach(category => {
+
+  categoriesN ++
+
+  console.log(categoriesN)
+
     if (category.codigo === "000") {return}
     const categoryHTML = `
 
-    <input type="checkbox" class="btn-check" id="btn-check-${category.nombre}" autocomplete="off">
-      <label class="btn btn-light rounded-4 btn-sm" for="btn-check-${category.nombre}">
-        <span loom="${category.nombre}"></span>
-      </label>
+    
+      <small style="border-width: 1px ;border-color: #03825a; color: #039768;" class="no-wrap font-500 decoration-none padded-wide color-black rounded-s border-solid s-padded-wide bg-none">
+        ${category.nombre}
+      </small>
     `;
-    html += categoryHTML;
+
+    if (categoriesN > 6) {return} else {
+      html += categoryHTML;
+    }
+    
   });
 
   container.innerHTML = html;
