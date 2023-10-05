@@ -27,18 +27,6 @@
     // Tooltip launch
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-
-    // Need help listener to launch teller
-    const navBarTellerLaunch = document.getElementById("navBarTellerLaunch")
-    if (navBarTellerLaunch){
-      navBarTellerLaunch.addEventListener('click', function() {
-        const buttonFatherBrick = document.getElementById('buttonFatherBrick');
-        if (buttonFatherBrick){
-          buttonFatherBrick.click();
-        }
-        
-      })
-    }
     
   }
   window.addEventListener('DOMContentLoaded', () => {
