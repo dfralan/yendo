@@ -1,4 +1,5 @@
-
+(function () {
+    function main() {
 // Crear un objeto que almacene las ciudades por provincia
 var ciudadesPorProvincia = {};
 citiesAR.forEach(function (provincia) {
@@ -57,3 +58,11 @@ $("ul.ui-autocomplete")
 $("input.ui-autocomplete-input").addClass("form-control"); // Add form-control class to the input field
 
 
+}
+
+// Run main when DOM is ready
+document.addEventListener("DOMContentLoaded", function () {
+    main()
+});
+
+})();
