@@ -619,6 +619,10 @@ html {
     margin: auto
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .xs-gap {
     grid-gap: 5px;
 }
@@ -856,14 +860,6 @@ brik {
     .on-mobile-show {
         visibility: visible;
         display: block;
-    }
-
-    .flex-wrap-on-mobile {
-        flex-wrap: wrap !important;
-    }
-    
-    .flex-row-on-mobile {
-        flex-direction: row !important;
     }
 
     .responsive-4 {
