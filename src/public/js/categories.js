@@ -168,7 +168,7 @@ function foreach(categories, containerId) {
     const categoryHTML = `
 
     
-      <small style="border-width: 1px ;border-color: #03825a; color: #039768;" class="no-wrap font-500 decoration-none  color-black rounded-s border-solid xs-padded bg-none">
+      <small style="border-width: 1px ;border-color: #0D7A5F; color: #0D7A5F;" class="no-wrap font-500 decoration-none  color-black rounded-s border-solid xs-padded bg-none">
         ${category.nombre}
       </small>
     `;
