@@ -14,7 +14,11 @@ function toggleAccessPassModal(){
     }
 }
 
-
-function attemptAccessPass() {
-  
+function toggleBurguer(){
+    const burguerMenu = document.getElementById('burguerMenu');
+    if (burguerMenu.classList.contains("display-none")){
+      burguerMenu.classList.remove("display-none");
+    } else {
+      burguerMenu.classList.add("display-none");
+    }
 }
