@@ -27,6 +27,17 @@
     // Tooltip launch
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+    const imgElement = document.getElementById('imgCoverBuscarPage');
+    const newImg = new Image();
+
+    // Set the source for the new image
+    newImg.src = 'https://yendo.delivery/src/public/img/land-bg-2.webp';
+
+    // Once the new image is loaded, replace the placeholder image
+    newImg.onload = function() {
+      imgElement.src = newImg.src;
+    };
     
   }
   window.addEventListener('DOMContentLoaded', () => {
