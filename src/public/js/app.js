@@ -36,7 +36,7 @@
 
     // Once the new image is loaded, replace the placeholder image
     newImg.onload = function() {
-      imgElement.src = newImg.src;
+      //imgElement.src = newImg.src;
     };
     
   }
