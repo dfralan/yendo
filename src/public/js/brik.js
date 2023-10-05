@@ -708,6 +708,10 @@ html {
     visibility: visible;
 }
 
+.on-desktop-hide {
+    visibility: hidden;
+}
+
 .on-mobile-show {
     visibility: collapse;
     display: none;
@@ -836,6 +840,10 @@ html {
     .on-mobile-hide {
         visibility: collapse;
         display: none;
+    }
+
+    .on-desktop-hide {
+        visibility: visible;
     }
 
     .on-mobile-show {

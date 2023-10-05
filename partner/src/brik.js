@@ -693,12 +693,10 @@ html {
 }
 
 .child {
-    display: none;
     opacity: 0;
 }
 
 .show-my-child:hover .child {
-    display: block;
     opacity: 1;
 }
 
@@ -860,16 +858,8 @@ brik {
         display: block;
     }
 
-    .bg-none-on-mobile {
-        background-color: none !important;
-    }
-
     .flex-wrap-on-mobile {
         flex-wrap: wrap !important;
-    }
-
-    .flex-col-on-mobile {
-        flex-wrap: col !important;
     }
     
     .flex-row-on-mobile {
