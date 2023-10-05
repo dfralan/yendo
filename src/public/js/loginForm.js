@@ -37,7 +37,7 @@
             // Select the root element or the element with data-bs-theme=light
             const rootElement = document.documentElement;
             // Change the value of --bs-primary to your desired color
-            rootElement.style.setProperty('--bs-primary', '#ff0000');
+            rootElement.style.setProperty('--bs-primary', '#039768');
 
         });
         

@@ -42,8 +42,8 @@
 
 <body class="bg-body-secondary">
 
-  <!-- Navbar -->
-  	<div style="background-color: white;" class="z-2 sticky to-top s-padded">
+  	<!-- Navbar -->
+  	<div style="background-color: white;" class="z-2 sticky to-top s-padded on-mobile-hide">
 		<div class="display-flex flex-row spaced to-center land">
 			<div class="display-flex flex-row full-center xs-gap">
 				<h1 style="transform: translateY(-3px); color: #222222; font-family: 'Urbanist'" class="font-600">
@@ -52,15 +52,25 @@
 				<h1 style="transform: translateY(-3px); color: #039768; font-family: 'Urbanist'" class="font-600">
 					delivery
 				</h1>
+				
 			</div>
 			
-			<div style="font-size: 15px !important;" class="display-flex flex-row color-black responsive-l-gap to-center overflow-scroll">
+			<div style="font-size: 15px !important;" class="display-flex flex-wrap color-black responsive-l-gap to-center overflow-scroll">
 				<a id="navBarTellerLaunch" class="cursor-pointer font-400 decoration-none color-black no-wrap">¿Necesitas ayuda?</a>
 				<a href="log.html" class="cursor-pointer font-400 decoration-none color-black no-wrap">Loguearse / Registrarse</a>
 				<a href="https://yendo.delivery/partner" style="border-width: 1px ;border-color: #03825a; color: #039768;" class="no-wrap font-500 font-l decoration-none padded-wide color-black rounded-s border-solid">Ser partner</a>
 			</div>
 		</div>
 	</div>
+
+	<!-- Mobile Navbar -->
+	<div class="z-2 sticky to-top s-padded land spaced display-flex flex-row to-center on-mobile-show">
+		<img width="50" src="https://yendo.delivery/src/public/img/yendo.svg" alt="">
+		<div class="display-flex full-center xs-padded bg-body rounded-s">
+			<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M160-240q-17 0-28.5-11.5T120-280q0-17 11.5-28.5T160-320h640q17 0 28.5 11.5T840-280q0 17-11.5 28.5T800-240H160Zm0-200q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520h640q17 0 28.5 11.5T840-480q0 17-11.5 28.5T800-440H160Zm0-200q-17 0-28.5-11.5T120-680q0-17 11.5-28.5T160-720h640q17 0 28.5 11.5T840-680q0 17-11.5 28.5T800-640H160Z"/></svg>
+		</div>
+	</div>
+	
 
 
 	<!-- Find delivery section -->
@@ -69,7 +79,7 @@
 		<div class="responsive-width-33 display-flex flex-col z-2 bg-body rounded-l padded s-gap">
 			<div class="display-flex flex-col padded m-gap no-padded-left no-padded-right">
 				<h1 class="font-600 color-primary width-100 text-center">
-					Lo que buscas te encuentra
+					Encontrá lo que buscas
 				</h1>
 				<p class="o-6 color-primary width-100 text-center no-wrap font-500">
 					¿Que necesitás?
@@ -79,7 +89,7 @@
 			<div class="display-flex flex-row to-center s-gap">
 				<input style="border-width: 1px ;" class="responsive-width-66 rounded-s border-solid decoration-none padded-wide border-secondary font-l" type="text" id="formCity" placeholder="Ingresá tu ciudad"
 				pattern="^.*\(.+\).*" required loom-placeholder="Ingresá tu ciudad" loom>
-				<button style="border-width: 1px ;border-color: #039768; background-color: #039768;" class="responsive-width-33 no-wrap font-400 decoration-none padded-wide color-white rounded-s font-l border-solid" type="button" id="buttonFindCityForm" role="button"
+				<button style="border-width: 1px ;border-color: #039768; background-color: #039768;" class="responsive-width-33 no-wrap font-500 decoration-none padded-wide color-white rounded-s font-l border-solid" type="button" id="buttonFindCityForm" role="button"
 				loom="Empezar"></button>
 			</div>
 
