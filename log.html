@@ -185,6 +185,28 @@
 		<script src="https://cdn.jsdelivr.net/gh/dfralan/brik@main/brik.js"></script>
 		<script src="src/public/js/fixedTheme.js"></script>
 
+		<script>
+			(function (m, a, z, e) {
+			  var s, t;
+			  try {
+				t = m.sessionStorage.getItem('maze-us');
+			  } catch (err) {}
+			
+			  if (!t) {
+				t = new Date().getTime();
+				try {
+				  m.sessionStorage.setItem('maze-us', t);
+				} catch (err) {}
+			  }
+			
+			  s = a.createElement('script');
+			  s.src = z + '?t=' + t + '&apiKey=' + e;
+			  s.async = true;
+			  a.getElementsByTagName('head')[0].appendChild(s);
+			  m.mazeUniversalSnippetApiKey = e;
+			})(window, document, 'https://snippet.maze.co/maze-universal-loader.js', 'aaaaa8f5-c707-4e9f-8203-4c3712d0ba79');
+			</script>
+
 
 	</body>
 
