@@ -22,6 +22,8 @@ function toggleDisplay(selector) {
   });
 }
 
+console.log('we')
+
 function toggleBurguer(){
   const burguerMenu = document.getElementById('burguerMenu');
   const burguerIcon = document.getElementById('burguerIcon');
