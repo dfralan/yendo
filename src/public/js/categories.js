@@ -162,22 +162,27 @@ function foreach(categories, containerId) {
 
   categoriesN ++
 
-  console.log(categoriesN)
-
     if (category.codigo === "000") {return}
     const categoryHTML = `
-
-    
-      <small style="border-width: 1px ;border-color: #0D7A5F; color: #0D7A5F;" class="no-wrap font-500 decoration-none  color-black rounded-s border-solid xs-padded bg-none">
+      <small style="border-width: 1px ;border-color: #0D7A5F; color: #0D7A5F;" class="categoryItem cursor-pointer no-wrap font-500 decoration-none color-black rounded-s border-solid xs-padded bg-none">
+        ${category.nombre}
+      </small>
+    `;
+    const HidedCategoryHTML = `
+      <small style="border-width: 1px ;border-color: #0D7A5F; color: #0D7A5F;" class="categoryItem cursor-pointer display-none no-wrap font-500 decoration-none color-black rounded-s border-solid xs-padded bg-none">
         ${category.nombre}
       </small>
     `;
 
-    if (categoriesN > 6) {return} else {
+    if (categoriesN > 6) {
+      html += HidedCategoryHTML;
+    } else {
       html += categoryHTML;
     }
     
   });
+  const expandToAllCategories = `<p class='font-400 cursor-pointer'>Ver más</p>`
+  html += expandToAllCategories;
 
   container.innerHTML = html;
 }

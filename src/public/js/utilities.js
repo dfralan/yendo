@@ -5,13 +5,21 @@ function clickOnTeller(){
     }
 }
 
-function toggleAccessPassModal(){
-    const accessPassModal = document.getElementById('accessPassModal');
-    if (accessPassModal.classList.contains("display-none")){
-      accessPassModal.classList.remove("display-none");
+function toggleDisplay(selector) {
+  const elements = document.querySelectorAll(selector);
+
+  if (elements.length === 0) {
+    console.error(`No elements found for selector: ${selector}`);
+    return;
+  }
+
+  elements.forEach(element => {
+    if (element.classList.contains("display-none")) {
+      element.classList.remove("display-none");
     } else {
-      accessPassModal.classList.add("display-none");
+      element.classList.add("display-none");
     }
+  });
 }
 
 function toggleBurguer(){
