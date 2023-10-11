@@ -164,7 +164,7 @@ function foreach(categories) {
 
     if (category.codigo === "000") {return}
     const categoryHTML = `
-      <small onclick="toggleMe(this)" style="border-width: 1px ;border-color: #0D7A5F; color: #0D7A5F; background-color: #0D7A5F" class="popularCategoryItem cursor-pointer no-wrap font-500 decoration-none color-black rounded-s border-solid xs-padded bg-none">
+      <small onclick="toggleMe(this)" style="border-width: 1px ;border-color: #0D7A5F; color: #0D7A5F;" class="popularCategoryItem cursor-pointer no-wrap font-500 decoration-none color-black rounded-s border-solid xs-padded">
         ${category.nombre}
       </small>
     `;
@@ -216,11 +216,11 @@ function toggleMe(element) {
   if (element.classList.contains('selected')) {
     element.classList.remove('selected');
     element.classList.remove('color-white');
-    element.classList.add('bg-none');
+    element.style.backgroundColor = ''; 
   } else {
     element.classList.add('selected');
     element.classList.add('color-white');
-    element.classList.remove('bg-none');
+    element.style.backgroundColor = '#0D7A5F'; 
   }
 }
 
