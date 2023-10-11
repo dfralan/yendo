@@ -181,7 +181,7 @@ function foreach(categories) {
     }
     
   });
-  const expandToAllCategories = `<p onclick="toggleCategories(this)" class='categoriesCompacted font-400 cursor-pointer'>Ver más</p>`
+  const expandToAllCategories = `<p onclick="toggleCategories()" class='font-400 cursor-pointer'>Ver más</p>`
   html += expandToAllCategories;
 
   container.innerHTML = html;
@@ -198,6 +198,8 @@ function toggleCategories() {
     categoryItems.forEach(items => {
         items.classList.remove("display-none");
     });
+
+    container.classList.remove("compacted");
   }
   else {
     categoryItems.forEach(items => {
