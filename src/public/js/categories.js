@@ -213,12 +213,12 @@ function toggleCategories() {
 }
 
 function toggleMe(element) {
-  if (element.classList.contains('selected')) {
-    element.classList.remove('selected');
+  if (element.classList.contains('selectedCategory')) {
+    element.classList.remove('selectedCategory');
     element.classList.remove('color-white');
     element.style.backgroundColor = ''; 
   } else {
-    element.classList.add('selected');
+    element.classList.add('selectedCategory');
     element.classList.add('color-white');
     element.style.backgroundColor = '#0D7A5F'; 
   }
