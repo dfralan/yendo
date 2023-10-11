@@ -216,9 +216,11 @@ function toggleMe(element) {
   if (element.classList.contains('selected')) {
     element.classList.remove('selected');
     element.classList.remove('color-white');
+    element.classList.add('bg-black');
   } else {
     element.classList.add('selected');
     element.classList.add('color-white');
+    element.classList.remove('bg-black');
   }
 }
 
