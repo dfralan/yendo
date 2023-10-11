@@ -196,17 +196,14 @@ function toggleCategories() {
 
   if (container.classList.contains("compacted")) {
     categoryItems.forEach(items => {
-
         items.classList.remove("display-none");
-      
     });
   }
   else {
     categoryItems.forEach(items => {
-
       items.classList.add("display-none");
-    
-  });
+    });
+    container.classList.add("compacted");
 
   }
 }
