@@ -149,11 +149,11 @@ const vehicleKind = {
 }
 
 var categoriesN = 0
+const container = document.getElementById('categoryPillsContainer');
 
-function foreach(categories, containerId) {
-  const container = document.getElementById(containerId);
+function foreach(categories) {
   if (!container) {
-    console.error(`Container with id "${containerId}" not found.`);
+    console.error(`Container not found.`);
     return;
   }
 
@@ -164,7 +164,7 @@ function foreach(categories, containerId) {
 
     if (category.codigo === "000") {return}
     const categoryHTML = `
-      <small style="border-width: 1px ;border-color: #0D7A5F; color: #0D7A5F;" class="categoryItem cursor-pointer no-wrap font-500 decoration-none color-black rounded-s border-solid xs-padded bg-none">
+      <small style="border-width: 1px ;border-color: #0D7A5F; color: #0D7A5F;" class="popularCategoryItem cursor-pointer no-wrap font-500 decoration-none color-black rounded-s border-solid xs-padded bg-none">
         ${category.nombre}
       </small>
     `;
@@ -181,14 +181,35 @@ function foreach(categories, containerId) {
     }
     
   });
-  const expandToAllCategories = `<p class='font-400 cursor-pointer'>Ver más</p>`
+  const expandToAllCategories = `<p onclick="toggleCategories(this)" class='categoriesCompacted font-400 cursor-pointer'>Ver más</p>`
   html += expandToAllCategories;
 
   container.innerHTML = html;
+  container.classList.add('compacted');
 }
 
 // Usage
 foreach(categories, 'categoryPillsContainer');
+
+function toggleCategories() {
+  const categoryItems = document.querySelectorAll('.categoryItem');
+
+  if (container.classList.contains("compacted")) {
+    categoryItems.forEach(items => {
+
+        items.classList.remove("display-none");
+      
+    });
+  }
+  else {
+    categoryItems.forEach(items => {
+
+      items.classList.add("display-none");
+    
+  });
+
+  }
+}
 
 
   
