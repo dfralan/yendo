@@ -198,6 +198,7 @@ function toggleCategories() {
     categoryItems.forEach(items => {
         items.classList.remove("display-none");
     });
+    element.textContent = 'Ver menos';
 
     container.classList.remove("compacted");
   }
@@ -206,6 +207,7 @@ function toggleCategories() {
       items.classList.add("display-none");
     });
     container.classList.add("compacted");
+    element.textContent = 'Ver más';
 
   }
 }
