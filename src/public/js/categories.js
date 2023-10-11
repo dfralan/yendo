@@ -181,7 +181,7 @@ function foreach(categories) {
     }
     
   });
-  const expandToAllCategories = `<p onclick="toggleCategories()" class='font-400 cursor-pointer'>Ver más</p>`
+  const expandToAllCategories = `<p onclick="toggleCategories()" id='categoriesToggler' class='font-400 cursor-pointer'>Ver más</p>`
   html += expandToAllCategories;
 
   container.innerHTML = html;
@@ -193,12 +193,13 @@ foreach(categories, 'categoryPillsContainer');
 
 function toggleCategories() {
   const categoryItems = document.querySelectorAll('.categoryItem');
+  const categoriesToggler = document.getElementById('categoriesToggler')
 
   if (container.classList.contains("compacted")) {
     categoryItems.forEach(items => {
         items.classList.remove("display-none");
     });
-    element.textContent = 'Ver menos';
+    categoriesToggler.textContent = 'Ver menos';
 
     container.classList.remove("compacted");
   }
@@ -207,7 +208,7 @@ function toggleCategories() {
       items.classList.add("display-none");
     });
     container.classList.add("compacted");
-    element.textContent = 'Ver más';
+    categoriesToggler.textContent = 'Ver más';
 
   }
 }
