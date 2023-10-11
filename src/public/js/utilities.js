@@ -20,9 +20,8 @@ function toggleDisplay(selector) {
       element.classList.add("display-none");
     }
   });
+  
 }
-
-console.log('we')
 
 function toggleBurguer(){
   const burguerMenu = document.getElementById('burguerMenu');

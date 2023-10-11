@@ -1279,7 +1279,6 @@ brik {
     display: inline-block;
 }
 
-
 .divider{
     border-bottom: 1px solid var(--tertiary-color);
     width: auto;
@@ -1289,36 +1288,6 @@ brik {
 .selected {
     background-color: var(--tint-color) !important;
     color: var(--white-color) !important;
-}
-
-.pastel-1 {
-    background-color: #ffd6ff;
-    color: black;
-    fill: black;
-}
-
-.pastel {
-    background-color: rgba(var(--tint-color-rgb), var(--shadow-opacity));
-    color: var(--tint-color-rgb);
-    fill: var(--tint-color-rgb);
-}
-
-.pastel-3 {
-    background-color: #c8b6ff;
-    color: black;
-    fill: black;
-}
-
-.pastel-4 {
-    background-color: #b8c0ff;
-    color: black;
-    fill: black;
-}
-
-.pastel-5 {
-    background-color: #bbd0ff;
-    color: black;
-    fill: black;
 }
 `;
 
