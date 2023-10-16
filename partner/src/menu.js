@@ -34,7 +34,7 @@ function generateHash(inputText) {
 
 
     if (!storedURL){
-        window.location.href = "https://yendo.vercel.app/partner";
+        window.location.href = "https://yendo.delivery/partner";
     }
     const userName = extractUserFromUrl(storedURL)
     const userHash = generateHash(userName)
@@ -43,7 +43,7 @@ function generateHash(inputText) {
 
     // If it doesnt match any partner redirect to main page
     if (!partnersAR[userHash]){
-        window.location.href = "https://yendo.vercel.app/partner";
+        window.location.href = "https://yendo.delivery/partner";
 
     // Otherwise, construct url to fetch data
     } else {
@@ -56,8 +56,8 @@ function generateHash(inputText) {
         const partnerTellerForm = partnersAR[userHash]?.tellerForm
         const wspNumber = partnersAR[userHash]?.wspNumber
         const partnerFontFamily = partnersAR[userHash]?.fontFamily
-        const coverMenu = `https://yendo.vercel.app/partner/src/users/img/${userName}-portada.jpg`
-        const profilePictureMenu = `https://yendo.vercel.app/partner/src/users/img/${userName}-profile.jpg`
+        const coverMenu = `https://yendo.delivery/partner/src/users/img/${userName}-portada.jpg`
+        const profilePictureMenu = `https://yendo.delivery/partner/src/users/img/${userName}-profile.jpg`
         const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
         const sheetName = 'carta - plan inicial';
         const qu = 'Select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y';
