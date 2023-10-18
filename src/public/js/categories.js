@@ -157,7 +157,11 @@ function foreach(categories) {
     return;
   }
 
-  let html = '';
+  let html = `
+  <small class="no-wrap font-500 decoration-none color-secondary xs-padded">
+        Tendencias:
+  </small>
+  `;
   categories.categorias.forEach(category => {
 
   categoriesN ++
