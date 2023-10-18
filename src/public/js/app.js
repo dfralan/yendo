@@ -28,16 +28,6 @@
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-    const imgElement = document.getElementById('imgCoverBuscarPage');
-    const newImg = new Image();
-
-    // Set the source for the new image
-    newImg.src = 'https://images.pexels.com/photos/64609/pexels-photo-64609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
-
-    // Once the new image is loaded, replace the placeholder image
-    newImg.onload = function() {
-      imgElement.src = newImg.src;
-    };
     
   }
   window.addEventListener('DOMContentLoaded', () => {

@@ -1,85 +1,85 @@
 (function () {
 
   
-  const elementToHide = document.getElementById('confirmationLocationMap');
-  const confirmAddressButton = document.getElementById('confirmAddressButton');
-  const userLocalization = document.getElementById('userLocalization')
+	const elementToHide = document.getElementById('confirmationLocationMap');
+	const confirmAddressButton = document.getElementById('confirmAddressButton');
+	const userLocalization = document.getElementById('userLocalization')
 
-  
-  function getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition, showError);
-    } else {
-      console.log("La geolocalización no es soportada por este navegador.");
-      elementToHide.style.display = 'none';
-    }
-  }
-
-
-  function FormulaCalculateDistance(lat, long, lat2, long2) {
-    const earthRadiusKm = 6371; // Radio de la Tierra en kilómetros
-  
-    const toRadians = (degree) => {
-      return degree * (Math.PI / 180);
-    };
-  
-    const dLat = toRadians(lat2 - lat);
-    const dLon = toRadians(long2 - long);
-  
-    const a =
-      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.cos(toRadians(lat)) * Math.cos(toRadians(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  
-    const distance = earthRadiusKm * c;
-    return distance;
-  }
-  //const distanceKm = FormulaCalculateDistance(lat, long, lat2, long2);
-  //console.log(`La distancia entre los puntos es de aproximadamente ${distanceKm.toFixed(2)} kilómetros.`);
+	
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition, showError);
+		} else {
+			console.log("La geolocalización no es soportada por este navegador.");
+			elementToHide.style.display = 'none';
+		}
+	}
 
 
-  function showPosition(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
+	function FormulaCalculateDistance(lat, long, lat2, long2) {
+		const earthRadiusKm = 6371; // Radio de la Tierra en kilómetros
+	
+		const toRadians = (degree) => {
+		return degree * (Math.PI / 180);
+		};
+	
+		const dLat = toRadians(lat2 - lat);
+		const dLon = toRadians(long2 - long);
+	
+		const a =
+		Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+		Math.cos(toRadians(lat)) * Math.cos(toRadians(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+		const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+	
+		const distance = earthRadiusKm * c;
+		return distance;
+	}
+	//const distanceKm = FormulaCalculateDistance(lat, long, lat2, long2);
+	//console.log(`La distancia entre los puntos es de aproximadamente ${distanceKm.toFixed(2)} kilómetros.`);
 
-    // Guardar las coordenadas en el Local Storage
-    localStorage.setItem('latitude', latitude);
-    localStorage.setItem('longitude', longitude);
 
-    console.log(`Latitud: ${latitude}\nLongitud: ${longitude}`);
-    
+	function showPosition(position) {
+		const latitude = position.coords.latitude;
+		const longitude = position.coords.longitude;
 
-    // Llamar a la función para obtener el nombre de la calle
-    getAddressFromCoordinates(latitude, longitude);
-    drawOnMap(latitude, longitude);
-    elementToHide.style.opacity = '1';
+		// Guardar las coordenadas en el Local Storage
+		localStorage.setItem('latitude', latitude);
+		localStorage.setItem('longitude', longitude);
 
-  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+		console.log(`Latitud: ${latitude}\nLongitud: ${longitude}`);
+		
 
-    // Add event listener to the "Hide Element" button
-    confirmAddressButton.addEventListener('click', function() {
-      // Hide the element by changing its style's display property to 'none'
-    elementToHide.style.display = 'none';
-    });
-  }
+		// Llamar a la función para obtener el nombre de la calle
+		getAddressFromCoordinates(latitude, longitude);
+		drawOnMap(latitude, longitude);
+		elementToHide.style.opacity = '1';
 
-  function showError(error) {
-    switch (error.code) {
-        case error.PERMISSION_DENIED:
-        console.log("El usuario denegó el permiso para la geolocalización.");
-        break;
-        case error.POSITION_UNAVAILABLE:
-        console.log("La información de ubicación no está disponible.");
-        break;
-        case error.TIMEOUT:
-        console.log("Se ha excedido el tiempo de espera para obtener la ubicación.");
-        break;
-        case error.UNKNOWN_ERROR:
-        console.log("Se ha producido un error desconocido al obtener la ubicación.");
-        break;
-    }
-    elementToHide.style.display = 'none';
+	const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+	const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+		// Add event listener to the "Hide Element" button
+		confirmAddressButton.addEventListener('click', function() {
+		// Hide the element by changing its style's display property to 'none'
+		elementToHide.style.display = 'none';
+		});
+	}
+
+	function showError(error) {
+		switch (error.code) {
+			case error.PERMISSION_DENIED:
+			console.log("El usuario denegó el permiso para la geolocalización.");
+			break;
+			case error.POSITION_UNAVAILABLE:
+			console.log("La información de ubicación no está disponible.");
+			break;
+			case error.TIMEOUT:
+			console.log("Se ha excedido el tiempo de espera para obtener la ubicación.");
+			break;
+			case error.UNKNOWN_ERROR:
+			console.log("Se ha producido un error desconocido al obtener la ubicación.");
+			break;
+		}
+		elementToHide.style.display = 'none';
   }
 
   function getAddressFromCoordinates(latitude, longitude) {
