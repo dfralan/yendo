@@ -168,12 +168,12 @@ function foreach(categories) {
 
     if (category.codigo === "000") {return}
     const categoryHTML = `
-      <small data-code='${category.codigo}' style="border-width: 1px ;border-color: #0D7A5F; color: #0D7A5F;" class="popularCategoryItem cursor-pointer no-wrap font-500 decoration-none color-black rounded-s border-solid xs-padded">
+      <small data-code='${category.codigo}' class="popularCategoryItem cursor-pointer no-wrap font-500 decoration-none color-white rounded-s border-solid xs-padded">
         ${category.nombre}
       </small>
     `;
     const HidedCategoryHTML = `
-      <small data-code='${category.codigo}' style="border-width: 1px ;border-color: #0D7A5F; color: #0D7A5F;" class="categoryItem cursor-pointer display-none no-wrap font-500 decoration-none color-black rounded-s border-solid xs-padded">
+      <small data-code='${category.codigo}' class="categoryItem cursor-pointer display-none no-wrap font-500 decoration-none color-white rounded-s border-solid xs-padded">
         ${category.nombre}
       </small>
     `;
