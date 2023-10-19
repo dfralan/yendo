@@ -58,12 +58,12 @@ function constructCategoriesDA(categories) {
             `;
     
             if (categoriesN > 12){
-return
+                return
             }
             else if (categoriesN > 4) {
-            categoriesConstruction += HidedCategoryHTML;
+                categoriesConstruction += HidedCategoryHTML;
             } else {
-            categoriesConstruction += categoryHTML;
+                categoriesConstruction += categoryHTML;
             }
             
         });
@@ -112,6 +112,7 @@ function rotateCoverHero() {
         'https://images.pexels.com/photos/2310483/pexels-photo-2310483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
         'https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     ];
+    
     let coverA = document.getElementById('coverA');
     let coverB = document.getElementById('coverB');
 
@@ -126,29 +127,22 @@ function rotateCoverHero() {
 
         if (counter % 2 === 0) {
             coverA.setAttribute('src', coverImgArray[counter]);
-            coverA.classList.remove("display-none")
-            
-            setTimeout(coverB.classList.add("display-none"), 2000);
-
-            console.log('A')
-            console.log(counter)
-            console.log(coverImgArray[counter])
+            setTimeout(function() {
+                coverA.classList.remove("display-none");
+                coverB.classList.add("display-none");
+            }, 2000);
         } else {
             coverB.setAttribute('src', coverImgArray[counter]);
-            coverB.classList.remove("display-none")
-            
-            setTimeout(coverA.classList.add("display-none"), 2000);
-
-            console.log('B')
-            console.log(counter)
-            console.log(coverImgArray[counter])
+            setTimeout(function() {
+                coverB.classList.remove("display-none");
+                coverA.classList.add("display-none");
+            }, 2000);
         }
 
         counter++;
-        setTimeout(rotate, 5000); // Call the rotate function recursively after 3 seconds
+        setTimeout(rotate, 7000);
     }
 
-    // Start the rotation initially
     rotate();
 }
 
