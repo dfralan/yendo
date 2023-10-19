@@ -754,6 +754,11 @@ html {
 }
 
 .height-100 {
+    height: 100%;
+
+}
+
+.height-100-vh {
     height: 100vh;
 
 }
