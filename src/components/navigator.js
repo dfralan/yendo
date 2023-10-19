@@ -1,10 +1,12 @@
-let coverImg = 'https://images.pexels.com/photos/64609/pexels-photo-64609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
+
+
 
 var navigatorview = `
 <!-- Find delivery section -->
 <div class="width-100 display-flex flex-col full-center relative">
 
-    <img src=${coverImg} class="width-100 height-100 cover cover-bottom absolute to-bottom">
+<img id='coverA' src='https://images.pexels.com/photos/64609/pexels-photo-64609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' class="width-100 height-100 cover cover-bottom absolute to-bottom">
+<img id='coverB' src='' class="width-100 height-100 cover cover-bottom absolute to-bottom">
     <div  class="bg-black o-4 width-100 height-100 cover cover-bottom absolute to-bottom"></div>
 
     <div style='padding-top: 100px; padding-bottom: 20px' class='padded no-padded-left no-padded-right land display-flex full-center width-100'>
@@ -77,6 +79,9 @@ return
 }
 
 
+
+
+
 function toggleCategories() {
     const container = document.getElementById('categoryPillsContainer');
     const categoriesToggler = document.getElementById('categoriesToggler');
@@ -99,3 +104,57 @@ function toggleCategories() {
 
 	}
 }
+
+
+function rotateCoverHero() {
+    let coverImgArray = [
+        'https://images.pexels.com/photos/64609/pexels-photo-64609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        'https://images.pexels.com/photos/2310483/pexels-photo-2310483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        'https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    ];
+    let coverA = document.getElementById('coverA');
+    let coverB = document.getElementById('coverB');
+
+    let counter = 0;
+
+    function rotate() {
+
+
+        if (counter === coverImgArray.length) {
+            counter = 0;
+        }
+
+        if (counter % 2 === 0) {
+            coverA.setAttribute('src', coverImgArray[counter]);
+            coverA.classList.remove("display-none")
+            
+            setTimeout(coverB.classList.add("display-none"), 2000);
+
+            console.log('A')
+            console.log(counter)
+            console.log(coverImgArray[counter])
+        } else {
+            coverB.setAttribute('src', coverImgArray[counter]);
+            coverB.classList.remove("display-none")
+            
+            setTimeout(coverA.classList.add("display-none"), 2000);
+
+            console.log('B')
+            console.log(counter)
+            console.log(coverImgArray[counter])
+        }
+
+        counter++;
+        setTimeout(rotate, 5000); // Call the rotate function recursively after 3 seconds
+    }
+
+    // Start the rotation initially
+    rotate();
+}
+
+// Brik launchs an event with the name of the component when is loaded or there are changes (be carefull with Event Listener duplications)
+window.addEventListener('navigatorview', function () {
+    rotateCoverHero()
+});
+
+
