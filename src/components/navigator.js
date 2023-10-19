@@ -12,7 +12,7 @@ var navigatorview = `
     <div style='padding-top: 100px; padding-bottom: 20px' class='padded no-padded-left no-padded-right land display-flex full-center width-100'>
         
 
-        <div style="transition: .3s; max-width: 600px;" class="responsive-width-66 display-flex flex-col z-2 rounded-l padded s-gap to-center bg-white">
+        <div style="transition: .3s; max-width: 600px;" class="responsive-width-66 display-flex flex-col z-2 rounded-l x-padded s-gap to-center bg-white">
             
             <h1 class="font-600 color-primary width-100 padded no-padded-left no-padded-right">
                 Encontrá lo que buscas
