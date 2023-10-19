@@ -2,7 +2,7 @@ var navbarview = `
 <!-- Navbar -->
 <div class="z-i sticky to-top to-left land spaced display-flex flex-row to-center">
     <div class="display-flex flex-row full-center s-gap">
-        <img width="50px" height="50px" src="https://yendo.delivery/src/public/img/yendo.svg" alt="">
+        <img width="70px" height="70px" src="https://yendo.delivery/src/public/img/logo-yendo-delivery.svg" alt="">
     </div>
 
     <div class="display-flex full-center rounded-s s-gap">
@@ -18,3 +18,19 @@ var navbarview = `
 
 </div>
 `
+
+
+function toggleBurguer(){
+    const burguerMenu = document.getElementById('burguerMenu');
+    const burguerIcon = document.getElementById('burguerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+      if (burguerMenu.classList.contains("display-none")){
+        burguerMenu.classList.remove("display-none");
+        closeIcon.classList.remove("display-none");
+        burguerIcon.classList.add("display-none");
+      } else {
+        burguerMenu.classList.add("display-none");
+        burguerIcon.classList.remove("display-none");
+        closeIcon.classList.add("display-none");
+      }
+  }

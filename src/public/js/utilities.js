@@ -23,17 +23,3 @@ function toggleDisplay(selector) {
   
 }
 
-function toggleBurguer(){
-  const burguerMenu = document.getElementById('burguerMenu');
-  const burguerIcon = document.getElementById('burguerIcon');
-  const closeIcon = document.getElementById('closeIcon');
-    if (burguerMenu.classList.contains("display-none")){
-      burguerMenu.classList.remove("display-none");
-      closeIcon.classList.remove("display-none");
-      burguerIcon.classList.add("display-none");
-    } else {
-      burguerMenu.classList.add("display-none");
-      burguerIcon.classList.remove("display-none");
-      closeIcon.classList.add("display-none");
-    }
-}
