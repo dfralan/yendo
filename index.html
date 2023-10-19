@@ -32,6 +32,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;1,600&display=swap" rel="stylesheet">
 </head>
 
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations()
+    .then(function(registrations){
+      for(let registration of registrations){
+        registration.unregister()
+        console.log('service worker unregistered')
+      }
+    }
+
+    )
+  }
+</script>
+
 <body style="transition: .3s;" class="display-flex flex-col m-gap">
 
   <!-- Menu -->
