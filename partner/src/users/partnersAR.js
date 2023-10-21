@@ -40,7 +40,7 @@ const partnersAR = {
   9634267191: {
     subscriptionKind: "partner",
     cityID: "3542",
-    username: "cardamomo.rosario",
+    username: "cardamomo.pasteleria",
     userKind: "1",
     categories: ["017"],
     locations: ["-32.8739917,-60.7587183"],
@@ -50,7 +50,7 @@ const partnersAR = {
     tellerForm: 'https://docs.google.com/forms/d/e/1FAIpQLSdTpcRGfTLAUOAWI47GHOOUECMtXG6EdEgxUY3oajXqsjheNQ/viewform?usp=pp_url&entry.1168217436=a&entry.1536991342=b&entry.1697400105=c&entry.75799250=d',
     tintColor: '#232323',
     contrastColor: '#FFFFFF',
-    accentColor: '#8126ff',
+    accentColor: '#2962E3',
     wspNumber: '5493417462378',
     theme: 'light',
     partnerStyle: 'modern',
