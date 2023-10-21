@@ -797,6 +797,11 @@ html {
     width: calc(100% / 3);
 }
 
+.responsive-width-30 {
+    display: flex;
+    width: 30%;
+}
+
 .responsive-width-25 {
     width: 25%;
 }
@@ -871,6 +876,11 @@ html {
     .responsive-width-33 {
         width: 100%;
     }
+
+    .responsive-width-30 {
+        width: 100%;
+    }
+    
 
     .responsive-width-66 {
         width: 100%;
