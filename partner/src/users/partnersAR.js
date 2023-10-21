@@ -50,7 +50,7 @@ const partnersAR = {
     tellerForm: 'https://docs.google.com/forms/d/e/1FAIpQLSdTpcRGfTLAUOAWI47GHOOUECMtXG6EdEgxUY3oajXqsjheNQ/viewform?usp=pp_url&entry.1168217436=a&entry.1536991342=b&entry.1697400105=c&entry.75799250=d',
     tintColor: '#232323',
     contrastColor: '#FFFFFF',
-    accentColor: '#1afffb',
+    accentColor: '#8126ff',
     wspNumber: '5493417462308',
     theme: 'light',
     partnerStyle: 'modern',
