@@ -1054,6 +1054,16 @@ html {
 
 .blur-behind {
     backdrop-filter: blur(5px);
+
+    /* For WebKit-based browsers like Safari */
+    -webkit-backdrop-filter: blur(5px);
+    
+    /* For Mozilla Firefox */
+    -moz-backdrop-filter: blur(5px);
+    
+    /* For Microsoft Edge (Chromium-based) */
+    -ms-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .placeholder-secondary::placeholder {
