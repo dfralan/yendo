@@ -51,7 +51,7 @@ const partnersAR = {
     tintColor: '#232323',
     contrastColor: '#FFFFFF',
     accentColor: '#8126ff',
-    wspNumber: '5493417462308',
+    wspNumber: '5493417462378',
     theme: 'light',
     partnerStyle: 'modern',
     fontFamily: "'Urbanist', sans-serif"
