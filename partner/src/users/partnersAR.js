@@ -37,6 +37,25 @@ const partnersAR = {
     partnerStyle: 'modern',
     fontFamily: "'Urbanist', sans-serif"
   },
+  9634267191: {
+    subscriptionKind: "partner",
+    cityID: "3542",
+    username: "cardamomo.rosario",
+    userKind: "1",
+    categories: ["017"],
+    locations: ["-32.8739917,-60.7587183"],
+    activeInterval: "09:00/23:00(-03:00)",
+    rank: "5.0",
+    menuId: '1XPU2b0wiF7mNIbdCs7LTsY374iGLhRYqScRrwbxP8xI',
+    tellerForm: 'https://docs.google.com/forms/d/e/1FAIpQLSdTpcRGfTLAUOAWI47GHOOUECMtXG6EdEgxUY3oajXqsjheNQ/viewform?usp=pp_url&entry.1168217436=a&entry.1536991342=b&entry.1697400105=c&entry.75799250=d',
+    tintColor: '#232323',
+    contrastColor: '#FFFFFF',
+    accentColor: '#1afffb',
+    wspNumber: '5493412825529',
+    theme: 'light',
+    partnerStyle: 'modern',
+    fontFamily: "'Urbanist', sans-serif"
+  },
   3079651: {
     subscriptionKind: "partner",
     cityID: "3542",
