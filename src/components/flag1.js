@@ -1,7 +1,7 @@
 var flag1 = `
 <div class="display-flex flex-wrap width-100">
     
-  <div class="responsive-width-50 bg-white land no-padded-right bg-white full-center">
+  <div class="responsive-width-50 bg-tertiary land no-padded-right bg-white full-center">
       <div class="display-flex flex-col m-gap width-100 x-padded no-padded-left no-padded-right">
         <h1>
           El día a día ahora es más fácil

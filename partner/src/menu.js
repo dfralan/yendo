@@ -39,7 +39,7 @@ function generateHash(inputText) {
     const userName = extractUserFromUrl(storedURL)
     const userHash = generateHash(userName)
 
-    console.log(generateHash('demo'))
+    console.log(generateHash('cardamomo.pasteleria'))
 
     // If it doesnt match any partner redirect to main page
     if (!partnersAR[userHash]){
