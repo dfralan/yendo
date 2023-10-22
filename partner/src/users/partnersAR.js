@@ -56,7 +56,7 @@ const partnersAR = {
     wspNumber: '5493417462378',
     theme: 'light',
     partnerStyle: 'modern',
-    fontFamily: "'Urbanist', sans-serif",
+    fontFamily: "'Special Elite', cursive",
     specialFontFamily: "'Special Elite', cursive",
   },
   3079651: {
