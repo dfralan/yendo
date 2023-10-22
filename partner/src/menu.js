@@ -93,6 +93,7 @@ function generateHash(inputText) {
                         Estado: row.c[6] && row.c[6].v ? row.c[6].v : '', 
                         };
                         Products.push(Product);
+                        console.log(Product.Descuento)
                 }
 
                 // Construct Categories Array (Column I)
