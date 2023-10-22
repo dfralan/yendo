@@ -255,7 +255,7 @@ function generateHash(inputText) {
                                 } else {
                                     return `
                                         <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
-                                            ${priceValue}
+                                            ${Product.Precios}
                                         </h4>`
                                 }
 
