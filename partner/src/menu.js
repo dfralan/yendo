@@ -56,8 +56,8 @@ function generateHash(inputText) {
         const partnerTellerForm = partnersAR[userHash]?.tellerForm
         const wspNumber = partnersAR[userHash]?.wspNumber
         const partnerFontFamily = partnersAR[userHash]?.fontFamily
+        const partnerSpecialFontFamily = partnersAR[userHash]?.specialFontFamily
         const coverMenu = `https://yendo.delivery/partner/src/users/img/${userName}-portada.jpg`
-        const profilePictureMenu = `https://yendo.delivery/partner/src/users/img/${userName}-profile.jpg`
         const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
         const sheetName = 'carta - plan inicial';
         const qu = 'Select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y';
@@ -187,7 +187,7 @@ function generateHash(inputText) {
                     newCategory.classList.add('l-gap', 'responsive-2', 'display-flex', 'flex-col', 'padded');
 
                     let categoryElement = `
-                        <h3 style="background-color: ${partnerTintColor}; color: ${partnerContrastColor}" class="w-fit s-padded font-500 max-width-100 wrap overflow-scroll">
+                        <h3 style="font-family: ${partnerSpecialFontFamily} ;background-color: ${partnerTintColor}; color: ${partnerContrastColor}" class="w-fit s-padded font-500 max-width-100 wrap overflow-scroll">
                             ${category}
                         </h3>
                         <div class="productContainer w-100 display-flex flex-col l-gap">
