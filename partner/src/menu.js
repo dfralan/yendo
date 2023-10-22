@@ -236,6 +236,30 @@ function generateHash(inputText) {
 
                             const estado = (Product.Estado !== 'Disponible' && Product.Estado !== '') ? labelConstructorByStyle(Product.Estado) : ''
 
+                            function getPrice() {
+                                var descuentoValue = parseFloat(Product.Descuento);
+                                var priceValue = parseFloat(Product.Price);
+                                if (!isNaN(descuentoValue) && descuentoValue > 0 && !isNaN(priceValue)) {
+                                    var discountPercentage = descuentoValue * 100;
+                                    var discountedPrice = priceValue - (priceValue * (discountPercentage / 100));
+
+                                    return `
+                                    <div class='display-flex flex-col'>
+                                            <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
+                                                <s>${priceValue}<s/>
+                                            </h4>
+                                            <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
+                                                ${discountedPrice}
+                                            </h4>
+                                    </div>`
+                                } else {
+                                    return `
+                                        <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
+                                            ${priceValue}
+                                        </h4>`
+                                }
+
+                            }
                             
                             let productElement = `
                                 <div style='color: ${partnerTintColor}' class="w-100 display-flex flex-col xs-gap">
@@ -244,9 +268,7 @@ function generateHash(inputText) {
                                             ${Product.Plato}
                                             ${estado}
                                         </h3>
-                                        <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
-                                            ${Product.Precio}
-                                        </h4>
+                                        ${getPrice()}
                                     </div>
                                     <div style='border-color: ${partnerTintColor};' class='border-solid'></div>
                                     <p class="font-300 max-width-100 wrap overflow-scroll">
