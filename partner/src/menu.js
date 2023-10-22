@@ -240,10 +240,9 @@ function generateHash(inputText) {
                                 
                                 const priceValue = Product.Precio;
                                 const discointValue = parseFloat(Product.Descuento);
+                                let numValue2 = parseFloat(priceValue.replace('$', ''));
 
                                 if (!isNaN(discointValue) && discointValue > 0) {
-                                    
-                                    let numValue2 = parseFloat(priceValue.replace('$', ''));
                                     var discountedPrice = numValue2 - (numValue2 * (discointValue));
 
                                     if (!isNaN(numValue2)) {
@@ -259,13 +258,13 @@ function generateHash(inputText) {
                                     } else {
                                         return `
                                         <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
-                                            $${discountedPrice}
+                                            $${numValue2}
                                         </h4>`
                                     }
                                 } else {
                                     return `
                                     <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
-                                        $${discountedPrice}
+                                        $${numValue2}
                                     </h4>`
                                 }          
                             }
