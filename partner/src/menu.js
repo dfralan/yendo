@@ -238,7 +238,7 @@ function generateHash(inputText) {
 
                             function getPrice() {
                                 var descuentoValue = parseFloat(Product.Descuento);
-                                var priceValue = parseFloat(Product.Price);
+                                var priceValue = parseFloat(Product.Precio);
                                 if (!isNaN(descuentoValue) && descuentoValue > 0 && !isNaN(priceValue)) {
                                     var discountPercentage = descuentoValue * 100;
                                     var discountedPrice = priceValue - (priceValue * (discountPercentage / 100));
