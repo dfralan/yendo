@@ -240,7 +240,8 @@ function generateHash(inputText) {
                                 
                                 const priceValue = Product.Precio;
                                 const discointValue = parseFloat(Product.Descuento);
-                                let numValue2 = parseFloat(priceValue.replace('$', ''));
+                                let numValue2 = typeof priceValue === 'string' ? parseFloat(priceValue.replace('$', '')) : parseFloat(priceValue);
+
 
                                 if (!isNaN(discointValue) && discointValue > 0) {
                                     var discountedPrice = numValue2 - (numValue2 * (discointValue));
