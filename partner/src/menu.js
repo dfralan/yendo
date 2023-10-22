@@ -237,31 +237,37 @@ function generateHash(inputText) {
                             const estado = (Product.Estado !== 'Disponible' && Product.Estado !== '') ? labelConstructorByStyle(Product.Estado) : ''
 
                             function getPrice() {
-                                var descuentoValue = parseFloat(Product.Descuento);
-                                var priceValue = parseFloat(Product.Precio);
-                                console.log(Product.Precio)
-                                console.log(priceValue)
-                                console.log(descuentoValue)
-                                if (typeof Product.Descuento === 'number' && Product.Descuento > 0) {
-                                    var discountPercentage = descuentoValue * 100;
-                                    var discountedPrice = priceValue - (priceValue * (discountPercentage / 100));
+                                
+                                const priceValue = Product.Precio;
+                                const discointValue = parseFloat(Product.Descuento);
 
+                                if (!isNaN(discointValue) && discointValue > 0) {
+                                    
+                                    let numValue2 = parseFloat(priceValue.replace('$', ''));
+                                    var discountedPrice = numValue2 - (numValue2 * (discointValue));
+
+                                    if (!isNaN(numValue2)) {
                                     return `
-                                    <div class='display-flex flex-col'>
+                                        <div class='display-flex flex-col'>
                                             <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
-                                                <s>${priceValue}</s>
+                                                <s>$${numValue2}</s>
                                             </h4>
                                             <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
-                                                ${discountedPrice}
+                                                $${discountedPrice}
                                             </h4>
-                                    </div>`
+                                        </div>`
+                                    } else {
+                                        return `
+                                        <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
+                                            $${discountedPrice}
+                                        </h4>`
+                                    }
                                 } else {
                                     return `
-                                        <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
-                                            ${Product.Precio}
-                                        </h4>`
-                                }
-
+                                    <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
+                                        $${discountedPrice}
+                                    </h4>`
+                                }          
                             }
                             
                             let productElement = `
