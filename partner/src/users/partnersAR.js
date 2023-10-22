@@ -57,7 +57,7 @@ const partnersAR = {
     theme: 'light',
     partnerStyle: 'modern',
     fontFamily: "'Urbanist', sans-serif",
-    specialFontFamily: "'Urbanist', sans-serif",
+    specialFontFamily: "'Special Elite', cursive",
   },
   3079651: {
     subscriptionKind: "partner",
