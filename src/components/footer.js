@@ -1,5 +1,5 @@
 var footerview = `
-<div class="bg-white display-flex flex-col full-center z-2 s-gap padded">
+<div class="bg-tertiary display-flex flex-col full-center z-2 s-gap padded">
 <div class="land display-flex flex-wrap m-gap color-black">
     <p onclick="clickOnTeller()" class="cursor-pointer decoration-none color-black">Ayuda</p>
     <a href="https://www.linkedin.com/company/yendoapp" target="_blank" class="decoration-none color-black">Linkedin</a>
