@@ -54,8 +54,8 @@
 		drawOnMap(latitude, longitude);
 		elementToHide.style.opacity = '1';
 
-	const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-	const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 		// Add event listener to the "Hide Element" button
 		confirmAddressButton.addEventListener('click', function() {
