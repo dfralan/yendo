@@ -246,7 +246,7 @@ function generateHash(inputText) {
                                     return `
                                     <div class='display-flex flex-col'>
                                             <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
-                                                <s>${priceValue}<s/>
+                                                <s>${priceValue}</s>
                                             </h4>
                                             <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
                                                 ${discountedPrice}
