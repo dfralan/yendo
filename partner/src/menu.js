@@ -247,7 +247,7 @@ function generateHash(inputText) {
 
                                     if (!isNaN(numValue2)) {
                                     return `
-                                        <div class='display-flex flex-col'>
+                                        <div class='display-flex flex-col to-end to-right flex-end'>
                                             <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
                                                 <s>$${numValue2}</s>
                                             </h4>
