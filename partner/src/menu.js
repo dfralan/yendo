@@ -166,6 +166,14 @@ function generateHash(inputText) {
                 <span  class="horizontal-scrolling-items__item">
                     ${Rotativo}&nbsp-&nbsp
                 </span>
+                
+                <span  class="horizontal-scrolling-items__item">
+                    ${Rotativo}&nbsp-&nbsp
+                </span>
+                
+                <span  class="horizontal-scrolling-items__item">
+                    ${Rotativo}&nbsp-&nbsp
+                </span>
                 ` 
                 rotativoMenuElement.innerHTML = rotation;
                 
