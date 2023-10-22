@@ -16,7 +16,8 @@ const partnersAR = {
     wspNumber: '5493415807460',
     theme: 'light',
     partnerStyle: 'classic',
-    fontFamily: "'Roboto', sans-serif"
+    fontFamily: "'Roboto', sans-serif",
+    specialFontFamily: "'Roboto', sans-serif"
   },
   5624572006: {
     subscriptionKind: "inicial",
@@ -35,7 +36,8 @@ const partnersAR = {
     wspNumber: '5493412825529',
     theme: 'dark',
     partnerStyle: 'modern',
-    fontFamily: "'Urbanist', sans-serif"
+    fontFamily: "'Urbanist', sans-serif",
+    specialFontFamily: "'Roboto', sans-serif"
   },
   9634267191: {
     subscriptionKind: "partner",
@@ -54,7 +56,8 @@ const partnersAR = {
     wspNumber: '5493417462378',
     theme: 'light',
     partnerStyle: 'modern',
-    fontFamily: "'Urbanist', sans-serif"
+    fontFamily: "'Urbanist', sans-serif",
+    specialFontFamily: "'Urbanist', sans-serif",
   },
   3079651: {
     subscriptionKind: "partner",
@@ -73,6 +76,7 @@ const partnersAR = {
     wspNumber: '5493412825529',
     theme: 'light',
     partnerStyle: 'modern',
-    fontFamily: "'Urbanist', sans-serif"
+    fontFamily: "'Urbanist', sans-serif",
+    specialFontFamily: "'Urbanist', sans-serif",
   }
 };
