@@ -247,17 +247,17 @@ function generateHash(inputText) {
 
                                     if (!isNaN(numValue2)) {
                                     return `
-                                        <div class='display-flex flex-col to-end to-right flex-end'>
-                                            <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
+                                        <div class='display-flex flex-col flex-end steady-33 text-rights'>
+                                            <h4 class="text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
                                                 <s>$${numValue2}</s>
                                             </h4>
-                                            <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
+                                            <h4 class="text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
                                                 $${discountedPrice}
                                             </h4>
                                         </div>`
                                     } else {
                                         return `
-                                        <h4 class="steady-33 text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
+                                        <h4 class="text-right display-flex flex-end font-300 xs-padded no-padded-left no-padded-right">
                                             $${numValue2}
                                         </h4>`
                                     }
