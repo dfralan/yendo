@@ -16,8 +16,8 @@ var navigatorview = `
             
             <h1 class="font-600 color-primary width-100 padded no-padded-left no-padded-right">
                 Encontrá lo que buscas
-                <input type="text" id="searchInput" placeholder="Escribe aquí">
-                <ul id="suggestions"></ul>
+                <input class='display-none' type="text" id="searchInput" placeholder="Escribe aquí">
+                <ul class='display-none' id="suggestions"></ul>
             </h1>
 
             <div class="width-100 display-flex flex-row to-center s-gap">
