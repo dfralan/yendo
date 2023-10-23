@@ -25,9 +25,9 @@ function constructCategoriesHero(categories) {
                 return
             } else {
                 const categoryHTML = `
-                <h4 style='border-width: 1.4px; ; border-color: #0D7A5F; color: #0D7A5F' data-code='${category.codigo}' class="cursor-pointer no-wrap font-500 decoration-none rounded-s border-solid xs-padded popularCategoryItem">
+                <h3 style='border-width: 1.4px; ; border-color: #0D7A5F; color: #0D7A5F' data-code='${category.codigo}' class="cursor-pointer no-wrap font-500 decoration-none rounded-s border-solid xs-padded popularCategoryItem">
                     ${category.nombre}
-                </h4>
+                </h3>
                 `;
                 categoriesConstruction += categoryHTML;
             }
