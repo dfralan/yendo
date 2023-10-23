@@ -19,7 +19,7 @@ var navigatorview = `
 
 <div class="width-100 display-flex flex-col full-center relative">
 
-<img id='coverA' src='https://images.pexels.com/photos/64609/pexels-photo-64609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' class="width-100 height-100-vh cover cover-bottom absolute to-bottom">
+<img alt='Arboristería Poda en altura Cerrajería Mudanzas Envíos' id='coverA' src='https://images.pexels.com/photos/64609/pexels-photo-64609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' class="width-100 height-100-vh cover cover-bottom absolute to-bottom">
 <img id='coverB' src='' class="width-100 height-100-vh cover cover-bottom absolute to-bottom">
     <div  class="bg-black o-4 width-100 height-100-vh cover cover-bottom absolute to-bottom"></div>
 
