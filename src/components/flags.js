@@ -62,19 +62,19 @@ var flag2 = `
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m382-354 339-339q12-12 28.5-12t28.5 12q12 12 12 28.5T778-636L410-268q-12 12-28 12t-28-12L182-440q-12-12-11.5-28.5T183-497q12-12 28.5-12t28.5 12l142 143Z"/></svg>
             </span>
-            Elige tu Tasker por opiniones, habilidades y precio
+            Compara reseñas, calificaciones y precios de Tasker
           </li>
           <li class="display-flex flex-row to-start s-gap">
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m382-354 339-339q12-12 28.5-12t28.5 12q12 12 12 28.5T778-636L410-268q-12 12-28 12t-28-12L182-440q-12-12-11.5-28.5T183-497q12-12 28.5-12t28.5 12l142 143Z"/></svg>
             </span>
-            Programe cuando funcione para usted, tan pronto como hoy
+            Elija y conéctese con la mejor persona para el trabajo
           </li>
           <li class="display-flex flex-row to-start s-gap">
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m382-354 339-339q12-12 28.5-12t28.5 12q12 12 12 28.5T778-636L410-268q-12 12-28 12t-28-12L182-440q-12-12-11.5-28.5T183-497q12-12 28.5-12t28.5 12l142 143Z"/></svg>
             </span>
-            Chatea, paga, da propinas y revisa todo a través de una sola plataforma
+            Guarda tus favoritas para reservar una y otra vez
           </li>
         </ul>
       </div>
