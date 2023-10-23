@@ -88,9 +88,9 @@ function constructCategoriesDA(categories) {
             
         });
         let toggler = `
-        <h4 onclick="toggleCategories()" id='categoriesToggler' class='color-black font-500 cursor-pointer display-flex full-center border-none bg-none'>
+        <h1 onclick="toggleCategories()" id='categoriesToggler' class='color-black font-500 font-l cursor-pointer display-flex full-center border-none bg-none'>
             Ver más
-        </h4>
+        </h1>
         `
         categoriesConstruction += toggler;
 

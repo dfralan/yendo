@@ -6,27 +6,27 @@ var flag1 = `
         <h1>
           El día a día ahora es más fácil
         </h1>
-        <h4 class="font-400">
-          Cuando la vida se vuelve ocupada, no es necesario que la afrontes solo. Recupera tiempo para lo que amas sin tener que gastar mucho dinero.
-        </h4>
+        <h2 class="font-400">
+          Cuando la vida se vuelve ocupada, no es necesario que la afrontes solo.
+        </h2>
         <ul class="list-decoration-none font-600">
           <li class="display-flex flex-row to-start s-gap">
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m382-354 339-339q12-12 28.5-12t28.5 12q12 12 12 28.5T778-636L410-268q-12 12-28 12t-28-12L182-440q-12-12-11.5-28.5T183-497q12-12 28.5-12t28.5 12l142 143Z"/></svg>
             </span>
-            Elige tu Tasker por opiniones, habilidades y precio
+              Elige tu Tasker por opiniones, habilidades y precio
           </li>
           <li class="display-flex flex-row to-start s-gap">
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m382-354 339-339q12-12 28.5-12t28.5 12q12 12 12 28.5T778-636L410-268q-12 12-28 12t-28-12L182-440q-12-12-11.5-28.5T183-497q12-12 28.5-12t28.5 12l142 143Z"/></svg>
             </span>
-            Programe cuando funcione para usted, tan pronto como hoy
+              Programe cuando funcione para usted, tan pronto como hoy
           </li>
           <li class="display-flex flex-row to-start s-gap">
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m382-354 339-339q12-12 28.5-12t28.5 12q12 12 12 28.5T778-636L410-268q-12 12-28 12t-28-12L182-440q-12-12-11.5-28.5T183-497q12-12 28.5-12t28.5 12l142 143Z"/></svg>
             </span>
-            Chatea, paga, da propinas y revisa todo a través de una sola plataforma
+              Recupera tiempo para lo que amas sin tener que gastar mucho dinero
           </li>
         </ul>
       </div>
@@ -54,9 +54,9 @@ var flag2 = `
         <h1>
           Un equipo de referencia a tu alcance
         </h1>
-        <h4 class="font-400">
+        <h2 class="font-400">
           Crea tu equipo de taskers locales con antecedentes verificados para ayudarte con la vida y de por vida. Lo que sea que necesites, lo tienen cubierto.
-        </h4>
+        </h2>
         <ul class="list-decoration-none font-600">
           <li class="display-flex flex-row to-start s-gap">
             <span>
