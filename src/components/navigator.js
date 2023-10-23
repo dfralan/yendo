@@ -16,6 +16,8 @@ var navigatorview = `
             
             <h1 class="font-600 color-primary width-100 padded no-padded-left no-padded-right">
                 Encontrá lo que buscas
+                <input type="text" id="searchInput" placeholder="Escribe aquí">
+                <ul id="suggestions"></ul>
             </h1>
 
             <div class="width-100 display-flex flex-row to-center s-gap">
@@ -146,9 +148,68 @@ function rotateCoverHero() {
     rotate();
 }
 
+
+
+
 // Brik launchs an event with the name of the component when is loaded or there are changes (be carefull with Event Listener duplications)
 window.addEventListener('navigatorview', function () {
     rotateCoverHero()
+
+
+
+
+    const searchInput = document.getElementById('searchInput');
+const suggestions = document.getElementById('suggestions');
+
+
+
+function updateSuggestions() {
+    const searchTerm = searchInput.value.toLowerCase();
+    suggestions.innerHTML = '';
+
+    if (searchTerm === '') {
+        suggestions.style.display = 'none';
+        return;
+    }
+
+    const matchingItems = [];
+
+    citiesAR.forEach(province => {
+        province.ciudades.forEach(city => {
+            if (city.nombre.toLowerCase().includes(searchTerm)) {
+                matchingItems.push(`${city.nombre} (${province.nombre})`);
+            }
+        });
+    });
+
+    if (matchingItems.length > 0) {
+        matchingItems.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = item;
+            suggestions.appendChild(listItem);
+        });
+        suggestions.style.display = 'block';
+    } else {
+        suggestions.style.display = 'none';
+    }
+}
+
+searchInput.addEventListener('input', updateSuggestions);
+
+suggestions.addEventListener('click', (e) => {
+    if (e.target.tagName === 'LI') {
+        searchInput.value = e.target.textContent;
+        suggestions.style.display = 'none';
+    }
+});
+
+document.addEventListener('click', (e) => {
+    if (e.target !== searchInput && e.target !== suggestions) {
+        suggestions.style.display = 'none';
+    }
+});
+
+    
 });
 
 
