@@ -19,7 +19,6 @@ var navbarview = `
 </div>
 `
 
-
 function toggleBurguer(){
     const burguerMenu = document.getElementById('burguerMenu');
     const burguerIcon = document.getElementById('burguerIcon');

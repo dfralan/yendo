@@ -3,6 +3,20 @@
 
 var navigatorview = `
 <!-- Find delivery section -->
+<style>
+#suggestions {
+    list-style: none; /* Remove default list styles */
+    position: absolute; /* The dropdown is positioned absolutely */
+    top: 100%; /* Position it below the input */
+    left: 0;
+    width: 100%; /* Match the width of the input */
+    display: none; /* Hide it by default */
+    padding: 10px
+  }
+  #suggestions li {
+    }
+  </style>
+
 <div class="width-100 display-flex flex-col full-center relative">
 
 <img id='coverA' src='https://images.pexels.com/photos/64609/pexels-photo-64609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' class="width-100 height-100-vh cover cover-bottom absolute to-bottom">
@@ -16,13 +30,17 @@ var navigatorview = `
             
             <h1 class="font-600 color-primary width-100 padded no-padded-left no-padded-right">
                 Encontrá lo que buscas
-                <input class='display-none' type="text" id="searchInput" placeholder="Escribe aquí">
-                <ul class='display-none' id="suggestions"></ul>
+                
             </h1>
 
             <div class="width-100 display-flex flex-row to-center s-gap">
-                <input style="border-width: 1px ;" class="width-100 rounded-s border-solid decoration-none padded-wide border-secondary font-l" type="text" id="formCity" placeholder="Ingresá tu ciudad"
-                pattern="^.*\(.+\).*" required loom-placeholder="Ingresá tu ciudad" loom>
+
+                <div class="dropdown width-100">
+                    <input style="border-width: 1px ;" class="width-100 rounded-s border-solid decoration-none padded-wide border-secondary font-l" type="text" id="formCity" placeholder="Ingresá tu ciudad"
+                    pattern="^.*\(.+\).*" required loom-placeholder="Ingresá tu ciudad" loom>
+                    <ul style='max-height: 200px; border-width: 1px ;' class='rounded-s border-solid border-secondary font-l display-flex flex-col s-gap dropdown-content bg-body overflow-scroll shadow-one' id="suggestions"></ul>
+                </div>
+                
                 <button style="border-width: 1px ;border-color: #0D7A5F; background-color: #0D7A5F;" class="width-fit no-wrap font-500 decoration-none padded-wide color-white rounded-s font-l border-solid" type="button" id="buttonFindCityForm" role="button"
                 loom="Empezar"></button>
             </div>
@@ -158,7 +176,7 @@ window.addEventListener('navigatorview', function () {
 
 
 
-    const searchInput = document.getElementById('searchInput');
+    const searchInput = document.getElementById('formCity');
 const suggestions = document.getElementById('suggestions');
 
 
@@ -188,7 +206,7 @@ function updateSuggestions() {
             listItem.textContent = item;
             suggestions.appendChild(listItem);
         });
-        suggestions.style.display = 'block';
+        suggestions.style.display = 'flex';
     } else {
         suggestions.style.display = 'none';
     }
