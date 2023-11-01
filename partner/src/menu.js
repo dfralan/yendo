@@ -34,15 +34,16 @@ function generateHash(inputText) {
 
 
     if (!storedURL){
-        alert("something happen")
-        window.location.href = "https://yendo.delivery";
+        window.location.href = "https://yendo.delivery/partner";
     }
     const userName = extractUserFromUrl(storedURL)
     const userHash = generateHash(userName)
 
+    console.log(generateHash('cardamomo.pasteleria'))
+
     // If it doesnt match any partner redirect to main page
     if (!partnersAR[userHash]){
-        window.location.href = "https://google.com";
+        window.location.href = "https://yendo.delivery/partner/cardamomo.pasteleria";
 
     // Otherwise, construct url to fetch data
     } else {
