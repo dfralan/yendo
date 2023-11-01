@@ -34,7 +34,8 @@ function generateHash(inputText) {
 
 
     if (!storedURL){
-        window.location.href = "https://yendo.delivery/partner/cardamomo.pasteleria";
+        alert("something happen")
+        window.location.href = "https://yendo.delivery/partner";
     }
     const userName = extractUserFromUrl(storedURL)
     const userHash = generateHash(userName)
