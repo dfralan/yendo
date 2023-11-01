@@ -39,10 +39,12 @@ function generateHash(inputText) {
     const userName = extractUserFromUrl(storedURL)
     const userHash = generateHash(userName)
 
-    console.log(generateHash('cardamomo.pasteleria'))
-
     // If it doesnt match any partner redirect to main page
     if (!partnersAR[userHash]){
+
+        //window.location.href = "https://yendo.delivery/partner";
+
+        // Nashe, que safe cardamomo noma
         window.location.href = "https://yendo.delivery/partner/cardamomo.pasteleria";
 
     // Otherwise, construct url to fetch data
