@@ -42,7 +42,7 @@ function generateHash(inputText) {
 
     // If it doesnt match any partner redirect to main page
     if (!partnersAR[userHash]){
-        window.location.href = "https://yendo.delivery/partner";
+        window.location.href = "https://google.com";
 
     // Otherwise, construct url to fetch data
     } else {
