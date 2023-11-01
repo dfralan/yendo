@@ -35,7 +35,7 @@ function generateHash(inputText) {
 
     if (!storedURL){
         alert("something happen")
-        window.location.href = "https://yendo.delivery/partner";
+        window.location.href = "https://yendo.delivery";
     }
     const userName = extractUserFromUrl(storedURL)
     const userHash = generateHash(userName)
