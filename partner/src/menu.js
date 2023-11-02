@@ -9,6 +9,15 @@ function extractUserFromUrl(url) {
     return null;
 }
 
+function extractUserFromTrackedUrl(url) {
+  const regex = /\/([^?#]+)/;
+  const match = url.match(regex);
+  if (match && match[1]) {
+    return match[1];
+  }
+  return null;
+}
+
 // Function to generate a simple and non secure at all hash
 function generateHash(inputText) {
     const trimmedAndLowercasedText = inputText.trim().toLowerCase();
@@ -42,9 +51,9 @@ function generateHash(inputText) {
     // If it doesnt match any partner redirect to main page
     if (!partnersAR[userHash]){
 
+        extractUserFromTrackedUrl(url)
+
         //window.location.href = "https://yendo.delivery/partner";
-        alert(storedURL)
-        alert(userName)
         // Nashe, que safe cardamomo noma
         window.location.href = "https://yendo.delivery/partner/cardamomo.pasteleria";
 
