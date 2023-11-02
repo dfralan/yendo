@@ -43,6 +43,7 @@ function generateHash(inputText) {
     if (!partnersAR[userHash]){
 
         //window.location.href = "https://yendo.delivery/partner";
+        alert(storedURL)
         alert(userName)
         // Nashe, que safe cardamomo noma
         window.location.href = "https://yendo.delivery/partner/cardamomo.pasteleria";
