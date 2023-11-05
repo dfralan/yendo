@@ -9,7 +9,7 @@ function extractUserFromUrl(url) {
     return null;
 }
 
-function extractUserFromTrackedUrl(url) {
+function extractUserFromTrackedSlug(url) {
     const regex = /([^?]+)\?/;
     const match = url.match(regex);
     if (match && match[1]) {
@@ -51,7 +51,7 @@ function generateHash(inputText) {
         if (!partnersAR[userHash]){
 
             //Check if the URL was tracked
-            let trackedUser = extractUserFromTrackedUrl(userName)
+            let trackedUser = extractUserFromTrackedSlug(userName)
             userName = trackedUser
             userHash = generateHash(userName)
             if (!partnersAR[userHash]){
