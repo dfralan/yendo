@@ -48,13 +48,16 @@ function generateHash(inputText) {
 
     // If it doesnt match any partner redirect to main page
      else {
-        let userName = extractUserFromUrl(storedURL)
-        let userHash = generateHash(userName)
+        var userName = extractUserFromUrl(storedURL)
+        var userHash = generateHash(userName)
 
         if (!partnersAR[userHash]){
+
+            //Check if the URL was tracked
             let trackedUser = extractUserFromTrackedUrl(userName)
             userName = trackedUser
             userHash = generateHash(userName)
+            alert(username + userHash + trackedUser)
             if (!partnersAR[userHash]){
                 window.location.href = "https://yendo.delivery/partner";
             }
