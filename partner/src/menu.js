@@ -9,6 +9,7 @@ function extractUserFromUrl(url) {
     return null;
 }
 
+// Function to extract the username from the tracked url slug
 function extractUserFromTrackedSlug(url) {
     const regex = /([^?]+)\?/;
     const match = url.match(regex);
@@ -21,39 +22,40 @@ function extractUserFromTrackedSlug(url) {
 // Function to generate a simple and non secure at all hash
 function generateHash(inputText) {
     const trimmedAndLowercasedText = inputText.trim().toLowerCase();
-
     let hash = 0;
     for (let i = 0; i < trimmedAndLowercasedText.length; i++) {
         const char = trimmedAndLowercasedText.charCodeAt(i);
         hash = (hash << 5) - hash + char;
     }
-
     // Take the absolute value to ensure it's non-negative
     hash = Math.abs(hash);
-
     return hash.toString();
 }
   
-
+// Main inmediate invoke function to check if the partner exist to create the menu
 (function () {
 
-    // Extract userName from URL stored in local storage and convert to Hash to match to see if exist in Partners List
+    // Stored URL fron the 404 page to extract slug
     const storedURL = localStorage.getItem('currentUrl');
+
+    // If no URL stored take it to the main page
     if (!storedURL){
         window.location.href = "https://yendo.delivery";
-    }
+    } else {
 
-    // If it doesnt match any partner redirect to main page
-     else {
-        var userName = extractUserFromUrl(storedURL)
-        var userHash = generateHash(userName)
+        // Declare userName and userHash
+        let userName = extractUserFromUrl(storedURL)
+        let userHash = generateHash(userName)
 
+        // If there is no match
         if (!partnersAR[userHash]){
 
             //Check if the URL was tracked
             let trackedUser = extractUserFromTrackedSlug(userName)
             userName = trackedUser
             userHash = generateHash(userName)
+
+            // If no match is finded take it to the main page
             if (!partnersAR[userHash]){
                 window.location.href = "https://yendo.delivery/partner";
             }
@@ -131,7 +133,7 @@ function generateHash(inputText) {
                     const partnerWspLink = document.getElementById('partnerWspNumber');
                   
                     // Update the href attribute to a new URL
-                    partnerWspLink.href = `https://wa.me/${wspNumber}`;  // Replace with the desired URL
+                    partnerWspLink.href = `https://wa.me/${wspNumber}`;
                 }setWspButton()
                 
 
