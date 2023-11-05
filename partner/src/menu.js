@@ -50,12 +50,9 @@ function generateHash(inputText) {
 
     // If it doesnt match any partner redirect to main page
     if (!partnersAR[userHash]){
-
-        extractUserFromTrackedUrl(url)
-
         //window.location.href = "https://yendo.delivery/partner";
         // Nashe, que safe cardamomo noma
-        window.location.href = "https://yendo.delivery/partner/cardamomo.pasteleria";
+        window.location.href = "https://yendo.delivery/partner/"+ extractUserFromTrackedUrl(url);
 
     // Otherwise, construct url to fetch data
     } else {
