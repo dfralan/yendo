@@ -45,20 +45,21 @@ function generateHash(inputText) {
     if (!storedURL){
         window.location.href = "https://yendo.delivery/partner";
     }
-    const userName = extractUserFromUrl(storedURL)
-    const userHash = generateHash(userName)
 
     // If it doesnt match any partner redirect to main page
-    if (!partnersAR[userHash]){
+     else {
+        let userName = extractUserFromUrl(storedURL)
+        let userHash = generateHash(userName)
 
-        extractUserFromTrackedUrl(url)
-
-        //window.location.href = "https://yendo.delivery/partner";
-        // Nashe, que safe cardamomo noma
-        window.location.href = "https://yendo.delivery/partner/cardamomo.pasteleria";
-
-    // Otherwise, construct url to fetch data
-    } else {
+        if (!partnersAR[userHash]){
+            let trackedUser = extractUserFromTrackedUrl(userName)
+            userName = trackedUser
+            userHash = generateHash(userName)
+            if (!partnersAR[userHash]){
+                window.location.href = "https://yendo.delivery/partner";
+            }
+        }
+        // Otherwise, construct url to fetch data
         const sheetID = partnersAR[userHash]?.menuId
         const partnerTintColor = partnersAR[userHash]?.tintColor
         const partnerAccentColor = partnersAR[userHash]?.accentColor
