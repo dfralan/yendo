@@ -52,12 +52,12 @@ function generateHash(inputText) {
         var userHash = generateHash(userName)
 
         if (!partnersAR[userHash]){
+            alert(userName)
 
             //Check if the URL was tracked
             let trackedUser = extractUserFromTrackedUrl(userName)
             userName = trackedUser
             userHash = generateHash(userName)
-            alert(username + userHash + trackedUser)
             if (!partnersAR[userHash]){
                 window.location.href = "https://yendo.delivery/partner";
             }
