@@ -60,7 +60,7 @@ function generateHash(inputText) {
             if (!partnersAR[userHash]){
                 window.location.href = "https://yendo.delivery/partner";
             }
-            return
+            alert(userName)
         }
     
         // Otherwise, construct url to fetch data
