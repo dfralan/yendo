@@ -10,12 +10,12 @@ function extractUserFromUrl(url) {
 }
 
 function extractUserFromTrackedUrl(url) {
-  const regex = /\/([^?#]+)/;
-  const match = url.match(regex);
-  if (match && match[1]) {
-    return match[1];
-  }
-  return null;
+    const regex = /([^?]+)\?/;
+    const match = url.match(regex);
+    if (match && match[1]) {
+      return match[1];
+    }
+    return null;
 }
 
 // Function to generate a simple and non secure at all hash
@@ -52,7 +52,6 @@ function generateHash(inputText) {
         var userHash = generateHash(userName)
 
         if (!partnersAR[userHash]){
-            alert(userName)
 
             //Check if the URL was tracked
             let trackedUser = extractUserFromTrackedUrl(userName)
@@ -61,7 +60,9 @@ function generateHash(inputText) {
             if (!partnersAR[userHash]){
                 window.location.href = "https://yendo.delivery/partner";
             }
+            return
         }
+    
         // Otherwise, construct url to fetch data
         const sheetID = partnersAR[userHash]?.menuId
         const partnerTintColor = partnersAR[userHash]?.tintColor
