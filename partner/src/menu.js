@@ -40,6 +40,7 @@ function generateHash(inputText) {
     // Extract userName from URL stored in local storage and convert to Hash to match to see if exist in Partners List
     const storedURL = localStorage.getItem('currentUrl');
 
+
     if (!storedURL){
         window.location.href = "https://yendo.delivery/partner";
     } else {
@@ -49,10 +50,12 @@ function generateHash(inputText) {
         // If it doesnt match any partner redirect to main page
         if (!partnersAR[userHash]){
             const trackedUserName = extractUserFromTrackedUrl(userName)
-            userHash = generateHash(trackedUserName)
+            userName = trackedUserName
+            userHash = generateHash(userName)
             if (!partnersAR[userHash]){
                 window.location.href = "https://yendo.delivery/partner";
             }
+            alert(userName)
         } 
 
         const sheetID = partnersAR[userHash]?.menuId
