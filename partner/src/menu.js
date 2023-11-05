@@ -54,9 +54,10 @@ function generateHash(inputText) {
             userHash = generateHash(userName)
             if (!partnersAR[userHash]){
                 window.location.href = "https://yendo.delivery/partner";
-            }
-            alert(userName)
+
         } 
+
+            alert(userName)
 
         const sheetID = partnersAR[userHash]?.menuId
         const partnerTintColor = partnersAR[userHash]?.tintColor
