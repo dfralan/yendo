@@ -66,12 +66,10 @@ buttonFindCityForm.addEventListener('click', function (event) {
 
   if (!matchFound) {
     let imgCoverBuscarPage = document.getElementById("imgCoverBuscarPage")
-
-    // Change the source of the image
-    imgCoverBuscarPage.src = "src/public/img/noDelivery.svg";
   
     deliveryResults.innerHTML = `
-    <div class="text-center">
+    <div class="text-center display-flex flex-col full-center l-gap">
+          <img id="imgCoverBuscarPage" src='src/public/img/noDelivery.svg' class="cover width-33" alt="">
           <p>No hay repartidores en tu zona.</p>
           <a class="text-decoration-none" href="register.html">¿Querés ser repartidor?</a>
     </div>
