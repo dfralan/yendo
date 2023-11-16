@@ -126,6 +126,11 @@ html {
 
 /* Avatars */
 
+.avatar-xl {
+    width: 90px;
+    height: 90px;
+}
+
 .avatar-l {
     width: 50px;
     height: 50px;

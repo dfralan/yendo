@@ -22,39 +22,40 @@ buttonFindCityForm.addEventListener('click', function (event) {
           deliveryStateStyle = " "
         } else {
           deliveryState = "Inactivo"
-          deliveryStateStyle = " style = 'filter: grayscale(100%); opacity: 0.9' "
+          deliveryStateStyle = "filter: grayscale(100%); opacity: 0.9"
         }
 
         deliveryResults.innerHTML += `
-        <a` + deliveryStateStyle + `class="text-decoration-none" href="https://yendo.delivery/`+ parseInt(key)/11 +`">
-        <label role="button" class=" py-3">
-          <div class="d-flex align-items-start">
-            <div class="me-3">
-              <img style="object-fit: cover;" class="rounded-circle" src="`+ obj.profileImg +`" alt="" width="90px" height="90px">
+        <a style="transition: .3s; max-width: 600px; ${deliveryStateStyle}" class="text-decoration-none width-100 display-flex flex-col z-2 rounded-l s-gap bg-white shadow-one" href="https://yendo.delivery/`+ parseInt(key)/11 +`">
+        
+          
+            <div class='display-flex flex-row s-gap'>
+
+            <div class=''>
+              <img class="rounded-l cover avatar-xl" src="`+ obj.profileImg +`" alt="">
+              <div class="rounded-l absolute to-top to-left avatar-xl display-flex full-center bg-tertiary" src="`+ obj.profileImg +`" alt=""></div>
             </div>
-            <div class="align-items-bottom">
-              <h5 class="m-0 p-0 text-dark">
-                `+ deliveryUsername +`
-              </h5>
-              <p class="m-0 fw-semibold text-primary" loom="` + deliveryState + `">
-                ` + deliveryState + `
-              </p>
-              <div>
-                <rater rating="`+ obj.rank +`">
-                  <ul class="list-inline mb-0 gap-0">
-                    <li class="list-inline-item badge rounded-pill text-light bg-black"></li>
-                    <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
-                    <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
-                    <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
-                    <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
-                    <li class="list-inline-item bi text-warning" style="margin: 0;"></li>
-                  </ul>
-                </rater>
+            
+
+              <div class='display-flex flex-col s-gap'>
+                <h5 class="m-0 p-0 text-dark">
+                  `+ deliveryUsername +`
+                </h5>
+                <p class="m-0 fw-semibold text-primary" loom="` + deliveryState + `">
+                  ` + deliveryState + `
+                </p>
               </div>
+
+            </div>
+            
+            
+            <div class="align-items-bottom">
+              
+              
               <small class="bi bi-geo-alt text-dark">`+ obtenerContenidoParentesis(formCity.value)[0] + " (" + obtenerContenidoParentesis(formCity.value)[1] + ")" +`</small>
             </div>
-          </div>
-        </label>
+          
+
         </a>
             `;
         matchFound = true; // Set the flag to true if a match is found
