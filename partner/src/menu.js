@@ -115,7 +115,8 @@ function generateHash(inputText) {
                 for (let i = 0; i < rows.length; i++) {
                     const category = rows[i].c[8] && rows[i].c[8].v !== null && rows[i].c[8].v !== undefined && rows[i].c[8].v !== '' ? rows[i].c[8].v : null;
                     // Only push non-empty categories
-                    if (category !== null) {
+                    if (category !== null && category !== 'Categorias') {
+                        console.log(category)
                         Categories.push(category);
                     }
                 }
