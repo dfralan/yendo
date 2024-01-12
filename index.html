@@ -30,21 +30,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;1,600&display=swap" rel="stylesheet">
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BZYEX17DFD"></script>
 <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  console.log('attempt to unregister service worker')
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations()
-    .then(function(registrations){
-      for(let registration of registrations){
-        registration.unregister()
-        console.log('service worker unregistered')
-      }
-    }
-
-    )
-  }
-  
+  gtag('config', 'G-BZYEX17DFD');
 </script>
 
 <body style="transition: .3s;" class="display-flex flex-col l-gap">
