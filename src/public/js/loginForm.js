@@ -88,7 +88,7 @@
       // JavaScript to handle form submission and display control messages
       loginForm.addEventListener('submit', function(event) {
         var form = event.target;
-        if (!form.checkValidity()) {
+        if (true) {
           event.preventDefault();
           event.stopPropagation();
           form.classList.add('was-validated');
