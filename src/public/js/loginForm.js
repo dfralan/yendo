@@ -87,8 +87,10 @@
 
       // JavaScript to handle form submission and display control messages
       loginForm.addEventListener('submit', function(event) {
+        console.log("attempt to submit")
         var form = event.target;
-        if (true) {
+        console.log(form)
+        if ("a" === "b") {
           event.preventDefault();
           event.stopPropagation();
           form.classList.add('was-validated');
@@ -97,8 +99,7 @@
           clearTimeout(validationTimeout);
           form.classList.remove('was-validated');
           event.preventDefault();
-          let formCityID = (obtenerIdCiudad(obtenerContenidoParentesis(formCity.value)[1],obtenerContenidoParentesis(formCity.value)[0]) || "")
-          submit(formUserKind, formCity.value + " " + formCityID, formUsername.value, formNumber.value);
+          submit(formUserKind, formCity.value + " ", formUsername.value, formNumber.value);
         }
       });
 
