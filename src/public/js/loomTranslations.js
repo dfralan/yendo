@@ -44,9 +44,9 @@ const loomTranslations = {
         "es": "Ingresá la dirección de entrega.",
         "br": "Digite o endereço de entrega."
     },
-    "Yendo - Mensajería Descentralizada": {
-        "es": "Yendo - Mensajería Descentralizada",
-        "br": "Yendo - Mensageria Descentralizada"
+    "micmic - Mensajería Descentralizada": {
+        "es": "micmic - Mensajería Descentralizada",
+        "br": "micmic - Mensageria Descentralizada"
     },
     "Conductor no verificado": {
         "es": "Conductor no verificado",
