@@ -25,9 +25,13 @@
   <link rel="icon" type="image/svg+xml" href="https://yendo.delivery/src/public/img/yendo.svg">
 
   <script src="src/public/js/categories.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Livvic:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -42,19 +46,20 @@
 
 <body style="transition: .3s;" class="display-flex flex-col l-gap">
 
-  <!-- Menu -->
+  <!-- Menu
   <brik menuview></brik>
   <script src="src/components/menu.js"></script>
+-->
 
-  <!-- Navbar -->
+  <!-- Navbar
   <brik navbarview></brik>
   <script src="src/components/navbar.js"></script>
-
-  <!-- Board Container -->
+-->
+  <!-- Board Container
   <brik navigatorview></brik>
   <script src="src/components/navigator.js"></script>
-
-  <!-- Delivery Results -->
+-->
+  <!-- Delivery Results
   <div class="display-flex flex-col full-center width-100">
     <div id="deliveryResults" class="responsive-width-66 display-flex flex-col x-padded full-center l-gap">
     </div>
@@ -62,28 +67,54 @@
     </div>
     
   </div>
-
-  <!-- Popular activities -->
+-->
+  <!-- Popular activities 
   <brik heropopularview></brik>
   <script src="src/components/heropopular.js"></script>
+-->
 
-  <!-- Flag 1 -->
+  <!-- Flag 1 
   <brik flag1></brik>
+-->
 
-  <!-- Popular activities -->
+  <!-- Popular activities
   <brik heropopulartaskersview></brik>
   <script src="src/components/heropopulartaskers.js"></script>
 
   <brik flag2></brik>
   <script src="src/components/flags.js"></script>
+-->
 
-  <!-- Task list wrapped -->
+  <!-- Task list wrapped
   <brik taskwrapview></brik>
   <script src="src/components/taskwrap.js"></script>
-
-  <!-- Footer -->
+-->
+  <!-- Footer
   <brik footerview></brik>
   <script src="src/components/footer.js"></script>
+-->
+
+<!-- Urgency cover for new brand -->
+  <div style="margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #7C3AED;" class="brand-container">
+
+    <div style="display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 120px;
+    background-color: white;
+    border-radius: 8px;">
+    <h1 style="font-family: 'Livvic', sans-serif; color: #7C3AED; padding-bottom: 5px;">micmic</h1>  
+  </div>
+
+  </div>
 
   <!-- Brik -->
   <script src="localbrik.js"></script>
