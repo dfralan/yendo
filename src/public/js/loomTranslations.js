@@ -76,7 +76,7 @@ const loomTranslations = {
         "es": "Mensajería descentralizada",
         "br": "Mensageria descentralizada"
     },
-    "Mensajería descentralizada para todos, no importa si sos un negocio, o un trabajador particular, con yendo podes automatizar tus pedidos y generar ingresos.": {
+    "Mensajería descentralizada para todos, no importa si sos un negocio, o un trabajador particular, con micmic podes automatizar tus pedidos y generar ingresos.": {
         "es": "Mensajería descentralizada para todos, no importa si eres un negocio o un trabajador particular, con Yendo puedes automatizar tus pedidos y generar ingresos.",
         "br": "Mensageria descentralizada para todos, não importa se você é um negócio ou um trabalhador autônomo, com o Yendo você pode automatizar seus pedidos e gerar renda."
     },
