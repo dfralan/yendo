@@ -48,7 +48,7 @@ const partnersAR = {
     locations: ["-32.9742145,-60.710014"],
     activeInterval: "09:00/14:00(-03:00)",
     rank: "5.0",
-    menuId: '1vF3AkCM5jxXWHg-U1h_Bi2orQdc2_uBNGIJgIcX64EE',
+    menuId: '1x7mRAEMxhOShyQ0fo1gDwhTbZNlLcY4QZJkHQ-mlYTE',
     tellerForm: '',
     tintColor: '#000000',
     contrastColor: '#FFFFFF',
