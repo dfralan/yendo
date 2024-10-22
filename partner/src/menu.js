@@ -230,6 +230,7 @@ function generateHash(inputText) {
 
                 Products.forEach((Product) => {
                     const parentDiv = document.getElementById(generateHash(Product.Categoria));
+                    if (Product.Plato === '') {return}
                     if (parentDiv) {
                         // Use querySelector to target the desired element
                         const productContainerDiv = parentDiv.querySelector('.productContainer');
