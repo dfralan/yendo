@@ -3,6 +3,9 @@
 
         const storedURL = localStorage.getItem('currentUrl');
         const last13Characters = parseInt(storedURL.slice(-13))
+
+// Dividimos la URL en partes por cada '/' y tomamos el último segmento
+        const sslug = storedURL.split('/').pop();
         var userID
         
         if (storedURL.includes("partner")) {
@@ -10,8 +13,8 @@
             return
         }
         
-        else if (!isNaN(last13Characters)) { 
-            userID = (last13Characters * 11)
+        else if (!isNaN(sslug)) { 
+            userID = (sslug * 11)
         } 
 
         // Match to see if there is an delivery with that number
