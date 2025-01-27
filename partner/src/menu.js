@@ -197,6 +197,8 @@ function generateHash(inputText) {
                 // Log the extracted categories
                 Categories.forEach((category, index) => {
 
+                    if (category === 'MENÙ EJECUTIVO DE 12 A 14.30HS') {return}
+
                     let categoryHash = generateHash(category)
 
                     const newCategoryAccessButton = document.createElement('a')
