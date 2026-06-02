@@ -1,1 +1,0 @@
-document.firstElementChild.setAttribute("data-theme", "light")
